@@ -1,0 +1,1603 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WYDE — обувь для широкой стопы. Первая тысяча</title>
+<meta name="description" content="WYDE — казахстанский бренд обуви, где широкая сама стелька и колодка, а не только верх. Узнай свой тип стопы и войди в первую тысячу.">
+<meta name="theme-color" content="#0d0c0a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WYDE">
+<meta property="og:title" content="WYDE — широкая стопа это сила">
+<meta property="og:description" content="Обувь, где широкая сама стелька, а не только верх. Узнай свой тип стопы и войди в первую тысячу WYDE.">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:locale:alternate" content="kk_KZ">
+<meta property="og:locale:alternate" content="en_US">
+<!-- Если сайт переедет на свой домен — поменяй адрес в двух строках ниже -->
+<meta property="og:url" content="https://yelzhan-ai.github.io/wyde-site/">
+<meta property="og:image" content="https://yelzhan-ai.github.io/wyde-site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Cpath fill='%23ff4f1a' d='M7 19h9l5 17 5-17h12l5 17 5-17h9L47 46h-8l-7-18-7 18h-8z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ================= ПАЛИТРА И ШРИФТЫ ================= */
+:root{
+  --ink:#0d0c0a; --ink2:#16140f; --ink3:#211e18; --line:#322d25; --edge:#4d463b;
+  --sand:#e8dcc6; --sand2:#cdbb99; --paper:#f4ecdc; --mute:#a0957f;
+  --hot:#ff4f1a; --hot2:#ff7445; --hot-l:#d63a0c; --hot-d:#b02e06;
+  --fh:'Oswald','Arial Narrow','Roboto Condensed',Impact,sans-serif;
+  --fb:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:70px}
+body{margin:0;background:var(--ink);color:var(--sand);font:400 17px/1.55 var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+svg,canvas,img{max-width:100%;display:block}
+h1,h2,h3,p,ul,ol,dl,dd,fieldset,legend{margin:0;padding:0}
+fieldset{border:0;min-width:0} ul,ol{list-style:none}
+a{color:inherit} button,input,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}
+
+/* ================= ШАПКА ================= */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(13,12,10,.84);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.logo{height:19px;width:auto;color:var(--sand)}
+.lang{display:flex;border:1px solid var(--edge);border-radius:999px;padding:3px}
+.lang button{background:none;border:0;min-width:46px;height:38px;border-radius:999px;font:800 13px/1 var(--fb);letter-spacing:.06em;color:var(--mute);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--sand);color:var(--ink)}
+
+/* ================= ОБЩЕЕ ================= */
+section{padding:76px 0;position:relative}
+.kicker{display:flex;align-items:center;gap:10px;font:800 12px/1.2 var(--fb);letter-spacing:.16em;text-transform:uppercase;color:var(--hot);margin-bottom:16px}
+.kicker::before{content:"";flex:none;width:28px;height:3px;background:currentColor}
+h1,h2,h3{overflow-wrap:anywhere}
+h2{font:700 clamp(38px,10.6vw,84px)/1 var(--fh);text-transform:uppercase;margin-bottom:18px}
+.lead{font-size:clamp(17px,4.5vw,21px);max-width:36em}
+.muted{color:var(--mute)} .small{font-size:14.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 24px;border-radius:12px;border:2px solid var(--hot);background:var(--hot);color:var(--ink);font:700 17px/1.1 var(--fh);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;text-align:center;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:var(--hot2);border-color:var(--hot2)} .btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--sand);border-color:var(--sand)}
+.btn.ghost:hover{background:rgba(232,220,198,.1)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.btns{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.hero .btns{margin-top:20px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:22px}
+.sand{background:var(--sand);color:var(--ink)}
+.sand .kicker{color:var(--hot-d)} .sand .btn.ghost{color:var(--ink);border-color:var(--ink)}
+.alt{background:var(--ink2)} .alt .card{background:var(--ink)}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* ================= ПЕРВЫЙ ЭКРАН ================= */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:76px 0 40px;overflow:hidden}
+.hero-bg{position:absolute;right:-30%;top:40px;width:min(118vw,760px);color:var(--sand);opacity:.13;transform:rotate(14deg);pointer-events:none}
+.hero .wrap{position:relative}
+.hero-logo{width:min(46vw,300px);color:var(--sand);margin-bottom:16px}
+.eyebrow{font:800 11.5px/1.3 var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+h1{font:700 clamp(42px,12.4vw,124px)/.96 var(--fh);text-transform:uppercase;letter-spacing:-.005em}
+h1 span{display:block} h1 .hot{color:var(--hot)}
+.wline{display:flex;align-items:center;margin:14px 0 12px;color:var(--hot);transform-origin:center;animation:widen 1.5s .25s cubic-bezier(.2,.8,.2,1) both}
+.wline i{flex:1;height:3px;background:currentColor}
+.wline::before,.wline::after{content:"";border:8px solid transparent}
+.wline::before{border-right-color:currentColor;margin-right:-1px} .wline::after{border-left-color:currentColor;margin-left:-1px}
+@keyframes widen{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
+.points{display:grid;gap:10px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font:600 14.5px/1.35 var(--fb);color:var(--sand2)}
+.points li{display:flex;gap:10px} .points li::before{content:"↔";color:var(--hot);flex:none}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:15px 0;font:700 clamp(22px,6vw,40px)/1 var(--fh);text-transform:uppercase;white-space:nowrap}
+.mq div{display:inline-block;animation:mq 30s linear infinite} .mq span{margin:0 .55em} .mq b{color:var(--hot)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ================= ТЕСТ СТЕЛЬКИ ================= */
+.test-grid{display:grid;gap:26px;margin-top:30px}
+.tsvg{width:min(62vw,250px);margin:0 auto}
+.tsvg .ins{fill:var(--ink3);stroke:var(--sand2);stroke-width:2.5;stroke-dasharray:7 6}
+.tsvg .ft{fill:rgba(232,220,198,.2);stroke:var(--sand);stroke-width:2.5}
+.tsvg .over{fill:var(--hot);stroke:var(--hot);stroke-width:2.5}
+#footG *{vector-effect:non-scaling-stroke}
+.footA{transform-box:view-box;transform-origin:100px 240px;animation:spread 5s ease-in-out infinite}
+@keyframes spread{0%,10%{transform:scaleX(.78)}42%,82%{transform:scaleX(var(--s,1))}100%{transform:scaleX(.78)}}
+.tsvg.set .footA{animation:none;transform:scaleX(var(--s,1));transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.tkey{display:flex;justify-content:center;gap:18px;margin-top:12px;font:600 13px var(--fb);color:var(--mute)}
+.tkey i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.nsteps{display:grid;gap:12px;counter-reset:n;margin-bottom:22px}
+.nsteps li{display:flex;gap:12px;align-items:flex-start}
+.nsteps li::before{counter-increment:n;content:counter(n);flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--hot);color:var(--hot);font:800 14px/27px var(--fb);text-align:center}
+.res{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.res-h{font:700 clamp(26px,7.4vw,40px)/1.02 var(--fh);text-transform:uppercase}
+.res-h b{display:block;font-size:clamp(84px,29vw,190px);line-height:.86;color:var(--hot);margin:.06em 0 .08em;white-space:nowrap}
+.punch{font:700 clamp(24px,6.8vw,38px)/1.05 var(--fh);text-transform:uppercase;margin:16px 0 14px}
+.punch em{font-style:normal;color:var(--hot);display:block}
+.note-ok{display:inline-block;margin-top:14px;font:600 13.5px/1.3 var(--fb);color:var(--sand2);border:1px dashed var(--edge);border-radius:10px;padding:8px 12px}
+.hint{margin-top:22px;padding:16px 18px;border-left:3px solid var(--hot);background:var(--ink3);border-radius:0 14px 14px 0;font-size:15.5px}
+
+/* ================= ПОЛЯ ================= */
+.field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.field>label,.flabel{font:600 14px/1.3 var(--fb);color:var(--sand)}
+.flabel small,.field label small{font-weight:400;color:var(--mute)}
+.inp{width:100%;min-height:54px;padding:12px 14px;background:var(--ink);border:1.5px solid var(--edge);border-radius:12px;font-size:17px;color:var(--sand)}
+.alt .inp{background:var(--ink2)}
+.inp::placeholder{color:#8b8272;opacity:1}
+.inp:focus{outline:none;border-color:var(--hot);box-shadow:0 0 0 3px rgba(255,79,26,.28)}
+.inp[readonly]{border-style:dashed;color:var(--sand2);text-overflow:ellipsis}
+.inp[readonly]::placeholder{font-size:14.5px}
+textarea.inp{min-height:112px;resize:vertical;line-height:1.4}
+.bad .inp,.bad .chip span{border-color:#ff7a6b}
+.err{font:600 13.5px/1.3 var(--fb);color:#ffa698}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+.stack{display:grid;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative;max-width:100%}
+.chip input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.chip span{display:flex;align-items:center;min-height:48px;padding:10px 17px;border:1.5px solid var(--edge);border-radius:999px;font:600 15px/1.2 var(--fb);transition:background .15s,color .15s,border-color .15s}
+.chip input:checked+span{background:var(--sand);color:var(--ink);border-color:var(--sand)}
+.chip input:focus-visible+span{outline:3px solid var(--hot);outline-offset:2px}
+
+/* ================= МАНИФЕСТ ================= */
+.manifest{padding:92px 0}
+.manifest p:not(.kicker){font:700 clamp(30px,8.4vw,70px)/1.04 var(--fh);text-transform:uppercase;margin-bottom:.6em;overflow-wrap:anywhere}
+.manifest p.dim{color:#5a5244}
+.manifest p.big{font-size:clamp(56px,17vw,156px);line-height:.95;margin:.3em 0 .35em}
+.manifest p.fin{color:var(--hot-l);margin-bottom:0}
+.manifest s{text-decoration:line-through;text-decoration-color:var(--hot-l);text-decoration-thickness:.11em}
+
+/* ================= КВИЗ ================= */
+.prog{height:5px;background:var(--line);border-radius:5px;overflow:hidden;margin:12px 0 22px}
+.prog i{display:block;height:100%;width:25%;background:var(--hot);border-radius:5px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.qmeta{display:flex;justify-content:space-between;align-items:center;gap:12px;font:800 12px/1 var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.linkbtn{background:none;border:0;padding:10px 0;font:700 14px var(--fb);color:var(--sand2);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.qtitle{font:700 clamp(30px,8.4vw,48px)/1 var(--fh);text-transform:uppercase}
+.opts{display:grid;gap:12px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:12px 16px 12px 12px;min-height:96px;background:var(--ink);border:1.5px solid var(--edge);border-radius:18px;cursor:pointer;transition:border-color .15s,transform .15s,background .15s}
+.opt:hover,.opt:focus-visible{border-color:var(--hot);transform:translateX(4px)}
+.opt:active{background:var(--ink3)}
+.opt svg{flex:none;width:72px;height:72px}
+.opt b{display:block;font:700 21px/1.08 var(--fh);text-transform:uppercase;letter-spacing:.02em}
+.opt small{display:block;margin-top:4px;font-size:14px;line-height:1.3;color:var(--mute)}
+.qi .a{fill:rgba(232,220,198,.14);stroke:var(--sand);stroke-width:2}
+.qi .h{fill:var(--hot);stroke:var(--hot);stroke-width:2}
+.qi .l{fill:none;stroke:var(--hot);stroke-width:3.5;stroke-linecap:round}
+.qi .g{fill:none;stroke:var(--edge);stroke-width:2;stroke-linecap:round}
+.fadein{animation:fadein .45s ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tname{display:flex;flex-direction:column;font:700 clamp(46px,13.6vw,108px)/1 var(--fh);text-transform:uppercase;color:var(--hot);margin:6px 0 12px}
+.tcard{border-top:1px solid var(--line);padding:22px 0 4px}
+.tcard h3{font:700 28px/1 var(--fh);text-transform:uppercase;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.tcard h3 small{font:600 14px/1.2 var(--fb);text-transform:none;color:var(--mute)}
+.tcard dt{font:800 11.5px/1.2 var(--fb);letter-spacing:.15em;text-transform:uppercase;color:var(--hot);margin-top:16px}
+.tcard dd{margin-top:6px}
+.toenote{margin-top:6px;padding:14px 16px;border-radius:14px;background:var(--ink3);font-size:15.5px}
+.storybox{margin-top:28px;display:grid;gap:20px;align-items:center}
+.storybox img{width:min(62vw,250px);height:auto;border-radius:18px;border:1px solid var(--line);margin:0 auto;background:var(--ink)}
+.storybox h3{font:700 clamp(28px,7.6vw,40px)/1 var(--fh);text-transform:uppercase;margin-bottom:10px}
+
+/* ================= ДЛИНА ≠ ШИРИНА ≠ ОБЪЁМ ================= */
+.dia{display:grid;grid-template-columns:.8fr 1.2fr;gap:10px;align-items:end;margin:30px 0 8px}
+.dia svg{width:100%;height:auto}
+.dia .f{fill:rgba(232,220,198,.1);stroke:var(--sand);stroke-width:2;stroke-linejoin:round}
+.dia .d{fill:none;stroke:var(--hot);stroke-width:2;stroke-linecap:round}
+.dia .gr{fill:none;stroke:var(--edge);stroke-width:2}
+.mk circle{fill:var(--hot)} .mk text{font:800 13px var(--fb);fill:var(--ink);text-anchor:middle}
+.legend li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-size:16px}
+.legend li::before{content:attr(data-n);flex:none;width:26px;height:26px;border-radius:50%;background:var(--hot);color:var(--ink);font:800 13px/26px var(--fb);text-align:center}
+.h3{font:700 clamp(26px,7vw,38px)/1.02 var(--fh);text-transform:uppercase;margin-bottom:12px}
+.cols{display:grid;gap:22px;margin-top:34px}
+.facts{display:grid;gap:12px;margin-top:6px}
+.facts li{padding:16px 18px;border-radius:16px;background:var(--ink);border:1px solid var(--line);font-size:15.5px}
+.src{display:inline-block;margin-top:14px;font:600 13.5px/1.4 var(--fb);color:var(--sand2);text-underline-offset:4px}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:18px}
+.scale span{padding:9px 0;text-align:center;border:1px solid var(--line);border-radius:8px;font:700 13px/1 var(--fh);color:var(--mute);transition:.3s}
+.scale span.on{background:var(--hot);border-color:var(--hot);color:var(--ink);transform:scale(1.14)}
+.jis-out{font:700 clamp(26px,7vw,36px)/1.05 var(--fh);text-transform:uppercase;margin-top:20px}
+.jis-out b{color:var(--hot);font-size:1.5em}
+
+/* ================= КАК ИЗМЕРИТЬ ================= */
+.steps{display:grid;gap:14px;margin-top:30px;counter-reset:s}
+.step{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:18px}
+.step svg{width:62px;height:62px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.step svg .o{stroke:var(--hot-l)} .step svg text{font:800 11px var(--fb);fill:var(--ink);stroke:none}
+.step h3{font:700 22px/1.08 var(--fh);text-transform:uppercase;margin-bottom:6px}
+.step h3::before{counter-increment:s;content:counter(s,decimal-leading-zero) " ";color:var(--hot-d)}
+.step p{font-size:15.5px;line-height:1.45}
+
+/* ================= АНКЕТА ================= */
+.form fieldset{padding:26px 0 0;margin-top:26px;border-top:1px solid var(--line)}
+.form legend{float:left;width:100%;font:700 26px/1 var(--fh);text-transform:uppercase;margin-bottom:18px}
+.form legend+*{clear:both}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:28px;font-size:15px;line-height:1.4}
+.consent input{flex:none;width:26px;height:26px;margin:0;accent-color:var(--hot)}
+.form .btn{width:100%;margin-top:22px;min-height:62px;font-size:19px}
+.fmsg{margin-top:14px;font:600 15px/1.4 var(--fb);color:#ffa698}
+.okbox{text-align:center;padding:34px 8px}
+.okbox svg{width:84px;height:84px;margin:0 auto 20px;color:var(--hot)}
+.okbox h3{font:700 clamp(36px,10vw,64px)/.96 var(--fh);text-transform:uppercase;margin-bottom:14px}
+.okbox .btn{margin-top:24px}
+.demo{margin-top:18px;font-size:13px;color:var(--mute)}
+
+/* ================= ИСТОРИЯ / FAQ / ФУТЕР ================= */
+.fgrid{display:grid;gap:28px;margin-top:8px}
+.photo{aspect-ratio:4/5;max-height:440px;width:100%;border-radius:22px;border:1.5px dashed var(--edge);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(232,220,198,.045) 14px 28px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--mute);font:800 12px/1 var(--fb);letter-spacing:.16em;text-transform:uppercase}
+.photo svg{width:46%;color:var(--edge)}
+.fgrid figure{margin:0;min-width:0}
+.fgrid figcaption{margin-top:12px;font:600 14.5px/1.4 var(--fb);color:var(--sand2)}
+#foText p{font:500 clamp(23px,6.2vw,34px)/1.2 var(--fh);margin-bottom:.75em}
+#foText p:last-child{color:var(--hot);font-weight:700;text-transform:uppercase}
+.sign{font:600 14px var(--fb);color:var(--mute)}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.nums li{border-top:3px solid var(--hot);padding-top:10px;font:600 13px/1.25 var(--fb);color:var(--mute)}
+.nums b{display:block;font:700 clamp(28px,8vw,44px)/1 var(--fh);color:var(--sand)}
+.nums li:last-child b{color:var(--hot)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font:700 clamp(21px,5.6vw,27px)/1.12 var(--fh);text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:400 32px/1 var(--fb);color:var(--hot);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;max-width:40em}
+footer{border-top:1px solid var(--line);padding:44px 0 110px}
+footer .logo{height:26px;margin-bottom:14px}
+.soc{display:flex;gap:10px;margin:22px 0 0}
+.soc a{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;border:1.5px solid var(--edge);transition:.15s}
+.soc a:hover{background:var(--sand);color:var(--ink);border-color:var(--sand)}
+.soc svg{width:22px;height:22px;fill:currentColor}
+.copy{margin-top:24px;font-size:13.5px;color:var(--mute)}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.wa svg{width:32px;height:32px;fill:currentColor}
+dialog{border:1px solid var(--line);padding:0;background:var(--ink2);color:var(--sand);border-radius:22px;width:min(560px,calc(100vw - 28px));max-height:86vh}
+dialog::backdrop{background:rgba(0,0,0,.72)}
+.dlg{padding:24px}
+.dlg h3{font:700 28px/1.02 var(--fh);text-transform:uppercase;margin-bottom:14px}
+.dlg li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.45}
+.dlg li b{color:var(--hot);font-weight:800}
+.dlg .btn{width:100%;margin-top:20px}
+.toast{position:fixed;left:50%;bottom:92px;z-index:60;transform:translate(-50%,20px);background:var(--sand);color:var(--ink);font:800 14px/1.2 var(--fb);padding:13px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;max-width:calc(100vw - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ================= ШИРОКИЕ ЭКРАНЫ ================= */
+@media(min-width:600px){
+  .btns{flex-direction:row;flex-wrap:wrap}
+  .points{grid-template-columns:repeat(3,1fr);gap:20px}
+  .opts{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
+  .opt{flex-direction:column;text-align:center;padding:22px 14px}
+  .opt:hover,.opt:focus-visible{transform:translateY(-4px)}
+  .opt svg{width:116px;height:116px}
+  .storybox{grid-template-columns:auto 1fr;gap:34px}
+  .steps{grid-template-columns:1fr 1fr}
+  .card{padding:34px}
+  .form .g2w{grid-template-columns:1fr 1fr}
+}
+@media(min-width:880px){
+  section{padding:110px 0}
+  .test-grid{grid-template-columns:300px 1fr;align-items:start;gap:50px}
+  .cols{grid-template-columns:1fr 1fr;gap:40px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .fgrid{grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+  .dia{max-width:620px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto} .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<noscript><p style="padding:84px 20px 0;font:600 15px sans-serif;color:#e8dcc6">Чтобы работали тест и анкета, включи JavaScript. · Тест пен сауалнама жұмыс істеуі үшін JavaScript-ті қос. · Please enable JavaScript to use the test and the form.</p></noscript>
+
+<!-- ===== SVG-заготовки: логотип WYDE и силуэт стопы (используются по всему сайту и на картинке для сторис) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="wyde" viewBox="0 0 576 100">
+      <g fill="currentColor" fill-rule="evenodd" transform="skewX(-9) translate(16 0)">
+        <path data-x="0" d="M0 0h30l20 62L70 0h30l20 62 20-62h30l-35 100h-28L85 38 63 100H35z"/>
+        <path data-x="182" transform="translate(182 0)" d="M0 0h34l31 48L96 0h34L80 66v34H50V66z"/>
+        <path data-x="324" transform="translate(324 0)" d="M0 0h62c38 0 58 22 58 50s-20 50-58 50H0zM28 26v48h32c20 0 32-10 32-24S80 26 60 26z"/>
+        <path data-x="458" transform="translate(458 0)" d="M0 0h100v24H28v14h60v24H28v14h72v24H0z"/>
+      </g>
+    </symbol>
+    <path id="insoleP" d="M100 20C140 20 160 70 160 130C160 190 140 230 138 290C137 340 135 400 100 400C65 400 63 340 62 290C60 230 40 190 40 130C40 70 60 20 100 20Z"/>
+    <g id="footG">
+      <path d="M100 95C150 85 178 110 176 150C174 200 150 235 146 290C144 345 138 392 100 392C62 392 56 345 54 290C50 235 26 200 24 150C22 110 50 85 100 95Z"/>
+      <ellipse cx="58" cy="62" rx="20" ry="26"/><ellipse cx="91" cy="48" rx="14" ry="20"/>
+      <ellipse cx="117" cy="52" rx="12" ry="17"/><ellipse cx="138" cy="64" rx="11" ry="15"/>
+      <ellipse cx="155" cy="82" rx="10" ry="13"/>
+    </g>
+    <mask id="outM" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="430">
+      <rect width="200" height="430" fill="#fff"/><use href="#insoleP" fill="#000"/>
+    </mask>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="WYDE"><svg class="logo" viewBox="0 0 576 100" role="img" aria-label="WYDE"><use href="#wyde"/></svg></a>
+    <div class="lang" role="group" data-i18n-aria="langLabel">
+      <button type="button" data-lang="ru" aria-pressed="true" lang="ru" aria-label="Русский">RU</button>
+      <button type="button" data-lang="kz" aria-pressed="false" lang="kk" aria-label="Қазақша">KZ</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== 1. ПЕРВЫЙ ЭКРАН ===== -->
+<!-- Варианты заголовка (стоит №1; чтобы поменять — правь h1a / h1b в объекте переводов T):
+     1) Широкая стопа — это сила. Узкая обувь — слабость обуви.
+     2) Твоя стопа не шире нормы. Это норма у́же тебя.
+     3) Хватит втискиваться. Стой широко. -->
+<section class="hero">
+  <svg class="hero-bg" viewBox="0 0 200 430" aria-hidden="true"><use href="#footG" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+  <div class="wrap">
+    <svg class="hero-logo" viewBox="0 0 576 100" aria-hidden="true"><use href="#wyde"/></svg>
+    <p class="eyebrow" data-i18n="heroEyebrow">Обувь для широкой стопы · Казахстан</p>
+    <h1><span data-i18n="h1a">Широкая стопа — это сила.</span><span class="hot" data-i18n="h1b">Узкая обувь — слабость обуви.</span></h1>
+    <div class="wline" aria-hidden="true"><i></i></div>
+    <p class="lead" data-i18n="heroSub">WYDE — казахстанский бренд обуви для широкой стопы. Мы делаем широкой саму стельку и колодку, а не только верх.</p>
+    <div class="btns">
+      <a class="btn" href="#quiz" data-i18n="btnType">Узнать свой тип стопы</a>
+      <a class="btn ghost" href="#join" data-i18n="btnJoin">Стать одним из первой тысячи</a>
+    </div>
+    <p class="muted small" style="margin-top:18px;max-width:34em" data-i18n="heroNote">Готовых пар пока нет: мы строим их по реальным меркам первой тысячи. Возможно, по твоим.</p>
+    <ul class="points" data-list="pts"></ul>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<!-- ===== 2. ТЕСТ СТЕЛЬКИ ===== -->
+<section id="test" class="alt">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="tK"></p>
+    <h2 class="rv" data-i18n="tH"></h2>
+    <p class="lead rv" data-i18n="tLead"></p>
+    <div class="test-grid">
+      <div class="rv">
+        <svg class="tsvg" id="tsvg" viewBox="0 0 200 430" role="img" aria-labelledby="tsvgT">
+          <title id="tsvgT" data-i18n="tAlt"></title>
+          <use href="#insoleP" class="ins"/>
+          <g class="footA"><use href="#footG" class="ft"/></g>
+          <g mask="url(#outM)"><g class="footA"><use href="#footG" class="over"/></g></g>
+        </svg>
+        <p class="tkey"><span><i style="background:var(--sand2)"></i><span data-i18n="tKeyIns"></span></span><span><i style="background:var(--hot)"></i><span data-i18n="tKeyOver"></span></span></p>
+      </div>
+      <div class="card rv">
+        <ol class="nsteps" data-list="tSteps"></ol>
+        <form id="testForm" novalidate>
+          <div class="g2">
+            <div class="field"><label for="tFoot" data-i18n="tFoot"></label><input class="inp" id="tFoot" inputmode="decimal" autocomplete="off" placeholder="10,5"></div>
+            <div class="field"><label for="tIns" data-i18n="tInsole"></label><input class="inp" id="tIns" inputmode="decimal" autocomplete="off" placeholder="9,5"></div>
+          </div>
+          <p class="err" id="tErr" role="alert" style="margin-top:10px" hidden></p>
+          <button class="btn" type="submit" style="width:100%;margin-top:16px" data-i18n="tBtn"></button>
+        </form>
+        <div class="res" id="tRes" aria-live="polite" hidden></div>
+      </div>
+    </div>
+    <p class="hint rv" data-i18n="tHint"></p>
+  </div>
+</section>
+
+<!-- ===== 3. МАНИФЕСТ ===== -->
+<section class="manifest sand" id="manifest">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="mK"></p>
+    <p class="dim rv" data-i18n="m1"></p>
+    <p class="dim rv" data-i18n-html="m2"></p>
+    <p class="dim rv" data-i18n="m3"></p>
+    <p class="big rv" data-i18n="m4"></p>
+    <p class="rv" data-i18n="m5"></p>
+    <p class="fin rv" data-i18n="m6"></p>
+  </div>
+</section>
+
+<!-- ===== 4. КВИЗ «ТИП СТОПЫ» + 5. КАРТИНКА ДЛЯ СТОРИС ===== -->
+<section id="quiz">
+  <div class="wrap narrow">
+    <p class="kicker rv" data-i18n="qK"></p>
+    <h2 class="rv" data-i18n="qH"></h2>
+    <p class="lead rv" data-i18n="qLead"></p>
+    <div class="card rv" id="quizBox" style="margin-top:28px"></div>
+    <div class="card storybox" id="story" hidden>
+      <canvas id="storyCv" width="1080" height="1920" hidden></canvas>
+      <img id="storyImg" alt="" width="1080" height="1920">
+      <div>
+        <h3 data-i18n="sH"></h3>
+        <p data-i18n="sLead"></p>
+        <div class="btns">
+          <button class="btn" type="button" id="sShare" data-i18n="sShare"></button>
+          <button class="btn ghost" type="button" id="sDl" data-i18n="sDl"></button>
+        </div>
+        <p class="muted small" style="margin-top:14px" data-i18n="sHold"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ДЛИНА ≠ ШИРИНА ≠ ОБЪЁМ + КАЛЬКУЛЯТОР JIS ===== -->
+<section id="size" class="alt">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="dK"></p>
+    <h2 class="rv" data-i18n="dH"></h2>
+    <p class="lead rv" data-i18n="dLead"></p>
+    <div class="cols">
+      <div class="rv">
+        <div class="dia" aria-hidden="true">
+          <svg viewBox="0 0 180 300">
+            <use href="#footG" class="f" transform="translate(22 0) scale(.72)"/>
+            <path class="d" d="M14 26V282M8 26H20M8 282H20M39 108H149M39 102V114M149 102V114M63 252H125M63 246V258M125 246V258"/>
+            <g class="mk"><circle cx="14" cy="154" r="11"/><text x="14" y="158.5">1</text></g>
+            <g class="mk"><circle cx="94" cy="108" r="11"/><text x="94" y="112.5">2</text></g>
+            <g class="mk"><circle cx="94" cy="252" r="11"/><text x="94" y="256.5">3</text></g>
+          </svg>
+          <svg viewBox="0 0 260 170">
+            <path class="gr" d="M8 142H252"/>
+            <path class="f" d="M40 8V96C30 108 28 132 44 138H206C226 138 232 120 216 112C190 100 150 84 118 60C104 48 100 30 100 8"/>
+            <ellipse class="d" cx="181" cy="116" rx="8" ry="26" stroke-dasharray="5 5"/>
+            <path class="d" d="M132 71V138M126 71H138"/>
+            <g class="mk"><circle cx="181" cy="72" r="11"/><text x="181" y="76.5">4</text></g>
+            <g class="mk"><circle cx="132" cy="106" r="11"/><text x="132" y="110.5">5</text></g>
+          </svg>
+        </div>
+        <ol class="legend" data-list="leg"></ol>
+      </div>
+      <div class="rv">
+        <h3 class="h3" data-i18n="whyH"></h3>
+        <p data-i18n="whyP"></p>
+        <h3 class="h3" style="margin-top:34px" data-i18n="factsH"></h3>
+        <ul class="facts" data-list="facts"></ul>
+        <a class="src" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6914786" target="_blank" rel="noopener" data-i18n="src"></a>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:38px">
+      <h3 class="h3" data-i18n="jH"></h3>
+      <p class="muted" data-i18n="jLead"></p>
+      <form id="jisForm" novalidate style="margin-top:18px">
+        <div class="g2">
+          <div class="field"><label for="jLen" data-i18n="jLen"></label><input class="inp" id="jLen" inputmode="decimal" autocomplete="off" placeholder="26"></div>
+          <div class="field"><label for="jGir" data-i18n="jGirth"></label><input class="inp" id="jGir" inputmode="decimal" autocomplete="off" placeholder="25,5"></div>
+        </div>
+        <p class="err" id="jErr" role="alert" style="margin-top:10px" hidden></p>
+        <button class="btn ghost" type="submit" style="width:100%;margin-top:16px" data-i18n="jBtn"></button>
+      </form>
+      <div class="scale" id="jScale" aria-hidden="true"></div>
+      <div id="jRes" aria-live="polite" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. КАК ИЗМЕРИТЬ СТОПУ ===== -->
+<section id="measure" class="sand">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="meK"></p>
+    <h2 class="rv" data-i18n="meH"></h2>
+    <p class="lead rv" data-i18n="meLead"></p>
+    <ol class="steps" id="steps"></ol>
+    <div class="btns"><a class="btn" href="#join" data-i18n="meCta"></a></div>
+  </div>
+</section>
+
+<!-- ===== 8. АНКЕТА «ПЕРВАЯ ТЫСЯЧА» ===== -->
+<section id="join">
+  <div class="wrap narrow">
+    <p class="kicker rv" data-i18n="fK"></p>
+    <h2 class="rv" data-i18n="fH"></h2>
+    <p class="lead rv" data-i18n="fLead"></p>
+    <div class="card" style="margin-top:28px">
+      <form class="form" id="joinForm" novalidate>
+        <fieldset style="margin-top:0;padding-top:0;border:0">
+          <legend data-i18n="g1"></legend>
+          <div class="stack">
+            <div class="field"><label for="f-name" data-i18n="name"></label><input class="inp" id="f-name" name="name" autocomplete="given-name" maxlength="60" data-req></div>
+            <div class="field"><label for="f-wa" data-i18n="wa"></label><input class="inp" id="f-wa" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" data-req data-phone></div>
+            <div class="field"><label for="f-ig" data-i18n-html="ig"></label><input class="inp" id="f-ig" name="instagram" autocapitalize="none" autocomplete="off" maxlength="60" placeholder="@"></div>
+            <div class="field"><label for="f-city" data-i18n="city"></label><input class="inp" id="f-city" name="city" autocomplete="address-level2" maxlength="60" data-req></div>
+            <div class="field" role="radiogroup" aria-labelledby="l-gender" data-reqgroup="gender"><span class="flabel" id="l-gender" data-i18n="gender"></span><div class="chips" data-chips="gender" data-type="radio"></div></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="g2"></legend>
+          <div class="stack">
+            <div class="g2">
+              <div class="field"><label for="f-lenL" data-i18n="lenL"></label><input class="inp" id="f-lenL" name="lenL" inputmode="decimal" autocomplete="off" data-req data-num="15,35"></div>
+              <div class="field"><label for="f-lenR" data-i18n="lenR"></label><input class="inp" id="f-lenR" name="lenR" inputmode="decimal" autocomplete="off" data-req data-num="15,35"></div>
+            </div>
+            <div class="g2">
+              <div class="field"><label for="f-ball" data-i18n="ball"></label><input class="inp" id="f-ball" name="ball" inputmode="decimal" autocomplete="off" data-req data-num="6,16"></div>
+              <div class="field"><label for="f-heel" data-i18n="heel"></label><input class="inp" id="f-heel" name="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
+            </div>
+            <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+            <div class="field"><label for="f-insole" data-i18n-html="insole"></label><input class="inp" id="f-insole" name="insole" inputmode="decimal" autocomplete="off" data-num="5,14"></div>
+            <div class="g2 g2w" style="grid-template-columns:1fr">
+              <div class="field"><label for="f-jis" data-i18n-html="jis"></label><input class="inp" id="f-jis" name="jis" readonly placeholder="—"></div>
+              <div class="field"><label for="f-type" data-i18n="type"></label><input class="inp" id="f-type" name="type" readonly data-i18n-ph="typePh"><input type="hidden" name="typeKeys" id="f-typeKeys"></div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="g3"></legend>
+          <div class="stack">
+            <div class="field" role="group" aria-labelledby="l-pains"><span class="flabel" id="l-pains"><span data-i18n="pains"></span> <small data-i18n="painsHint"></small></span><div class="chips" data-chips="pains" data-type="checkbox"></div></div>
+            <div class="field"><label for="f-brands" data-i18n="brands"></label><textarea class="inp" id="f-brands" name="brands" maxlength="600" data-i18n-ph="brandsPh"></textarea></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="g4"></legend>
+          <div class="stack">
+            <div class="field" role="radiogroup" aria-labelledby="l-model"><span class="flabel" id="l-model" data-i18n="model"></span><div class="chips" data-chips="model" data-type="radio"></div></div>
+            <div class="field" role="radiogroup" aria-labelledby="l-color"><span class="flabel" id="l-color" data-i18n="color"></span><div class="chips" data-chips="color" data-type="radio"></div></div>
+          </div>
+        </fieldset>
+        <div class="field" id="consentField">
+          <label class="consent"><input type="checkbox" name="consent" id="f-consent"><span><span data-i18n="consent"></span> <button type="button" class="linkbtn" style="padding:0;font-size:15px" data-open="policy" data-i18n="policyLink"></button></span></label>
+        </div>
+        <button class="btn" type="submit" id="submitBtn" data-i18n="submit"></button>
+        <p class="fmsg" id="formMsg" role="alert" hidden></p>
+        <a class="btn ghost" id="waSend" target="_blank" rel="noopener" hidden data-i18n="waSend"></a>
+      </form>
+      <div class="okbox" id="okBox" tabindex="-1" hidden>
+        <svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="42" cy="42" r="38"/><path d="M26 43l11 11 21-23"/></svg>
+        <h3 data-i18n="okH"></h3>
+        <p class="lead" style="margin:0 auto" data-i18n="okP"></p>
+        <button class="btn" type="button" id="inviteBtn" data-i18n="okBtn"></button>
+        <p class="demo" id="demoNote" hidden data-i18n="demo"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. ИСТОРИЯ ОСНОВАТЕЛЯ ===== -->
+<section id="founder" class="alt">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="foK"></p>
+    <h2 class="rv" data-i18n="foH"></h2>
+    <div class="fgrid">
+      <!-- ФОТО: когда будет снимок, замени весь блок <div class="photo">…</div> на
+           <img src="founder.jpg" alt="Елжан и Елтинжал, основатели WYDE" style="border-radius:22px;width:100%"> -->
+      <figure class="rv">
+        <div class="photo"><svg viewBox="0 0 576 100" aria-hidden="true"><use href="#wyde"/></svg><span data-i18n="photo"></span></div>
+        <figcaption data-i18n="founders">Елжан и Елтинжал — сын и отец, основатели WYDE</figcaption>
+      </figure>
+      <div class="story rv">
+        <div id="foText"></div>
+        <p class="sign" data-i18n="sign"></p>
+        <ul class="nums" id="nums"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. FAQ ===== -->
+<section id="faq">
+  <div class="wrap narrow">
+    <h2 class="rv" data-i18n="faqH"></h2>
+    <div class="faq rv" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== 11. ФУТЕР ===== -->
+<footer>
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 576 100" role="img" aria-label="WYDE"><use href="#wyde"/></svg>
+    <p data-i18n="tagline"></p>
+    <p class="muted small" data-i18n="origin"></p>
+    <div class="soc" id="soc" hidden></div>
+    <p class="copy" id="copy"></p>
+  </div>
+</footer>
+
+<a class="wa" id="waFloat" target="_blank" rel="noopener" hidden data-i18n-aria="waLabel"></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="policy" aria-labelledby="polH">
+  <div class="dlg">
+    <h3 id="polH" data-i18n="pH"></h3>
+    <ul id="polList"></ul>
+    <button class="btn" type="button" data-close data-i18n="pOk"></button>
+  </div>
+</dialog>
+
+<script>
+/* =====================================================================
+   НАСТРОЙКИ. Заполни позже — пустые поля просто не показываются на сайте.
+   ===================================================================== */
+const CONFIG = {
+  whatsapp: "",   // номер в формате 77001234567
+  instagram: "",  // ссылка, например https://instagram.com/wyde
+  tiktok: "",     // ссылка
+  threads: "",    // ссылка
+  company: "",    // название ТОО для футера
+  sheetUrl: "",   // URL Google Apps Script (пусто = демо-режим)
+  metaPixelId: "",
+  tiktokPixelId: ""
+};
+
+/* =====================================================================
+   ТЕКСТЫ. Все слова сайта на трёх языках лежат здесь: T.ru, T.kz, T.en.
+   Правь текст в кавычках — структуру и названия ключей не меняй.
+   ===================================================================== */
+const T = {};
+
+T.ru = {
+  title: "WYDE — обувь для широкой стопы. Первая тысяча",
+  desc: "WYDE — казахстанский бренд обуви, где широкая сама стелька и колодка, а не только верх. Узнай свой тип стопы и войди в первую тысячу.",
+  langLabel: "Язык сайта", waLabel: "Написать в WhatsApp",
+
+  heroEyebrow: "Обувь для широкой стопы · Казахстан",
+  h1a: "Широкая стопа — это сила.", h1b: "Узкая обувь — слабость обуви.",
+  heroSub: "WYDE — казахстанский бренд обуви для широкой стопы. Мы делаем широкой саму стельку и колодку, а не только верх.",
+  heroNote: "Готовых пар пока нет: мы строим их по реальным меркам первой тысячи. Возможно, по твоим.",
+  btnType: "Узнать свой тип стопы", btnJoin: "Стать одним из первой тысячи",
+  pts: ["Широкая стелька, а не только верх", "Колодки под узкую и под широкую пятку", "Старт — Казахстан. Дальше — весь мир"],
+  mq: ["Шире стандарта", "WYDE", "Стой широко"],
+
+  tK: "Тест стельки · 1 минута", tH: "Момент правды",
+  tLead: "Вытащи стельку из своих кроссовок. Положи на пол. Встань на неё всем весом. А теперь посмотри вниз.",
+  tAlt: "Стопа встаёт на стельку и выходит за её края", tKeyIns: "стелька", tKeyOver: "стопа за краем",
+  tSteps: ["Вытащи стельку из любой своей пары.", "Положи на пол и встань на неё всем весом.", "Измерь линейкой самое широкое место стопы и стельки."],
+  tFoot: "Ширина стопы, см", tInsole: "Ширина стельки, см", tBtn: "Показать правду",
+  tRes: "Твоя стопа шире стельки на <b>{x} мм</b>",
+  tPunch: "Это не ты не влез. <em>Это обувь не дотянула.</em>",
+  tMore: "Каждый шаг ты делаешь на краю, которого под тобой нет. WYDE расширяет саму стельку — чтобы опора была там, где стоишь ты.",
+  tEqH: "Стелька не уже твоей стопы.",
+  tEqP: "Редкий случай: эта пара держит твою ширину. Запомни её. Но ширина — только одна мерка из пяти. Пройди тест типа стопы.",
+  tErr: "Введи обе ширины в сантиметрах — например, 10,5 и 9,5.",
+  tFilled: "Эти цифры мы уже подставили в анкету.",
+  tHint: "Обычная «широкая» обувь (2E, 4E, wide) добавляет объём сверху, а стелька почти не меняется. В парах, которые мы измерили сами, она оставалась около 9,5 см. Сверху просторно, по бокам тесно.",
+
+  mK: "Манифест",
+  m1: "Обувь массово шьют под одну «среднюю» стопу.",
+  m2: "Всех остальных назвали <s>нестандартными</s>.",
+  m3: "С детства — тесные пары, стёртые ноги и тихая мысль: «дело во мне».",
+  m4: "Дело не в тебе.",
+  m5: "Нестандартных стоп не бывает. Бывает ленивый стандарт.",
+  m6: "WYDE шьёт под настоящие стопы.",
+
+  qK: "Тест · 4 вопроса", qH: "Узнай свой тип стопы",
+  qLead: "Четыре вопроса — и ты знаешь, как устроена твоя опора и какая обувь её достойна.",
+  qProg: "Вопрос {n} из 4", back: "Назад",
+  q: [
+    { t: "Какая у тебя пятка?", h: "Посмотри на стопу сзади или на свой след на полу.", o: [["Узкая", "заметно у́же переда"], ["Обычная", ""], ["Широкая", "почти как перед"]] },
+    { t: "Какой у тебя подъём?", h: "Это верх стопы — там, где шнуровка.", o: [["Низкий", "стопа плоская сверху"], ["Средний", ""], ["Высокий", "шнуровка вечно давит"]] },
+    { t: "Какие у тебя пальцы?", h: "Посмотри на стопу сверху.", o: [["Большой длиннее всех", ""], ["Второй длиннее большого", ""], ["Первые три вровень", "квадрат"]] },
+    { t: "Стопа широкая по всей длине?", h: "Или широкий только перед, а к пятке она сужается?", o: [["Да", "от пальцев до пятки"], ["Нет", "широкий только перед"]] }
+  ],
+  rK: "Твой тип стопы", rPower: "В чём сила", rNeed: "Что обязано быть в обуви",
+  types: {
+    fan: { n: "Веер", tag: "широкий перед, точная пятка",
+      p: "Перед раскрывается веером и берёт опору на себя, а пятка остаётся точной. Мощная площадка спереди — для толчка, рывка и резкой смены направления.",
+      s: "Широкая стелька в пучках и носок, где пальцам есть куда раскрыться. И при этом узкая пяточная часть — чтобы пятка сидела, а не болталась. Именно для этого у WYDE есть отдельная колодка под узкую пятку." },
+    mono: { n: "Монолит", tag: "широкая от пальцев до пятки",
+      p: "Опора по всей длине. Ты стоишь на земле всей площадью: тебя трудно сдвинуть и невозможно не заметить.",
+      s: "Стелька, широкая по всей длине, и широкая пяточная часть — без сужения посередине. Колодка WYDE под широкую пятку." },
+    plat: { n: "Платформа", tag: "широкая и низкая",
+      p: "Широкая и низкая — как платформа: центр тяжести ближе к земле, контакт с опорой максимальный. Такую устойчивость не купишь.",
+      s: "Ширина — в стельке, а не в высоте. Низкий объём верха, чтобы стопа не плавала: обычные 2E и 4E дают тебе лишнюю высоту и ни миллиметра нужной ширины." },
+    titan: { n: "Титан", tag: "широкая и высокая",
+      p: "Широкая, высокая, объёмная — стопа, которой нужно много места, потому что в ней много силы. Крупная опора под большую нагрузку.",
+      s: "И широкая стелька, и высокий объём верха. Глубокая посадка, шнуровка, которая раскрывается широко, и язычок, который не давит на подъём." },
+    arch: { n: "Арка", tag: "высокий подъём",
+      p: "Высокий подъём — природная пружина: свод собирает энергию шага и возвращает её. Упругий, лёгкий ход.",
+      s: "Запас по высоте над подъёмом, широкая шнуровка и мягкий язычок. А перед — на широкой стельке." },
+    square: { n: "Квадрат", tag: "пальцы в одну линию",
+      p: "Пальцы в одну линию — ты отталкиваешься сразу всем фронтом. Нагрузка делится поровну, опора — как стена.",
+      s: "Квадратный широкий носок. Зауженный мыс забирает место у крайних пальцев — тебе нужен прямой фронт, где помещаются все." }
+  },
+  toe: {
+    big: "Большой палец длиннее всех — носок должен быть асимметричным, с запасом над большим пальцем.",
+    second: "Второй палец длиннее — запас длины нужен по центру носка, а не только у большого пальца."
+  },
+  rJoin: "Занять место в первой тысяче", rAgain: "Пройти заново", rFilled: "Твой тип уже в анкете.",
+
+  sH: "Карточка для сторис",
+  sLead: "Покажи свой тип. Пусть друзья с такой же стопой узнают: дело было не в них.",
+  sDl: "Скачать", sShare: "Поделиться", sHold: "Или зажми картинку пальцем — и сохрани её в галерею.",
+  cMy: "Мой тип стопы", cWider: "Шире стельки на {x} мм", cAsk: "А какой тип у тебя?", cTag: "Обувь для широкой стопы",
+  shareText: "Мой тип стопы — {type}. А какой у тебя?",
+
+  dK: "Как устроен размер", dH: "Длина ≠ ширина ≠ объём",
+  dLead: "Размер на коробке знает только длину. А у стопы пять мерок.",
+  leg: ["Длина — от пятки до самого длинного пальца", "Ширина в пучках — самое широкое место переда", "Ширина пятки", "Обхват в пучках — лента вокруг стопы по косточкам", "Подъём — высота стопы сверху"],
+  whyH: "Почему 2E и 4E не спасают",
+  whyP: "Буквы полноты — E, 2E, 4E — считают по обхвату, то есть по объёму. Такую обувь шьют под стопу сразу и широкую, и высокую: материал добавляют сверху, а стелька остаётся почти прежней. Но у многих стопа широкая и низкая. Им достаётся лишняя высота — и ни миллиметра нужной ширины.",
+  factsH: "Что говорят данные",
+  facts: [
+    "20 тысяч 3D-сканов из 7 стран Восточной и Юго-Восточной Азии: стопа там в среднем шире, а подъём ниже, чем у европейцев и американцев.",
+    "1,2 млн сканов: одна ширина обуви подходит максимум 40% людей с одинаковой длиной стопы. Исследователи советуют разрабатывать обувь отдельно под каждый регион.",
+    "В обычных магазинах и на маркетплейсах Казахстана такую обувь почти невозможно найти и примерить."
+  ],
+  src: "Источник: Jurca и др., Scientific Reports, 2019 ↗",
+  jH: "Калькулятор полноты (JIS)",
+  jLead: "Японская шкала JIS, мужская таблица. Введи длину стопы и обхват в пучках.",
+  jLen: "Длина стопы, см", jGirth: "Обхват в пучках, см", jBtn: "Рассчитать",
+  jRes: "Твоя полнота по JIS: <b>{w}</b>",
+  jNote: "Это ориентир, а не приговор: буква описывает обхват, но не говорит, широкая у тебя стопа или высокая.",
+  jOver: "Шире G: шкала закончилась раньше, чем твоя стопа.",
+  jUnder: "У́же A по этой шкале.",
+  jErr: "Введи длину (20–32 см) и обхват (18–33 см).",
+  filled: "Подставили в анкету.",
+
+  meK: "Инструкция", meH: "Как измерить стопу за 5 минут",
+  meLead: "Нужны лист A4, ручка, линейка и сантиметровая лента. Меряй вечером: к вечеру стопа становится шире.",
+  steps: [
+    ["Лист к стене", "Положи лист A4 на твёрдый пол вплотную к стене."],
+    ["Встань и обведи", "Вечером, стоя: пятка касается стены, вес на обеих ногах. Обведи стопу, держа ручку вертикально."],
+    ["Длина", "Линейкой: от края листа у стены до кончика самого длинного пальца."],
+    ["Ширина в пучках и пятка", "Самое широкое место переда — ширина в пучках. Самое широкое место пятки — ширина пятки."],
+    ["Обхват", "Сантиметровой лентой вокруг стопы по косточкам у большого пальца и мизинца. Стоя, без натяга."],
+    ["Обе ноги", "Повтори для второй стопы: они почти всегда разные. В анкету запиши обе длины, а ширину — по той стопе, что шире."]
+  ],
+  meCta: "Мерки готовы — в анкету",
+
+  fK: "Анкета", fH: "Первая тысяча WYDE",
+  fLead: "Первые участники помогут создать колодку, выберут первую модель и цвет и первыми получат доступ к предзаказу. Это не рассылка. Это место в команде.",
+  g1: "О тебе", g2: "Твои мерки", g3: "Твой опыт", g4: "Твой голос",
+  name: "Имя", wa: "WhatsApp", ig: "Instagram <small>(необязательно)</small>", city: "Город", gender: "Пол",
+  lenL: "Длина левой стопы, см", lenR: "Длина правой стопы, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см",
+  girth: "Обхват в пучках, см <small>(необязательно)</small>",
+  insole: "Ширина стельки твоей обуви, см <small>(если стелька вынимается)</small>",
+  jis: "Полнота по JIS <small>(из калькулятора, необязательно)</small>",
+  type: "Тип стопы", typePh: "Пройди тест — подставим сами",
+  pains: "Где обычная обувь тебе проигрывает?", painsHint: "можно выбрать несколько",
+  brands: "Какие бренды и ширины пробовал — и что не так?", brandsPh: "Например: Mizuno 3E — сверху просторно, по бокам тесно",
+  model: "Какую модель шьём первой?", color: "Первый цвет",
+  opts: {
+    gender: ["Мужской", "Женский"],
+    pains: ["Тесно по бокам", "Давит сверху", "Болтается пятка", "Зажат мизинец", "К вечеру тесно"],
+    model: ["Повседневные кроссовки", "Беговые", "Кеды", "Ботинки"],
+    color: ["Чёрный", "Белый", "Бежевый", "Серый"]
+  },
+  consent: "Я согласен(на) на обработку персональных данных.", policyLink: "Политика — коротко",
+  submit: "Занять место в первой тысяче", sending: "Отправляем…",
+  eReq: "Заполни это поле", ePhone: "Введи номер полностью: +7 и 10 цифр",
+  eNum: "Введи число в сантиметрах, например 26,5", eRange: "Проверь значение — похоже на опечатку",
+  eConsent: "Без согласия мы не можем принять анкету", ePick: "Выбери вариант",
+  eSum: "Почти готово — проверь выделенные поля.",
+  fail: "Не получилось отправить — похоже, подвела связь. Твои ответы сохранены: попробуй ещё раз.",
+  waSend: "Отправить в WhatsApp",
+  okH: "Добро пожаловать в первую тысячу WYDE",
+  okP: "Твои мерки — уже часть будущей колодки. Мы напишем тебе в WhatsApp, когда откроем голосования и предзаказ.",
+  okBtn: "Позови друга с такой же стопой",
+  demo: "Демо-режим: анкета сохранена только на этом устройстве.",
+  copied: "Ссылка скопирована",
+  invite: "У тебя тоже широкая стопа? Здесь собирают первую тысячу для обуви, у которой широкая сама стелька. Пройди тест:",
+
+  foK: "История основателя", foH: "Мир не шьёт под таких, как я",
+  fo: [
+    "Мне 23. Моя стопа — 26 см в длину и 10,5 см в ширину. Пятка узкая, пальцы квадратом.",
+    "Я купил Hobibear 4E, Adidas 2E, Mizuno 3E, Nike wide. Вытащил стельки и положил рядом. Везде — 9,5 см.",
+    "Моя стопа шире на целый сантиметр. Четыре «широкие» пары — и ни одна не шире меня.",
+    "Мир не шьёт под таких, как я. Поэтому мы с папой решили шить сами."
+  ],
+  sign: "Елжан, сооснователь WYDE", photo: "Фото скоро",
+  founders: "Елжан и Елтинжал — сын и отец, основатели WYDE",
+  nums: [["26 см", "длина стопы"], ["10,5 см", "ширина стопы"], ["9,5 см", "стелька в «широких» парах"]],
+
+  faqH: "Вопросы",
+  faq: [
+    ["Когда старт?", "Дату не называем, пока не держим в руках готовый образец. Порядок такой: мерки первой тысячи → колодка → тестовые пары → предзаказ. Участники узнают обо всём первыми."],
+    ["Сколько будет стоить?", "Честно: цену назовём ближе к предзаказу. Не хотим обещать цифру, которую потом придётся менять."],
+    ["Какие будут модели?", "Выбираем вместе с первой тысячей. В анкете есть голосование: повседневные кроссовки, беговые, кеды или ботинки. Цвет — тоже."],
+    ["Будет доставка по Казахстану?", "Стартуем в Казахстане, доставку планируем по всей стране. Способы и условия объявим вместе с предзаказом. Дальше — весь мир."],
+    ["Зачем вам мои мерки и как вы их храните?", "Мы собираем первую базу реальных стоп Казахстана — таких данных пока нет. По ним мы создадим колодку. Мерки хранятся в закрытой таблице, доступ к ней есть только у команды WYDE. Мы никому их не продаём и не передаём. Номер нужен только для того, чтобы позвать тебя на предзаказ. Попросишь удалить — удалим."]
+  ],
+
+  pH: "Политика обработки данных — коротко",
+  pol: [
+    ["Кто", "Данные собирает команда WYDE{company}."],
+    ["Что", "Имя, номер WhatsApp, Instagram (по желанию), город, пол, мерки стоп и ответы анкеты."],
+    ["Зачем", "Чтобы создать колодку по реальным меркам, провести голосование за модель и цвет и пригласить тебя на предзаказ."],
+    ["Как храним", "В закрытой таблице, доступ — только у команды WYDE. Имя и контакты никому не передаём и не продаём. Для разработки колодки используем мерки без имени и контактов."],
+    ["Сколько", "Пока идёт проект — или пока ты не попросишь удалить."],
+    ["Твои права", "Напиши нам — покажем, исправим или удалим твои данные. Согласие можно отозвать в любой момент."]
+  ],
+  pDemo: "Сейчас сайт работает в демо-режиме: анкета сохраняется только в твоём браузере и никуда не отправляется.",
+  pOk: "Понятно",
+  tagline: "Шире стандарта.", origin: "Родом из Казахстана. Для настоящих стоп."
+};
+
+T.kz = {
+  title: "WYDE — кең табанға арналған аяқ киім. Алғашқы мыңдық",
+  desc: "WYDE — тек үсті емес, ұлтарағы мен қалыбының өзі кең қазақстандық аяқ киім бренді. Табан типіңді біл де, алғашқы мыңдыққа қосыл.",
+  langLabel: "Сайт тілі", waLabel: "WhatsApp-қа жазу",
+
+  heroEyebrow: "Кең табанға арналған аяқ киім · Қазақстан",
+  h1a: "Кең табан — күш.", h1b: "Тар келсе — кінә аяқ киімде.",
+  heroSub: "WYDE — кең табанға арналған қазақстандық аяқ киім бренді. Біз тек үстін емес, ұлтарақ пен қалыптың өзін кең жасаймыз.",
+  heroNote: "Дайын жұп әзірге жоқ: оны алғашқы мың адамның нақты өлшемі бойынша жасаймыз. Бәлкім, сенің өлшемің бойынша.",
+  btnType: "Табан типіңді біл", btnJoin: "Алғашқы мыңның бірі бол",
+  pts: ["Тек үсті емес — ұлтарақтың өзі кең", "Тар өкшеге де, кең өкшеге де бөлек қалып", "Бастауы — Қазақстан. Әрі қарай — бүкіл әлем"],
+  mq: ["Стандарттан кең", "WYDE", "Нық бас"],
+
+  tK: "Ұлтарақ сынағы · 1 минут", tH: "Шындық сәті",
+  tLead: "Кроссовкаңның ұлтарағын суырып ал. Еденге қой. Үстіне бар салмағыңмен тұр. Енді төмен қара.",
+  tAlt: "Табан ұлтараққа түсіп, оның шетінен асып тұр", tKeyIns: "ұлтарақ", tKeyOver: "шетінен асқан табан",
+  tSteps: ["Кез келген аяқ киіміңнің ұлтарағын суырып ал.", "Еденге қойып, үстіне бар салмағыңмен тұр.", "Сызғышпен табаныңның және ұлтарақтың ең кең жерін өлше."],
+  tFoot: "Табан ені, см", tInsole: "Ұлтарақ ені, см", tBtn: "Шындықты көрсет",
+  tRes: "Табаның ұлтарақтан <b>{x} мм</b> кең",
+  tPunch: "Сен сыймай қалған жоқсың. <em>Аяқ киім жетпей қалды.</em>",
+  tMore: "Әр қадамыңда астыңда жоқ жиекті басып келесің. WYDE ұлтарақтың өзін кеңейтеді — тірек дәл сен тұрған жерде болуы үшін.",
+  tEqH: "Ұлтарақ табаныңнан тар емес.",
+  tEqP: "Сирек жағдай: бұл жұп еніңе сай келеді. Есіңе сақтап қой. Бірақ ен — бес өлшемнің біреуі ғана. Табан типінің тестінен өт.",
+  tErr: "Екі енді де сантиметрмен енгіз — мысалы, 10,5 және 9,5.",
+  tFilled: "Бұл сандарды сауалнамаға өзіміз енгізіп қойдық.",
+  tHint: "Әдеттегі «кең» аяқ киім (2E, 4E, wide) көлемді үстіне қосады, ал ұлтарақ өзгермейді дерлік. Өзіміз өлшеген жұптарда ол шамамен 9,5 см болды. Үсті бос, екі бүйірі тар.",
+
+  mK: "Манифест",
+  m1: "Аяқ киім жаппай бір ғана «орташа» табанға тігіледі.",
+  m2: "Қалғандарына <s>«стандартқа сай емес»</s> деген ат тағылды.",
+  m3: "Бала күннен — тар аяқ киім, қажалған аяқ және іштегі бір ой: «мәселе менде шығар».",
+  m4: "Мәселе сенде емес.",
+  m5: "Стандартқа сыймайтын табан болмайды. Жалқау стандарт болады.",
+  m6: "WYDE нағыз табанға тігеді.",
+
+  qK: "Тест · 4 сұрақ", qH: "Табан типіңді біл",
+  qLead: "Төрт сұрақ — тірегің қалай құрылғанын және оған қандай аяқ киім лайық екенін білесің.",
+  qProg: "{n}-сұрақ · барлығы 4", back: "Артқа",
+  q: [
+    { t: "Өкшең қандай?", h: "Табаныңа артынан немесе едендегі ізіңе қара.", o: [["Тар", "алдыңғы жағынан анық жіңішке"], ["Қалыпты", ""], ["Кең", "алдыңғы жағымен шамалас"]] },
+    { t: "Табаныңның үсті қандай?", h: "Бұл — бау байланатын жер, табанның үстіңгі жағы.", o: [["Аласа", "үсті жайпақ"], ["Орташа", ""], ["Биік", "бау үнемі қысады"]] },
+    { t: "Башпайларың қандай?", h: "Табаныңа үстінен қара.", o: [["Бас бармақ бәрінен ұзын", ""], ["Екінші башпай ұзынырақ", ""], ["Алғашқы үшеуі бір деңгейде", "шаршы"]] },
+    { t: "Табаның өн бойы кең бе?", h: "Әлде тек алды кең, өкшеге қарай тарыла ма?", o: [["Иә", "башпайдан өкшеге дейін"], ["Жоқ", "тек алды кең"]] }
+  ],
+  rK: "Сенің табан типің", rPower: "Күшің неде", rNeed: "Аяқ киіміңде міндетті түрде не болуы керек",
+  types: {
+    fan: { n: "Қанат", tag: "алды кең, өкшесі нақты",
+      p: "Табанның алды қанатша жайылып, тіректі өзіне алады, ал өкше нақты қалады. Алдыңда — қуатты алаң: серпілуге, жұлқынуға және бағытты күрт өзгертуге арналған.",
+      s: "Табанның ең кең жерінде — кең ұлтарақ, ал тұмсығында башпайлар еркін жайылатын орын болуы керек. Сонымен бірге өкше тұсы тар болғаны жөн — өкше бос тұрмай, нық отыруы үшін. WYDE-тың тар өкшеге арналған бөлек қалыбы дәл осы үшін бар." },
+    mono: { n: "Жартас", tag: "башпайдан өкшеге дейін кең",
+      p: "Тірек — табанның өн бойында. Жерге бүкіл аумағыңмен тұрасың: сені орныңнан қозғау қиын, байқамау мүмкін емес.",
+      s: "Өн бойы кең ұлтарақ және кең өкше тұсы — ортасында тарылмайтын. WYDE-тың кең өкшеге арналған қалыбы." },
+    plat: { n: "Тұғыр", tag: "кең әрі аласа",
+      p: "Кең әрі аласа — тұғыр іспетті: ауырлық орталығың жерге жақын, тірек ауданың барынша үлкен. Мұндай орнықтылық сатып алынбайды.",
+      s: "Кеңдік биіктікте емес, ұлтарақта болуы керек. Табан ішінде бос жылжымауы үшін үсті аласа пішілген аяқ киім керек: әдеттегі 2E мен 4E саған артық биіктік береді, ал қажетті еннен бір миллиметр де қоспайды." },
+    titan: { n: "Алып", tag: "кең әрі биік",
+      p: "Кең, биік, көлемді — күші мол болғандықтан орынды да көп қажет ететін табан. Үлкен жүкке арналған ірі тірек.",
+      s: "Кең ұлтарақ та, көлемді үсті де керек. Терең отырыс, кең ашылатын бау және табан үстін қыспайтын тілше." },
+    arch: { n: "Күмбез", tag: "үсті биік",
+      p: "Табан үстінің биіктігі — табиғи серіппе: табан күмбезі қадам қуатын жинап, қайта береді. Жеңіл, серпінді жүріс.",
+      s: "Табан үстіне биіктік қоры, кең ашылатын бау және жұмсақ тілше. Ал алдыңғы жағы кең ұлтарақта тұруы керек." },
+    square: { n: "Шаршы", tag: "башпайлары бір сызықта",
+      p: "Башпайлар бір сызықта — бүкіл алдыңғы шебіңмен бірден серпілесің. Салмақ тең бөлінеді, тірегің қабырғадай берік.",
+      s: "Шаршы пішінді кең тұмсық. Сүйір тұмсық шеткі башпайлардың орнын тартып алады — саған бәрі сыятын түзу алдыңғы жақ керек." }
+  },
+  toe: {
+    big: "Бас бармағың бәрінен ұзын — тұмсық асимметриялы, бас бармақ тұсында қоры бар болуы керек.",
+    second: "Екінші башпайың ұзынырақ — қор тек бас бармақ тұсында емес, тұмсықтың ортасында да керек."
+  },
+  rJoin: "Алғашқы мыңнан орын ал", rAgain: "Тестті қайта өту", rFilled: "Типің сауалнамаға енгізілді.",
+
+  sH: "Сторис карточкасы",
+  sLead: "Типіңді көрсет. Табаны сендей достарың да білсін: мәселе оларда болған жоқ.",
+  sDl: "Жүктеп алу", sShare: "Бөлісу", sHold: "Немесе суретті басып тұрып, галереяға сақтап ал.",
+  cMy: "Менің табан типім", cWider: "Ұлтарақтан {x} мм кең", cAsk: "Ал сенің типің қандай?", cTag: "Кең табанға арналған аяқ киім",
+  shareText: "Менің табан типім — {type}. Ал сенікі қандай?",
+
+  dK: "Өлшем қалай құрылған", dH: "Ұзындық ≠ ен ≠ көлем",
+  dLead: "Қораптағы өлшем тек ұзындықты біледі. Ал табанда бес өлшем бар.",
+  leg: ["Ұзындық — өкшеден ең ұзын башпайға дейін", "Табан ені — алдыңғы жақтың ең кең жері", "Өкше ені", "Табан айналымы — буын тұсынан таспамен айналдыра өлшенеді", "Көтерілім — табан үстінің биіктігі"],
+  whyH: "2E мен 4E неге көмектеспейді",
+  whyP: "Толықтық әріптері — E, 2E, 4E — айналыммен, яғни көлеммен есептеледі. Мұндай аяқ киім бірден әрі кең, әрі биік табанға тігіледі: материал үстіне қосылады, ал ұлтарақ сол күйі дерлік қалады. Бірақ көп адамның табаны кең әрі аласа. Оларға артық биіктік бұйырады — ал қажетті еннен бір миллиметр де тимейді.",
+  factsH: "Деректер не дейді",
+  facts: [
+    "Шығыс және Оңтүстік-Шығыс Азияның 7 елінен алынған 20 мың 3D-скан: ол жақта табан еуропалықтар мен америкалықтарға қарағанда орта есеппен кеңірек, ал көтерілімі аласарақ.",
+    "1,2 млн скан: аяқ киімнің бір ғана ені табан ұзындығы бірдей адамдардың әрі кетсе 40%-ына сай келеді. Зерттеушілер аяқ киімді әр аймаққа бөлек әзірлеуге кеңес береді.",
+    "Қазақстанның әдеттегі дүкендері мен маркетплейстерінен мұндай аяқ киімді тауып, киіп көру мүмкін емес дерлік."
+  ],
+  src: "Дереккөз: Jurca және т.б., Scientific Reports, 2019 ↗",
+  jH: "Толықтық калькуляторы (JIS)",
+  jLead: "Жапонияның JIS шкаласы, ерлер кестесі. Табан ұзындығы мен айналымын енгіз.",
+  jLen: "Табан ұзындығы, см", jGirth: "Табан айналымы, см", jBtn: "Есептеу",
+  jRes: "JIS бойынша толықтығың: <b>{w}</b>",
+  jNote: "Бұл — үкім емес, бағдар ғана: әріп айналымды сипаттайды, бірақ табаның кең бе, биік пе — оны айтпайды.",
+  jOver: "G-ден де кең: шкала табаныңнан бұрын таусылды.",
+  jUnder: "Бұл шкала бойынша A-дан жіңішке.",
+  jErr: "Ұзындықты (20–32 см) және айналымды (18–33 см) енгіз.",
+  filled: "Сауалнамаға енгізілді.",
+
+  meK: "Нұсқаулық", meH: "Табанды 5 минутта қалай өлшеуге болады",
+  meLead: "Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Кешке өлше: кешке қарай табан кеңейеді.",
+  steps: [
+    ["Парақты қабырғаға тақа", "A4 парақты қатты еденге, қабырғаға тақап қой."],
+    ["Тұрып, айналдыра сыз", "Кешке, түрегеп тұрып өлше: өкшең қабырғаға тиіп тұрсын, салмағың екі аяққа тең түссін. Қаламды тік ұстап, табаныңды айналдыра сыз."],
+    ["Ұзындық", "Сызғышпен: парақтың қабырға жақ шетінен ең ұзын башпайдың ұшына дейін."],
+    ["Табан ені мен өкше ені", "Алдыңғы жақтың ең кең жері — табан ені. Өкшенің ең кең жері — өкше ені."],
+    ["Айналым", "Өлшеуіш таспаны бас бармақ пен шынашақ түбіндегі буындар тұсынан айналдыр. Тұрып, таспаны қатты тартпай өлше."],
+    ["Екі аяқ та", "Екінші табаныңды да өлше: олар бірдей бола бермейді. Сауалнамаға екі ұзындықты да жаз, ал енді кеңірек табаның бойынша көрсет."]
+  ],
+  meCta: "Өлшемдерім дайын — сауалнамаға",
+
+  fK: "Сауалнама", fH: "WYDE алғашқы мыңдығы",
+  fLead: "Алғашқы қатысушылар қалып жасауға көмектеседі, бірінші модель мен түсті таңдайды және алдын ала тапсырысқа бірінші болып қол жеткізеді. Бұл — хабарлама тарату тізімі емес. Бұл — командадағы орның.",
+  g1: "Өзің туралы", g2: "Өлшемдерің", g3: "Тәжірибең", g4: "Дауысың",
+  name: "Атың", wa: "WhatsApp", ig: "Instagram <small>(міндетті емес)</small>", city: "Қала", gender: "Жынысың",
+  lenL: "Сол табан ұзындығы, см", lenR: "Оң табан ұзындығы, см", ball: "Табан ені, см", heel: "Өкше ені, см",
+  girth: "Табан айналымы, см <small>(міндетті емес)</small>",
+  insole: "Қазіргі аяқ киіміңнің ұлтарақ ені, см <small>(ұлтарақ суырылса)</small>",
+  jis: "JIS бойынша толықтық <small>(калькулятордан, міндетті емес)</small>",
+  type: "Табан типі", typePh: "Тесттен өт — өзіміз енгіземіз",
+  pains: "Әдеттегі аяқ киім саған қай жерде жеңіледі?", painsHint: "бірнешеуін таңдауға болады",
+  brands: "Қандай брендтер мен ендерді киіп көрдің — не ұнамады?", brandsPh: "Мысалы: Mizuno 3E — үсті бос, бүйірі тар",
+  model: "Бірінші қай модельді тігеміз?", color: "Бірінші түс",
+  opts: {
+    gender: ["Ер", "Әйел"],
+    pains: ["Екі бүйірі тар", "Үстінен қысады", "Өкше бос тұрады", "Шынашақ қысылады", "Кешке қарай тарылады"],
+    model: ["Күнделікті кроссовка", "Жүгіруге арналған", "Кеды", "Бәтеңке"],
+    color: ["Қара", "Ақ", "Беж", "Сұр"]
+  },
+  consent: "Жеке деректерімді өңдеуге келісемін.", policyLink: "Саясат — қысқаша",
+  submit: "Алғашқы мыңнан орын алу", sending: "Жіберілуде…",
+  eReq: "Бұл өрісті толтыр", ePhone: "Нөмірді толық енгіз: +7 және 10 цифр",
+  eNum: "Санды сантиметрмен енгіз, мысалы 26,5", eRange: "Мәнді тексер — қате терілген сияқты",
+  eConsent: "Келісімсіз сауалнаманы қабылдай алмаймыз", ePick: "Бір нұсқаны таңда",
+  eSum: "Сәл қалды — белгіленген өрістерді тексер.",
+  fail: "Жіберілмеді — байланыс үзілген сияқты. Жауаптарың сақталды: қайта жіберіп көр.",
+  waSend: "WhatsApp арқылы жіберу",
+  okH: "WYDE алғашқы мыңдығына қош келдің",
+  okP: "Өлшемдерің енді болашақ қалыптың бір бөлігі. Дауыс беру мен алдын ала тапсырыс ашылғанда WhatsApp-қа жазамыз.",
+  okBtn: "Табаны сендей досыңды шақыр",
+  demo: "Демо-режим: сауалнама тек осы құрылғыда сақталды.",
+  copied: "Сілтеме көшірілді",
+  invite: "Сенің де табаның кең бе? Мұнда ұлтарағының өзі кең аяқ киім үшін алғашқы мыңдық жиналып жатыр. Тесттен өт:",
+
+  foK: "Негізін қалаушының оқиғасы", foH: "Әлем мен сияқтыларға тікпейді",
+  fo: [
+    "Мен 23 жастамын. Табанымның ұзындығы — 26 см, ені — 10,5 см. Өкшем тар, башпайларым шаршы.",
+    "Hobibear 4E, Adidas 2E, Mizuno 3E, Nike wide сатып алдым. Ұлтарақтарын суырып, қатар қойдым. Бәрінде — 9,5 см.",
+    "Менің табаным тұтас бір сантиметрге кең. Төрт «кең» жұп — біреуі де менен кең емес.",
+    "Әлем мен сияқтыларға тікпейді. Сондықтан әкем екеуміз өзіміз тігуді ұйғардық."
+  ],
+  sign: "Елжан, WYDE негізін қалаушылардың бірі", photo: "Фото жақында",
+  founders: "Елжан мен әкесі Елтинжал — WYDE негізін қалаушылар",
+  nums: [["26 см", "табан ұзындығы"], ["10,5 см", "табан ені"], ["9,5 см", "«кең» жұптардағы ұлтарақ"]],
+
+  faqH: "Сұрақтар",
+  faq: [
+    ["Қашан басталады?", "Қолымызда дайын үлгі болмайынша күнін атамаймыз. Реті мынадай: алғашқы мыңның өлшемдері → қалып → сынақ жұптар → алдын ала тапсырыс. Қатысушылар бәрін бірінші болып біледі."],
+    ["Бағасы қанша болады?", "Шынын айтсақ: бағаны алдын ала тапсырысқа жақын жариялаймыз. Кейін өзгертуге тура келетін санды уәде еткіміз келмейді."],
+    ["Қандай модельдер болады?", "Алғашқы мыңмен бірге таңдаймыз. Сауалнамада дауыс беру бар: күнделікті кроссовка, жүгіруге арналған, кеды немесе бәтеңке. Түсін де бірге таңдаймыз."],
+    ["Қазақстан бойынша жеткізу бола ма?", "Қазақстаннан бастаймыз, жеткізуді бүкіл ел бойынша жоспарлап отырмыз. Тәсілдері мен шарттарын алдын ала тапсырыспен бірге жариялаймыз. Әрі қарай — бүкіл әлем."],
+    ["Өлшемдерім не үшін керек және қалай сақталады?", "Біз Қазақстандағы нақты табандардың алғашқы базасын жинап жатырмыз — мұндай дерек әзірге жоқ. Қалыпты соған қарап жасаймыз. Өлшемдер жабық кестеде сақталады, оған тек WYDE командасы кіре алады. Оларды ешкімге сатпаймыз және бермейміз. Нөмірің тек алдын ала тапсырысқа шақыру үшін керек. Өшіруді сұрасаң — өшіреміз."]
+  ],
+
+  pH: "Деректерді өңдеу саясаты — қысқаша",
+  pol: [
+    ["Кім", "Деректерді WYDE командасы{company} жинайды."],
+    ["Не", "Атың, WhatsApp нөмірің, Instagram (қаласаң), қала, жыныс, табан өлшемдері және сауалнама жауаптары."],
+    ["Не үшін", "Нақты өлшемдер бойынша қалып жасау, модель мен түске дауыс беруді өткізу және сені алдын ала тапсырысқа шақыру үшін."],
+    ["Қалай сақталады", "Жабық кестеде, оған тек WYDE командасы кіре алады. Атың мен байланыс деректеріңді ешкімге бермейміз және сатпаймыз. Қалыпты әзірлеуге өлшемдер атсыз және байланыс деректерінсіз қолданылады."],
+    ["Қанша уақыт", "Жоба жүріп тұрғанда — немесе өшіруді сұрағаныңа дейін."],
+    ["Сенің құқығың", "Бізге жаз — деректеріңді көрсетеміз, түзетеміз немесе өшіреміз. Келісіміңді кез келген уақытта қайтарып ала аласың."]
+  ],
+  pDemo: "Қазір сайт демо-режимде жұмыс істеп тұр: сауалнама тек сенің браузеріңде сақталады және ешқайда жіберілмейді.",
+  pOk: "Түсінікті",
+  tagline: "Стандарттан кең.", origin: "Қазақстаннан шыққан. Нағыз табандар үшін."
+};
+
+T.en = {
+  title: "WYDE — footwear for wide feet. The First Thousand",
+  desc: "WYDE is a footwear brand from Kazakhstan that widens the insole and the last itself — not just the upper. Find your foot type and join the first thousand.",
+  langLabel: "Site language", waLabel: "Message us on WhatsApp",
+
+  heroEyebrow: "Footwear for wide feet · Born in Kazakhstan",
+  h1a: "Wide feet are power.", h1b: "Narrow shoes are the weakness.",
+  heroSub: "WYDE is a footwear brand from Kazakhstan, built for wide feet. We widen the insole and the last itself — not just the upper.",
+  heroNote: "No pairs exist yet: we're building them from the real measurements of our first thousand. Maybe yours.",
+  btnType: "Find your foot type", btnJoin: "Join the first thousand",
+  pts: ["A wider insole — not just a roomier upper", "Separate lasts for narrow and wide heels", "Starting in Kazakhstan. Then the world"],
+  mq: ["Wider than the standard", "WYDE", "Stand wide"],
+
+  tK: "The insole test · 1 minute", tH: "The moment of truth",
+  tLead: "Pull the insole out of your sneakers. Lay it on the floor. Stand on it with your full weight. Now look down.",
+  tAlt: "A foot steps onto an insole and spills over its edges", tKeyIns: "insole", tKeyOver: "foot past the edge",
+  tSteps: ["Pull the insole out of any pair you own.", "Lay it on the floor and stand on it with your full weight.", "With a ruler, measure the widest part of your foot and of the insole."],
+  tFoot: "Foot width, cm", tInsole: "Insole width, cm", tBtn: "Show me the truth",
+  tRes: "Your foot is wider than the insole by <b>{x} mm</b>",
+  tPunch: "You didn't fail to fit. <em>The shoe failed to show up.</em>",
+  tMore: "With every step you land on an edge that isn't there. WYDE widens the insole itself — so the ground is exactly where you stand.",
+  tEqH: "This insole isn't narrower than your foot.",
+  tEqP: "That's rare: this pair holds your width. Remember it. But width is just one of five measurements. Take the foot type test.",
+  tErr: "Enter both widths in centimetres — for example, 10.5 and 9.5.",
+  tFilled: "We've already added these numbers to your form.",
+  tHint: "Typical “wide” shoes (2E, 4E, wide) add volume on top, while the insole barely changes. In the pairs we measured ourselves, it stayed at around 9.5 cm. Roomy above, tight at the sides.",
+
+  mK: "Manifesto",
+  m1: "Shoes are mass-produced for one “average” foot.",
+  m2: "Everyone else got labelled <s>non-standard</s>.",
+  m3: "Tight pairs since childhood. Raw heels. And one quiet thought: “it must be me.”",
+  m4: "It was never you.",
+  m5: "There are no non-standard feet. Only a lazy standard.",
+  m6: "WYDE builds for real feet.",
+
+  qK: "The test · 4 questions", qH: "Find your foot type",
+  qLead: "Four questions — and you'll know how your foundation is built, and what kind of shoe it deserves.",
+  qProg: "Question {n} of 4", back: "Back",
+  q: [
+    { t: "What's your heel like?", h: "Look at your foot from behind, or at your footprint on the floor.", o: [["Narrow", "clearly narrower than the front"], ["Regular", ""], ["Wide", "almost as wide as the front"]] },
+    { t: "How high is your instep?", h: "That's the top of your foot — under the laces.", o: [["Low", "flat on top"], ["Medium", ""], ["High", "laces always press"]] },
+    { t: "What about your toes?", h: "Look down at your foot.", o: [["Big toe is the longest", ""], ["Second toe is longer", ""], ["First three line up", "square"]] },
+    { t: "Is your foot wide all the way down?", h: "Or is only the front wide, narrowing toward the heel?", o: [["Yes", "from toes to heel"], ["No", "only the front is wide"]] }
+  ],
+  rK: "Your foot type", rPower: "Your power", rNeed: "What your shoe must have",
+  types: {
+    fan: { n: "Delta", tag: "wide front, precise heel",
+      p: "Your forefoot fans out and takes the load, while your heel stays precise. A powerful platform up front — made for push-off, bursts and sharp cuts.",
+      s: "A wide insole at the ball and a toe box where your toes can actually splay. Plus a narrow heel cup, so your heel locks in instead of slipping. That's exactly why WYDE has a dedicated narrow-heel last." },
+    mono: { n: "Monolith", tag: "wide from toes to heel",
+      p: "Support along the entire length. You meet the ground with your whole foot: hard to move, impossible to miss.",
+      s: "An insole that's wide end to end, and a wide heel — no pinch in the middle. The WYDE wide-heel last." },
+    plat: { n: "Platform", tag: "wide and low",
+      p: "Wide and low, like a platform: your centre of gravity sits closer to the ground and your contact area is maxed out. Stability you can't buy.",
+      s: "Width in the insole, not in the height. A low-volume upper so your foot doesn't swim: standard 2E and 4E give you height you don't need — and not one millimetre of the width you do." },
+    titan: { n: "Titan", tag: "wide and high",
+      p: "Wide, tall, full-volume — a foot that needs a lot of room because there's a lot of strength in it. A big base for big loads.",
+      s: "A wide insole and a high-volume upper. A deep fit, lacing that opens wide, and a tongue that never presses on your instep." },
+    arch: { n: "Arch", tag: "high instep",
+      p: "A high instep is a natural spring: your arch loads the energy of every step and gives it back. A light, elastic stride.",
+      s: "Extra height over the instep, wide-opening lacing and a soft tongue. All of it on a wide insole up front." },
+    square: { n: "Block", tag: "toes in one line",
+      p: "Toes in a straight line — you push off with your whole front at once. The load is shared evenly. You stand like a wall.",
+      s: "A square, wide toe box. A tapered toe steals room from your outer toes — you need a straight front where everyone fits." }
+  },
+  toe: {
+    big: "Your big toe is the longest — the toe box should be asymmetric, with room right over the big toe.",
+    second: "Your second toe is longer — you need extra length at the centre of the toe box, not just by the big toe."
+  },
+  rJoin: "Claim your spot in the first thousand", rAgain: "Retake the test", rFilled: "Your type is already in the form.",
+
+  sH: "Your story card",
+  sLead: "Show your type. Let your friends with the same feet know: it was never them.",
+  sDl: "Download", sShare: "Share", sHold: "Or press and hold the image to save it to your gallery.",
+  cMy: "My foot type", cWider: "{x} mm wider than my insole", cAsk: "What's yours?", cTag: "Footwear for wide feet",
+  shareText: "My foot type is {type}. What's yours?",
+
+  dK: "How sizing really works", dH: "Length ≠ width ≠ volume",
+  dLead: "The size on the box only knows your length. Your foot has five measurements.",
+  leg: ["Length — from heel to the longest toe", "Ball width — the widest part of the forefoot", "Heel width", "Ball girth — a tape around the foot at the ball joints", "Instep — how tall your foot is on top"],
+  whyH: "Why 2E and 4E don't save you",
+  whyP: "Width letters — E, 2E, 4E — are based on girth, which means volume. Those shoes are built for a foot that's both wide and tall: material is added on top while the insole stays almost the same. But many feet are wide and low. They get height they don't need — and not one millimetre of the width they do.",
+  factsH: "What the data says",
+  facts: [
+    "20,000 3D scans from 7 countries in East and Southeast Asia: on average, feet there are wider and insteps lower than among Europeans and Americans.",
+    "1.2 million scans: a single shoe width fits at most 40% of people with the same foot length. The researchers recommend designing footwear separately for each region.",
+    "In regular stores and on marketplaces in Kazakhstan, shoes like these are nearly impossible to find and try on."
+  ],
+  src: "Source: Jurca et al., Scientific Reports, 2019 ↗",
+  jH: "Width calculator (JIS)",
+  jLead: "Japan's JIS scale, men's table. Enter your foot length and ball girth.",
+  jLen: "Foot length, cm", jGirth: "Ball girth, cm", jBtn: "Calculate",
+  jRes: "Your JIS width: <b>{w}</b>",
+  jNote: "It's a reference point, not a verdict: the letter describes girth — it can't tell whether your foot is wide or tall.",
+  jOver: "Beyond G: the chart ran out before your foot did.",
+  jUnder: "Narrower than A on this scale.",
+  jErr: "Enter your length (20–32 cm) and girth (18–33 cm).",
+  filled: "Added to your form.",
+
+  meK: "How-to", meH: "Measure your feet in 5 minutes",
+  meLead: "You'll need a sheet of A4, a pen, a ruler and a soft tape measure. Measure in the evening: feet get wider through the day.",
+  steps: [
+    ["Paper to the wall", "Lay a sheet of A4 on a hard floor, flush against the wall."],
+    ["Stand and trace", "In the evening, standing: heel touching the wall, weight on both feet. Trace your foot with the pen held upright."],
+    ["Length", "With a ruler: from the wall edge of the sheet to the tip of your longest toe."],
+    ["Ball width and heel", "The widest part of the forefoot is your ball width. The widest part of the heel is your heel width."],
+    ["Girth", "Wrap the tape around your foot at the joints behind the big toe and the little toe. Standing, no pulling."],
+    ["Both feet", "Repeat for the other foot: they're almost never identical. Enter both lengths, and the width of the wider foot."]
+  ],
+  meCta: "Got my numbers — to the form",
+
+  fK: "The form", fH: "The WYDE First Thousand",
+  fLead: "The first members will help shape the last, choose the first model and colour, and get first access to pre-order. This isn't a mailing list. It's a seat on the team.",
+  g1: "About you", g2: "Your measurements", g3: "Your experience", g4: "Your vote",
+  name: "Name", wa: "WhatsApp", ig: "Instagram <small>(optional)</small>", city: "City", gender: "Gender",
+  lenL: "Left foot length, cm", lenR: "Right foot length, cm", ball: "Ball width, cm", heel: "Heel width, cm",
+  girth: "Ball girth, cm <small>(optional)</small>",
+  insole: "Insole width of your current shoes, cm <small>(if it comes out)</small>",
+  jis: "JIS width <small>(from the calculator, optional)</small>",
+  type: "Foot type", typePh: "Take the test — we'll fill it in",
+  pains: "Where do regular shoes let you down?", painsHint: "pick as many as you like",
+  brands: "Which brands and widths have you tried — and what went wrong?", brandsPh: "E.g. Mizuno 3E — roomy on top, tight at the sides",
+  model: "Which model do we build first?", color: "First colour",
+  opts: {
+    gender: ["Male", "Female"],
+    pains: ["Tight at the sides", "Pressure on top", "Heel slips", "Little toe gets crushed", "Tight by evening"],
+    model: ["Everyday sneakers", "Running shoes", "Canvas sneakers", "Boots"],
+    color: ["Black", "White", "Beige", "Grey"]
+  },
+  consent: "I agree to the processing of my personal data.", policyLink: "The short policy",
+  submit: "Claim my spot in the first thousand", sending: "Sending…",
+  eReq: "This one's required", ePhone: "Enter the full number: +7 and 10 digits",
+  eNum: "Enter a number in centimetres, e.g. 26.5", eRange: "Check this value — it looks like a typo",
+  eConsent: "We can't accept the form without your consent", ePick: "Pick an option",
+  eSum: "Almost there — check the highlighted fields.",
+  fail: "Couldn't send — looks like the connection dropped. Your answers are saved: please try again.",
+  waSend: "Send via WhatsApp",
+  okH: "Welcome to the WYDE First Thousand",
+  okP: "Your measurements are now part of the future last. We'll message you on WhatsApp when voting and pre-orders open.",
+  okBtn: "Bring a friend with the same feet",
+  demo: "Demo mode: your form is saved on this device only.",
+  copied: "Link copied",
+  invite: "Got wide feet too? They're gathering the first thousand for shoes with a truly wider insole. Take the test:",
+
+  foK: "The founder's story", foH: "The world doesn't make shoes for feet like mine",
+  fo: [
+    "I'm 23. My foot is 26 cm long and 10.5 cm wide. Narrow heel, square toes.",
+    "I bought Hobibear 4E, Adidas 2E, Mizuno 3E, Nike wide. I pulled out the insoles and laid them side by side. Every single one: 9.5 cm.",
+    "My foot is a full centimetre wider. Four “wide” pairs — and not one of them wider than me.",
+    "The world doesn't make shoes for feet like mine. So my dad and I decided to make them ourselves."
+  ],
+  sign: "Yelzhan, co-founder of WYDE", photo: "Photo coming soon",
+  founders: "Yelzhan and his father Yeltinzhal — the founders of WYDE",
+  nums: [["26 cm", "foot length"], ["10.5 cm", "foot width"], ["9.5 cm", "insole in “wide” pairs"]],
+
+  faqH: "Questions",
+  faq: [
+    ["When do you launch?", "We won't name a date until we're holding a finished sample. The order is: first-thousand measurements → the last → test pairs → pre-order. Members hear everything first."],
+    ["How much will they cost?", "Honestly: we'll announce the price closer to pre-order. We'd rather not promise a number we'd have to change."],
+    ["Which models are coming?", "We're choosing together with the first thousand. The form has a vote: everyday sneakers, running shoes, canvas sneakers or boots. Colour too."],
+    ["Will you deliver across Kazakhstan?", "We're starting in Kazakhstan, with delivery planned nationwide. Methods and terms will be announced with the pre-order. After that — the world."],
+    ["Why do you need my measurements, and how do you store them?", "We're building the first database of real feet in Kazakhstan — that data doesn't exist yet. We'll use it to create our last. Measurements are kept in a private spreadsheet that only the WYDE team can access. We never sell or share them. Your number is only used to invite you to pre-order. Ask us to delete your data — and we will."]
+  ],
+
+  pH: "Data policy — the short version",
+  pol: [
+    ["Who", "Your data is collected by the WYDE team{company}."],
+    ["What", "Name, WhatsApp number, Instagram (optional), city, gender, foot measurements and your answers."],
+    ["Why", "To build a last from real measurements, run the vote on model and colour, and invite you to pre-order."],
+    ["How we store it", "In a private spreadsheet only the WYDE team can access. We never share or sell your name or contacts. For last development we use measurements without names or contacts."],
+    ["How long", "For as long as the project runs — or until you ask us to delete it."],
+    ["Your rights", "Message us and we'll show, correct or delete your data. You can withdraw your consent at any time."]
+  ],
+  pDemo: "The site is currently running in demo mode: your form is saved in your browser only and isn't sent anywhere.",
+  pOk: "Got it",
+  tagline: "Wider than the standard.", origin: "From Kazakhstan. For real feet."
+};
+
+/* =====================================================================
+   ЛОГИКА САЙТА. Ниже править не обязательно.
+   ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const HTML_LANG = { ru: "ru", kz: "kk", en: "en" };
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+};
+const state = { lang: "ru", test: null, quiz: { step: 0, a: [], done: false }, typeKeys: [], toe: "", jis: null };
+let L = T.ru;
+
+const fill = (s, v = {}) => String(s).replace(/\{(\w+)\}/g, (m, k) => (k in v ? v[k] : m));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+/* число из поля: понимает запятую; если ввели миллиметры (265) — переводит в сантиметры */
+const num = v => { let n = parseFloat(String(v).replace(",", ".").replace(/[^\d.]/g, "")); if (isNaN(n)) return NaN; if (n >= 40) n /= 10; return Math.round(n * 10) / 10; };
+const fmt = n => (state.lang === "en" ? String(n) : String(n).replace(".", ","));
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2600); }
+function track(ev) { try { if (window.fbq) fbq("trackCustom", ev); if (window.ttq) ttq.track(ev); } catch (e) {} }
+
+/* ---------- Языки ---------- */
+function setLang(lang, save) {
+  if (!T[lang]) lang = "ru";
+  state.lang = lang; L = T[lang];
+  document.documentElement.lang = HTML_LANG[lang];
+  document.title = L.title;
+  const md = $('meta[name="description"]'); if (md) md.content = L.desc;
+  $$(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  $$("[data-i18n]").forEach(el => { el.textContent = L[el.dataset.i18n] ?? ""; });
+  $$("[data-i18n-html]").forEach(el => { el.innerHTML = L[el.dataset.i18nHtml] ?? ""; });
+  $$("[data-i18n-ph]").forEach(el => { el.placeholder = L[el.dataset.i18nPh] ?? ""; });
+  $$("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", L[el.dataset.i18nAria] ?? ""));
+  $$("[data-list]").forEach(el => { el.innerHTML = L[el.dataset.list].map((s, i) => `<li data-n="${i + 1}">${esc(s)}</li>`).join(""); });
+  renderStatic(); renderChips(); renderTest(); renderQuiz(); renderJis(); renderType(); drawStory();
+  if (save) store.set("wyde_lang", lang);
+}
+
+/* ---------- Иконки шагов «как измерить» ---------- */
+const FOOT = t => `<use href="#footG" transform="${t}"/>`;
+const ICONS = [
+  `<path d="M8 6v52M8 16l-5 5M8 30l-5 5M8 44l-5 5"/><rect x="12" y="10" width="36" height="46" rx="2"/><text x="22" y="38">A4</text>`,
+  FOOT("translate(8 3) scale(.13)") + `<path class="o" d="M40 34l14-14 5 5-14 14-7 2z"/>`,
+  FOOT("translate(6 3) scale(.13)") + `<path class="o" d="M46 8v46M41 8h10M41 54h10"/>`,
+  FOOT("translate(18 3) scale(.13)") + `<path class="o" d="M17 23h28M17 18v10M45 18v10M23 49h16M23 44v10M39 44v10"/>`,
+  FOOT("translate(18 3) scale(.13)") + `<ellipse class="o" cx="31" cy="23" rx="15" ry="5"/><path class="o" d="M46 23c7 2 9 9 4 15"/>`,
+  FOOT("translate(2 3) scale(.13)") + FOOT("translate(62 3) scale(-.13 .13)")
+];
+
+function renderStatic() {
+  $("#mq").innerHTML = L.mq.map((s, i) => `<span>${i === 1 ? "<b>" + esc(s) + "</b>" : esc(s)}</span><span>↔</span>`).join("").repeat(8);
+  $("#steps").innerHTML = L.steps.map((s, i) => `<li class="step"><svg viewBox="0 0 64 64" aria-hidden="true">${ICONS[i]}</svg><div><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p></div></li>`).join("");
+  $("#foText").innerHTML = L.fo.map(p => `<p>${esc(p)}</p>`).join("");
+  $("#nums").innerHTML = L.nums.map(n => `<li><b>${esc(n[0])}</b>${esc(n[1])}</li>`).join("");
+  const open = $$("#faqList details").map(d => d.open);
+  $("#faqList").innerHTML = L.faq.map((f, i) => `<details${open[i] ? " open" : ""}><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join("");
+  const co = CONFIG.company ? ` (${CONFIG.company})` : "";
+  $("#polList").innerHTML = L.pol.map(p => `<li><b>${esc(p[0])}.</b> ${esc(fill(p[1], { company: co }))}</li>`).join("") + (CONFIG.sheetUrl ? "" : `<li>${esc(L.pDemo)}</li>`);
+  $("#copy").textContent = `© ${new Date().getFullYear()} WYDE` + (CONFIG.company ? ` · ${CONFIG.company}` : "");
+}
+
+/* ---------- Варианты-«чипы» в анкете ---------- */
+const OPT = { gender: ["m", "f"], pains: ["sides", "top", "heel", "pinky", "evening"], model: ["daily", "run", "canvas", "boots"], color: ["black", "white", "beige", "grey"] };
+function renderChips() {
+  $$("[data-chips]").forEach(box => {
+    const k = box.dataset.chips;
+    if (!box.children.length) box.innerHTML = OPT[k].map(v => `<label class="chip"><input type="${box.dataset.type}" name="${k}" value="${v}"><span></span></label>`).join("");
+    $$("span", box).forEach((s, i) => { s.textContent = L.opts[k][i]; });
+  });
+}
+function setField(name, val) { const el = $(`#joinForm [name="${name}"]`); if (el) { el.value = val; saveDraft(); } }
+
+/* ---------- 2. Тест стельки ---------- */
+function runTest(e) {
+  e.preventDefault();
+  const f = num($("#tFoot").value), i = num($("#tIns").value), er = $("#tErr");
+  if (!(f >= 5 && f <= 16 && i >= 5 && i <= 16)) { er.textContent = L.tErr; er.hidden = false; return; }
+  er.hidden = true;
+  state.test = { foot: f, insole: i, diff: Math.round((f - i) * 10) };
+  store.set("wyde_test", state.test);
+  setField("ball", fmt(f)); setField("insole", fmt(i));
+  renderTest(true); drawStory(); track("InsoleTest");
+}
+function renderTest(scroll) {
+  const t = state.test, box = $("#tRes"), svg = $("#tsvg");
+  if (!t) { box.hidden = true; return; }
+  svg.style.setProperty("--s", Math.max(.6, Math.min(1.24, (t.foot / t.insole) * (120 / 152))).toFixed(3));
+  svg.classList.add("set");
+  box.innerHTML = (t.diff > 0
+    ? `<p class="res-h">${fill(L.tRes, { x: t.diff })}</p><p class="punch">${L.tPunch}</p><p>${esc(L.tMore)}</p>`
+    : `<p class="punch">${esc(L.tEqH)}</p><p>${esc(L.tEqP)}</p>`)
+    + `<p class="note-ok">✓ ${esc(L.tFilled)}</p><div class="btns"><a class="btn" href="#quiz">${esc(L.btnType)}</a></div>`;
+  box.hidden = false;
+  if (scroll) box.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+/* ---------- 4. Квиз «тип стопы» ---------- */
+const QK = [["narrow", "regular", "wide"], ["low", "mid", "high"], ["big", "second", "square"], ["yes", "no"]];
+function topIcon(o) {
+  const F = 33, H = o.H || 20, c = 50, tz = o.toes || [24, 23, 25, 28, 32], r = n => Math.round(n * 10) / 10;
+  const heel = `C${c + H} 136 ${r(c + H * .6)} 144 ${c} 144C${r(c - H * .6)} 144 ${c - H} 136 ${c - H} 114`;
+  const body = `M${c} 34C${r(c + F * .8)} 30 ${c + F} 42 ${c + F} 60C${c + F} 82 ${c + H} 90 ${c + H} 114${heel}C${c - H} 90 ${c - F} 82 ${c - F} 60C${c - F} 42 ${r(c - F * .8)} 30 ${c} 34Z`;
+  const rx = [9, 6.5, 6, 5.5, 5], ry = [11, 8.5, 8, 7, 6.5], xs = [24, 40, 53, 65, 76];
+  const toes = tz.map((y, i) => `<ellipse class="${o.hl === "toes" ? "h" : "a"}" cx="${xs[i]}" cy="${y}" rx="${rx[i]}" ry="${ry[i]}"/>`).join("");
+  return `<svg class="qi" viewBox="0 0 100 150" aria-hidden="true"><path class="${o.hl === "body" ? "h" : "a"}" d="${body}"/>${o.hl === "heel" ? `<path class="h" d="M${c + H} 104V114${heel}V104Z"/>` : ""}${toes}</svg>`;
+}
+function qIcon(qi, oi) {
+  if (qi === 1) {
+    const c = [["80 60 50 54", 78], ["82 54 56 44", 71], ["84 44 62 30", 63]][oi];
+    return `<svg class="qi" viewBox="0 0 120 90" aria-hidden="true"><path class="g" d="M6 81H114"/><path class="a" d="M16 6V56C10 64 10 76 20 78Q54 ${c[1]} 84 78H106C114 78 116 68 106 64C${c[0]} 46 20V6Z"/><path class="l" d="M106 64C${c[0]} 46 20"/></svg>`;
+  }
+  if (qi === 0) return topIcon({ H: [13, 20, 29][oi], hl: "heel" });
+  if (qi === 2) return topIcon({ toes: [[24, 23, 25, 28, 32], [26, 19, 24, 28, 32], [24, 21.5, 21, 27, 32]][oi], hl: "toes" });
+  return topIcon({ H: [31, 15][oi], hl: "body" });
+}
+function renderQuiz() {
+  const box = $("#quizBox"), qz = state.quiz;
+  if (qz.done) return renderResult();
+  const i = qz.step, q = L.q[i];
+  box.innerHTML = `<div class="qmeta"><span>${fill(L.qProg, { n: i + 1 })}</span>${i ? `<button type="button" class="linkbtn" data-qback>← ${esc(L.back)}</button>` : ""}</div>
+    <div class="prog"><i style="width:${(i + 1) * 25}%"></i></div>
+    <div class="fadein"><h3 class="qtitle" id="qT" tabindex="-1">${esc(q.t)}</h3><p class="muted" style="margin-top:8px">${esc(q.h)}</p>
+    <div class="opts" role="group" aria-labelledby="qT">${q.o.map((o, j) => `<button type="button" class="opt" data-qa="${j}">${qIcon(i, j)}<span><b>${esc(o[0])}</b>${o[1] ? `<small>${esc(o[1])}</small>` : ""}</span></button>`).join("")}</div></div>`;
+  $("#story").hidden = true;
+}
+function computeType() {
+  const [heel, inst, toes, whole] = state.quiz.a, keys = [];
+  const shape = heel === "narrow" ? "fan" : (heel === "wide" || whole === "yes") ? "mono" : "fan";
+  keys.push(shape);
+  if (inst === "low") keys.push("plat"); else if (inst === "high") keys.push(shape === "mono" ? "titan" : "arch");
+  if (toes === "square") keys.push("square");
+  state.typeKeys = keys; state.toe = toes === "square" ? "" : toes; state.quiz.done = true;
+  store.set("wyde_quiz", state.quiz.a);
+}
+const typeName = lang => state.typeKeys.map(k => T[lang || state.lang].types[k].n).join(" · ");
+function renderType() {
+  if (!state.typeKeys.length) return;
+  $("#f-type").value = typeName(); $("#f-typeKeys").value = state.typeKeys.join(","); saveDraft();
+}
+function renderResult() {
+  const ks = state.typeKeys;
+  $("#quizBox").innerHTML = `<div class="fadein"><p class="kicker">${esc(L.rK)}</p>
+    <p class="tname" id="rT" tabindex="-1">${ks.map(k => `<span>${esc(L.types[k].n)}</span>`).join("")}</p>
+    ${ks.map(k => { const t = L.types[k]; return `<div class="tcard"><h3>${esc(t.n)} <small>${esc(t.tag)}</small></h3><dl><dt>${esc(L.rPower)}</dt><dd>${esc(t.p)}</dd><dt>${esc(L.rNeed)}</dt><dd>${esc(t.s)}</dd></dl></div>`; }).join("")}
+    ${state.toe ? `<p class="toenote">${esc(L.toe[state.toe])}</p>` : ""}
+    <p class="note-ok">✓ ${esc(L.rFilled)}</p>
+    <div class="btns"><a class="btn" href="#join">${esc(L.rJoin)}</a><button type="button" class="btn ghost" data-qagain>${esc(L.rAgain)}</button></div></div>`;
+  $("#story").hidden = false;
+}
+function quizClick(e) {
+  const qz = state.quiz, a = e.target.closest("[data-qa]");
+  if (a) {
+    qz.a[qz.step] = QK[qz.step][+a.dataset.qa];
+    if (qz.step < 3) { qz.step++; renderQuiz(); $("#qT").focus({ preventScroll: true }); }
+    else { computeType(); renderQuiz(); renderType(); drawStory(); track("QuizDone"); $("#quiz").scrollIntoView({ behavior: "smooth" }); $("#rT").focus({ preventScroll: true }); }
+  } else if (e.target.closest("[data-qback]")) { qz.step--; renderQuiz(); }
+  else if (e.target.closest("[data-qagain]")) { state.quiz = { step: 0, a: [], done: false }; renderQuiz(); $("#quiz").scrollIntoView({ behavior: "smooth" }); }
+}
+
+/* ---------- 5. Картинка для сторис (canvas 1080×1920) ---------- */
+const pageUrl = () => location.origin + location.pathname;
+let storyRun = 0;
+async function drawStory() {
+  const cv = $("#storyCv");
+  if (!cv || !state.typeKeys.length) return;
+  const run = ++storyRun, names = state.typeKeys.map(k => L.types[k].n.toUpperCase());
+  const wider = state.test && state.test.diff > 0 ? fill(L.cWider, { x: state.test.diff }).toUpperCase() : "";
+  const sample = names.join("") + L.cMy + L.cAsk + L.cTag + wider;
+  try { await Promise.all([document.fonts.load("700 100px Oswald", sample.toUpperCase()), document.fonts.load("800 40px Manrope", sample)]); } catch (e) {}
+  if (run !== storyRun) return;
+  const c = cv.getContext("2d"), W = 1080, H = 1920, FH = 'Oswald,"Arial Narrow",Impact,sans-serif', FB = "Manrope,system-ui,sans-serif";
+  const SAND = "#e8dcc6", HOT = "#ff4f1a", MUTE = "#a0957f";
+  const fit = (txt, w, size, fam, max) => { for (; size > 30; size -= 4) { c.font = `${w} ${size}px ${fam}`; if (c.measureText(txt).width <= max) break; } return size; };
+  const sp = px => { if ("letterSpacing" in c) c.letterSpacing = px + "px"; };
+  c.setTransform(1, 0, 0, 1, 0, 0); c.textAlign = "left"; c.textBaseline = "alphabetic"; sp(0);
+  c.fillStyle = "#0d0c0a"; c.fillRect(0, 0, W, H);
+  const g = c.createRadialGradient(940, 180, 0, 940, 180, 1000);
+  g.addColorStop(0, "rgba(255,79,26,.30)"); g.addColorStop(1, "rgba(255,79,26,0)");
+  c.fillStyle = g; c.fillRect(0, 0, W, H);
+  /* фоновый силуэт стопы */
+  c.save(); c.translate(470, 380); c.rotate(.24); c.scale(3.7, 3.7); c.strokeStyle = "rgba(232,220,198,.12)"; c.lineWidth = 1;
+  $$("#footG path").forEach(p => c.stroke(new Path2D(p.getAttribute("d"))));
+  $$("#footG ellipse").forEach(el => { const a = n => +el.getAttribute(n); c.beginPath(); c.ellipse(a("cx"), a("cy"), a("rx"), a("ry"), 0, 0, 7); c.stroke(); });
+  c.restore();
+  /* логотип */
+  c.save(); c.translate(90, 250); c.scale(.8, .8); c.transform(1, 0, -.158, 1, 0, 0); c.translate(16, 0); c.fillStyle = SAND;
+  $$("#wyde path").forEach(p => { c.save(); c.translate(+p.dataset.x, 0); c.fill(new Path2D(p.getAttribute("d")), "evenodd"); c.restore(); });
+  c.restore();
+  /* подпись */
+  c.fillStyle = HOT; c.fillRect(90, 452, 56, 7);
+  c.font = `800 42px ${FB}`; sp(7); c.fillText(L.cMy.toUpperCase(), 168, 470); sp(0);
+  /* имена типов */
+  let size = [300, 260, 205][names.length - 1] || 190;
+  names.forEach(n => { size = Math.min(size, fit(n, 700, size, FH, 900)); });
+  c.font = `700 ${size}px ${FH}`; c.fillStyle = HOT;
+  let y = 520;
+  names.forEach(n => { y += size; c.fillText(n, 86, y - size * .12); });
+  /* стрелка ширины */
+  y += 50; c.fillStyle = SAND; c.fillRect(118, y - 3, 844, 6);
+  [[90, 1], [990, -1]].forEach(([x, d]) => { c.beginPath(); c.moveTo(x, y); c.lineTo(x + 34 * d, y - 17); c.lineTo(x + 34 * d, y + 17); c.closePath(); c.fill(); });
+  if (wider) { const s = fit(wider, 700, 92, FH, 900); c.font = `700 ${s}px ${FH}`; c.fillStyle = SAND; c.fillText(wider, 88, y + 60 + s * .8); }
+  /* низ */
+  const ask = L.cAsk.toUpperCase(), s2 = fit(ask, 700, 104, FH, 900);
+  c.font = `700 ${s2}px ${FH}`; c.fillStyle = SAND; c.fillText(ask, 88, 1520);
+  c.font = `600 40px ${FB}`; c.fillStyle = MUTE; c.fillText(L.cTag, 90, 1590);
+  const host = (location.host + location.pathname).replace(/\/(index\.html)?$/, "");
+  if (location.host) { c.font = `800 38px ${FB}`; c.fillStyle = HOT; c.fillText(host, 90, 1652); }
+  /* PNG готовим заранее: «Поделиться» должно сработать сразу по нажатию (требование iOS),
+     а саму картинку можно сохранить долгим нажатием — это выручает во встроенных браузерах Instagram и TikTok */
+  cv.toBlob(b => {
+    if (!b || run !== storyRun) return;
+    storyPng = b; const img = $("#storyImg"), old = img.dataset.u;
+    img.dataset.u = img.src = URL.createObjectURL(b); img.alt = L.cMy + ": " + typeName();
+    if (old) setTimeout(() => URL.revokeObjectURL(old), 1000);
+  }, "image/png");
+}
+let storyPng = null;
+function storyDownload() {
+  if (!storyPng) return;
+  const a = document.createElement("a"), u = URL.createObjectURL(storyPng); a.href = u; a.download = "wyde-story.png";
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 5000); track("StoryDownload");
+}
+function storyShare() {
+  try {
+    const file = new File([storyPng], "wyde-story.png", { type: "image/png" });
+    if (storyPng && navigator.canShare && navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], text: fill(L.shareText, { type: typeName() }) + " " + pageUrl() })
+        .then(() => track("StoryShare"), e => { if (!e || e.name !== "AbortError") storyDownload(); });
+      return;
+    }
+  } catch (e) {}
+  storyDownload();
+}
+
+/* ---------- 6. Калькулятор полноты JIS (мужская таблица) ---------- */
+const JIS = ["A", "B", "C", "D", "E", "2E", "3E", "4E", "F", "G"];
+const jisLabel = idx => JIS[Math.max(0, Math.min(9, idx))] + (idx > 9 ? "+" : idx < 0 ? "−" : "");
+function runJis(e) {
+  e.preventDefault();
+  const len = num($("#jLen").value), g = num($("#jGir").value), er = $("#jErr");
+  if (!(len >= 20 && len <= 32 && g >= 18 && g <= 33)) { er.textContent = L.jErr; er.hidden = false; return; }
+  er.hidden = true;
+  const d = 222 + 0.6 * (len * 10 - 225);                 // обхват для полноты D, мм
+  const idx = 3 + Math.round((g * 10 - d) / 6);           // шаг 6 мм; D — четвёртая буква
+  state.jis = { len, g, idx }; store.set("wyde_jis", state.jis);
+  setField("jis", jisLabel(idx));
+  if (!$("#f-girth").value) setField("girth", fmt(g));
+  renderJis(); track("JisCalc");
+}
+function renderJis() {
+  const j = state.jis, box = $("#jRes"), i = j ? Math.max(0, Math.min(9, j.idx)) : -1;
+  $("#jScale").innerHTML = JIS.map((w, k) => `<span class="${k === i ? "on" : ""}">${w}</span>`).join("");
+  if (!j) { box.hidden = true; return; }
+  box.innerHTML = `<p class="jis-out">${fill(L.jRes, { w: JIS[i] })}</p>`
+    + (j.idx > 9 ? `<p style="margin-top:8px"><b>${esc(L.jOver)}</b></p>` : j.idx < 0 ? `<p style="margin-top:8px">${esc(L.jUnder)}</p>` : "")
+    + `<p class="muted small" style="margin-top:10px">${esc(L.jNote)}</p><p class="note-ok">✓ ${esc(L.filled)}</p>`;
+  box.hidden = false;
+}
+
+/* ---------- 8. Анкета: черновик, маска телефона, проверка, отправка ---------- */
+const form = () => $("#joinForm");
+let sent = false, draftT;
+function formData() {
+  const d = { pains: [] };
+  $$("input[name],textarea[name]", form()).forEach(el => {
+    if (el.name === "pains") { if (el.checked) d.pains.push(el.value); }
+    else if (el.type === "checkbox") d[el.name] = el.checked;
+    else if (el.type === "radio") { if (el.checked) d[el.name] = el.value; else if (!(el.name in d)) d[el.name] = ""; }
+    else d[el.name] = el.value.trim();
+  });
+  return d;
+}
+function saveDraft() { clearTimeout(draftT); draftT = setTimeout(() => { if (!sent) store.set("wyde_draft", formData()); }, 300); }
+function loadDraft() {
+  const d = store.get("wyde_draft", null); if (!d) return;
+  $$("input[name],textarea[name]", form()).forEach(el => {
+    const v = d[el.name]; if (v == null || el.name === "consent") return;
+    if (el.type === "checkbox") el.checked = Array.isArray(v) && v.includes(el.value);
+    else if (el.type === "radio") el.checked = v === el.value;
+    else el.value = v;
+  });
+}
+/* если тест или калькулятор уже пройдены, а поле в анкете пустое — подставляем */
+function syncForm() {
+  const put = (n, v) => { const el = $(`#joinForm [name="${n}"]`); if (el && !el.value) el.value = v; };
+  if (state.test) { put("ball", fmt(state.test.foot)); put("insole", fmt(state.test.insole)); }
+  if (state.jis) { put("jis", jisLabel(state.jis.idx)); put("girth", fmt(state.jis.g)); }
+}
+function phoneDigits(v) { let d = v.replace(/\D/g, ""); if (v.trim().startsWith("+7")) d = d.slice(1); if (d.length > 10 && /^[78]/.test(d)) d = d.slice(1); return d.slice(0, 10); }
+function phoneFmt(d) { let s = "+7"; if (d.length) s += " (" + d.slice(0, 3); if (d.length >= 3) s += ") " + d.slice(3, 6); if (d.length >= 6) s += "-" + d.slice(6, 8); if (d.length >= 8) s += "-" + d.slice(8, 10); return s; }
+function phoneInput(e) {
+  const el = e.target, del = (e.inputType || "").startsWith("delete"); let d = phoneDigits(el.value);
+  if (del && d.length === (el._d || "").length) d = d.slice(0, -1);
+  el._d = d; el.value = d.length ? phoneFmt(d) : del ? "" : "+7 (";
+}
+function setErr(field, msg) {
+  field.classList.toggle("bad", !!msg);
+  let e = $(".err", field); const inp = $(".inp", field);
+  if (msg) {
+    if (!e) { e = document.createElement("span"); e.className = "err"; e.id = "err-" + (inp ? inp.name : field.id || "g"); field.appendChild(e); }
+    e.textContent = msg; if (inp) { inp.setAttribute("aria-invalid", "true"); inp.setAttribute("aria-describedby", e.id); }
+  } else { if (e) e.remove(); if (inp) { inp.removeAttribute("aria-invalid"); inp.removeAttribute("aria-describedby"); } }
+}
+function checkField(el) {
+  const v = el.value.trim(); let msg = "";
+  if (el.hasAttribute("data-phone")) { if (phoneDigits(v).length !== 10) msg = L.ePhone; }
+  else if (el.hasAttribute("data-req") && !v) msg = L.eReq;
+  else if (el.dataset.num && v) { const [a, b] = el.dataset.num.split(",").map(Number), n = num(v); if (isNaN(n)) msg = L.eNum; else if (n < a || n > b) msg = L.eRange; }
+  setErr(el.closest(".field"), msg); return !msg;
+}
+function validate() {
+  let first = null;
+  $$(".inp[data-req],.inp[data-num]", form()).forEach(el => { if (!checkField(el)) first = first || el; });
+  const g = $("input[name=gender]:checked"); setErr($('[data-reqgroup="gender"]'), g ? "" : L.ePick); if (!g) first = first || $("input[name=gender]");
+  const c = $("#f-consent"); setErr($("#consentField"), c.checked ? "" : L.eConsent); if (!c.checked) first = first || c;
+  if (first) { first.focus({ preventScroll: true }); first.closest(".field").scrollIntoView({ behavior: "smooth", block: "center" }); }
+  return !first;
+}
+/* В таблицу всё уходит по-русски, на каком бы языке ни заполняли — так проще анализировать */
+function payload() {
+  const d = formData(), lab = (k, v) => (v ? T.ru.opts[k][OPT[k].indexOf(v)] : "");
+  const n = k => { const x = num(d[k]); return isNaN(x) ? "" : x; };
+  const ball = n("ball"), ins = n("insole");
+  return {
+    name: d.name, whatsapp: "+7" + phoneDigits(d.whatsapp), instagram: d.instagram === "@" ? "" : d.instagram, city: d.city, gender: lab("gender", d.gender),
+    lenL: n("lenL"), lenR: n("lenR"), ball, heel: n("heel"), girth: n("girth"), insole: ins,
+    widerMm: ball !== "" && ins !== "" ? Math.round((ball - ins) * 10) : "",
+    jis: d.jis, type: state.typeKeys.length ? typeName("ru") : "",
+    pains: d.pains.map(v => lab("pains", v)).join(", "), brands: d.brands, model: lab("model", d.model), color: lab("color", d.color),
+    lang: state.lang.toUpperCase(), consent: "да",
+    utm: new URLSearchParams(location.search).get("utm_source") || document.referrer || ""
+  };
+}
+const WA_LABELS = { name: "Имя", whatsapp: "WhatsApp", instagram: "Instagram", city: "Город", gender: "Пол", lenL: "Длина левой, см", lenR: "Длина правой, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см", girth: "Обхват в пучках, см", insole: "Ширина стельки, см", widerMm: "Стопа шире стельки, мм", jis: "Полнота JIS", type: "Тип стопы", pains: "Где проигрывает обувь", brands: "Бренды и ширины", model: "Модель", color: "Цвет", lang: "Язык", consent: "Согласие на обработку данных" };
+const waNum = () => CONFIG.whatsapp.replace(/\D/g, "");
+const waLink = d => "https://wa.me/" + waNum() + "?text=" + encodeURIComponent("Анкета WYDE — первая тысяча\n" + Object.keys(WA_LABELS).filter(k => d[k] !== "" && d[k] != null).map(k => WA_LABELS[k] + ": " + d[k]).join("\n"));
+function done(demo) {
+  sent = true; store.del("wyde_draft");
+  form().hidden = true; const ok = $("#okBox"); ok.hidden = false; $("#demoNote").hidden = !demo;
+  ok.focus({ preventScroll: true }); $("#join").scrollIntoView({ behavior: "smooth" });
+  try { if (window.fbq) fbq("track", "Lead"); if (window.ttq) ttq.track("SubmitForm"); } catch (e) {}
+}
+async function submitForm(e) {
+  e.preventDefault();
+  const msg = $("#formMsg"), btn = $("#submitBtn"), wa = $("#waSend");
+  msg.hidden = true; wa.hidden = true;
+  if (!validate()) { msg.textContent = L.eSum; msg.hidden = false; return; }
+  const data = payload();
+  if (!CONFIG.sheetUrl) {                                   // ДЕМО-РЕЖИМ: сохраняем на устройстве
+    const all = store.get("wyde_submissions", []); all.push({ ...data, date: new Date().toISOString() }); store.set("wyde_submissions", all);
+    return done(true);
+  }
+  btn.disabled = true; btn.textContent = L.sending;
+  try {
+    const r = await fetch(CONFIG.sheetUrl, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
+    const j = await r.json(); if (!j.ok) throw new Error(j.error || "sheet error");
+    done(false);
+  } catch (err) {
+    msg.textContent = L.fail; msg.hidden = false;
+    if (CONFIG.whatsapp) { wa.href = waLink(data); wa.hidden = false; }
+  } finally { btn.disabled = false; btn.textContent = L.submit; }
+}
+async function invite() {
+  const url = pageUrl(), text = L.invite;
+  try { if (navigator.share) { await navigator.share({ title: "WYDE", text, url }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(text + " " + url); toast(L.copied); }
+  catch (e) { window.open("https://wa.me/?text=" + encodeURIComponent(text + " " + url), "_blank", "noopener"); }
+}
+
+/* ---------- Контакты и пиксели: появляются только если заполнен CONFIG ---------- */
+const SOC = {
+  instagram: `<path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>`,
+  tiktok: `<path d="M14 2h3.2c.3 2.3 1.6 3.8 3.8 4v3.2c-1.4 0-2.7-.4-3.8-1.1v6.6a6.2 6.2 0 1 1-6.2-6.2c.3 0 .7 0 1 .1v3.3a3 3 0 1 0 2 2.8z"/>`,
+  threads: `<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M19 8.5C18 5 15.6 3 12.2 3 7.6 3 5 6.3 5 12s2.6 9 7.2 9c3.6 0 6.1-2 6.1-4.8 0-2.6-2.2-4-5.6-4-2.4 0-3.9 1-3.9 2.6 0 1.4 1.2 2.4 3 2.4 2.3 0 3.6-1.5 3.6-4.5V11c-.3-2-1.6-3-3.9-3-1.7 0-2.9.7-3.3 1.9"/>`,
+  whatsapp: `<path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4 14.9l-.4-.2-2.7.7.7-2.6-.3-.4A8 8 0 0 1 12 4z"/><path d="M9.1 7.5c-.3 0-.6.1-.8.4-.5.6-.8 1.3-.7 2.1.2 1.5 1.1 2.9 2.5 4.2 1.4 1.2 2.8 2 4.3 2.1.8.1 1.5-.2 2.1-.8.3-.3.4-.7.2-1l-.1-.2-1.9-.9c-.3-.1-.6-.1-.8.2l-.6.8c-1.2-.6-2.2-1.5-2.9-2.7l.7-.8c.2-.2.2-.5.1-.8l-.9-2.1c-.1-.3-.4-.5-.7-.5z"/>`
+};
+function initContacts() {
+  const url = (v, base) => (!v ? "" : /^https?:\/\//.test(v) ? v : base + v.replace(/^@/, ""));
+  const links = [
+    ["Instagram", "instagram", url(CONFIG.instagram, "https://instagram.com/")],
+    ["TikTok", "tiktok", url(CONFIG.tiktok, "https://www.tiktok.com/@")],
+    ["Threads", "threads", url(CONFIG.threads, "https://www.threads.net/@")],
+    ["WhatsApp", "whatsapp", CONFIG.whatsapp ? "https://wa.me/" + waNum() : ""]
+  ].filter(x => x[2]);
+  const box = $("#soc");
+  box.innerHTML = links.map(([n, k, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${n}"><svg viewBox="0 0 24 24" aria-hidden="true">${SOC[k]}</svg></a>`).join("");
+  box.hidden = !links.length;
+  if (CONFIG.whatsapp) { const wa = $("#waFloat"); wa.href = "https://wa.me/" + waNum(); wa.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${SOC.whatsapp}</svg>`; wa.hidden = false; }
+}
+function initPixels() {
+  if (CONFIG.metaPixelId) {
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", CONFIG.metaPixelId); fbq("track", "PageView");
+  }
+  if (CONFIG.tiktokPixelId) {
+    !function (w, d, t) { w.TiktokAnalyticsObject = t; var q = w[t] = w[t] || []; q.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"]; q.setAndDefer = function (o, m) { o[m] = function () { o.push([m].concat(Array.prototype.slice.call(arguments, 0))); }; }; for (var i = 0; i < q.methods.length; i++) q.setAndDefer(q, q.methods[i]); q.load = function (id, n) { var u = "https://analytics.tiktok.com/i18n/pixel/events.js"; q._i = q._i || {}; q._i[id] = []; q._i[id]._u = u; q._t = q._t || {}; q._t[id] = +new Date(); q._o = q._o || {}; q._o[id] = n || {}; var s = d.createElement("script"); s.async = !0; s.src = u + "?sdkid=" + id + "&lib=" + t; var a = d.getElementsByTagName("script")[0]; a.parentNode.insertBefore(s, a); }; q.load(CONFIG.tiktokPixelId); q.page(); }(window, document, "ttq");
+  }
+}
+
+/* ---------- Запуск ---------- */
+function init() {
+  state.test = store.get("wyde_test", null);
+  state.jis = store.get("wyde_jis", null);
+  const qa = store.get("wyde_quiz", null);
+  if (Array.isArray(qa) && qa.length === 4) { state.quiz.a = qa; computeType(); }
+  setLang(store.get("wyde_lang", "ru"));                    // по умолчанию RU
+  loadDraft();
+  const tk = $("#f-typeKeys").value;
+  if (!state.typeKeys.length && tk) state.typeKeys = tk.split(",").filter(k => T.ru.types[k]);
+  renderType(); syncForm();
+  if (state.test) { $("#tFoot").value = fmt(state.test.foot); $("#tIns").value = fmt(state.test.insole); }
+  if (state.jis) { $("#jLen").value = fmt(state.jis.len); $("#jGir").value = fmt(state.jis.g); }
+  initContacts(); initPixels();
+
+  $$(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang, true)));
+  $("#testForm").addEventListener("submit", runTest);
+  $("#jisForm").addEventListener("submit", runJis);
+  $("#quizBox").addEventListener("click", quizClick);
+  $("#sDl").addEventListener("click", storyDownload);
+  $("#sShare").addEventListener("click", storyShare);
+  $("#inviteBtn").addEventListener("click", invite);
+  $("#waSend").addEventListener("click", () => setTimeout(() => done(false), 900));
+
+  const f = form(), ph = $("[data-phone]", f);
+  f.addEventListener("submit", submitForm);
+  f.addEventListener("input", e => { if (e.target === ph) phoneInput(e); if (e.target.closest(".bad") && e.target.classList.contains("inp")) checkField(e.target); saveDraft(); });
+  f.addEventListener("change", e => { const fd = e.target.closest(".field.bad"); if (fd && !e.target.classList.contains("inp")) setErr(fd, ""); saveDraft(); });
+  ph.addEventListener("focus", () => { if (!ph.value) ph.value = "+7 ("; });
+  ph.addEventListener("blur", () => { if (!phoneDigits(ph.value)) ph.value = ""; });
+
+  const dlg = $("#policy");
+  $$('[data-open="policy"]').forEach(b => b.addEventListener("click", () => (dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""))));
+  dlg.addEventListener("click", e => { if (e.target === dlg || e.target.closest("[data-close]")) (dlg.close ? dlg.close() : dlg.removeAttribute("open")); });
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { rootMargin: "0px 0px -6% 0px" });
+    $$(".rv").forEach(el => io.observe(el));
+  } else $$(".rv").forEach(el => el.classList.add("in"));
+}
+try { init(); } catch (err) { document.documentElement.classList.remove("js"); console.error(err); }
+</script>
+</body>
+</html>
