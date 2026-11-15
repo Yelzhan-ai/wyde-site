@@ -85,16 +85,15 @@ h2{font:700 clamp(38px,10.6vw,84px)/1 var(--fh);text-transform:uppercase;margin-
 
 /* ================= ПЕРВЫЙ ЭКРАН ================= */
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:76px 0 40px;overflow:hidden}
-.hero-bg{position:absolute;right:-30%;top:40px;width:min(118vw,760px);color:var(--sand);opacity:.13;transform:rotate(14deg);pointer-events:none}
+.hero-anim{margin:0 0 16px}
+.hero-box{position:relative;height:140px}
+/* стопа повёрнута носком вправо: ширина стопы идёт по вертикали */
+.hero-anim .hsvg{position:absolute;left:50%;top:50%;width:140px;height:301px;margin:0;transform:translate(-50%,-50%) rotate(90deg)}
+.hero-anim .tkey{margin-top:8px}
 .hero .wrap{position:relative}
 .eyebrow{font:800 11.5px/1.3 var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
 h1{font:700 clamp(42px,12.4vw,124px)/.96 var(--fh);text-transform:uppercase;letter-spacing:-.005em}
 h1 span{display:block} h1 .hot{color:var(--hot)}
-.wline{display:flex;align-items:center;margin:14px 0 12px;color:var(--hot);transform-origin:center;animation:widen 1.5s .25s cubic-bezier(.2,.8,.2,1) both}
-.wline i{flex:1;height:3px;background:currentColor}
-.wline::before,.wline::after{content:"";border:8px solid transparent}
-.wline::before{border-right-color:currentColor;margin-right:-1px} .wline::after{border-left-color:currentColor;margin-left:-1px}
-@keyframes widen{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
 .points{display:grid;gap:10px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font:600 16px/1.35 var(--fb);color:var(--sand2)}
 .points li{display:flex;gap:10px} .points li::before{content:"↔";color:var(--hot);flex:none}
 .mq{overflow:hidden;border-block:1px solid var(--line);padding:15px 0;font:700 clamp(22px,6vw,40px)/1 var(--fh);text-transform:uppercase;white-space:nowrap}
@@ -271,6 +270,9 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
 @media(min-width:600px){
   .btns{flex-direction:row;flex-wrap:wrap}
   .btn.next{max-width:560px}
+  .hero-box{height:190px}
+  .hero-anim .hsvg{width:190px;height:408px}
+  .hero-anim{max-width:420px}
   .points{grid-template-columns:repeat(3,1fr);gap:20px}
   .opts{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
   .opt{flex-direction:column;text-align:center;padding:22px 14px}
@@ -288,6 +290,24 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   .steps{grid-template-columns:repeat(3,1fr)}
   .fgrid{grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
   .dia{max-width:620px}
+}
+/* низкие телефоны: кнопка первого экрана должна быть видна сразу */
+@media(max-width:599px) and (max-height:700px){
+  .hero{padding-top:66px}
+  .hero-box{height:110px}
+  .hero-anim .hsvg{width:110px;height:237px}
+  .hero-anim{margin-bottom:10px}
+  h1{font-size:38px}
+  .hero .lead{font-size:16.5px}
+}
+/* компьютер: анимация справа от текста, стопа вертикально */
+@media(min-width:880px){
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:64px;align-items:end}
+  .hero .wrap>*{grid-column:1}
+  .hero .wrap>.hero-anim{grid-column:2;grid-row:1/span 6;align-self:center;max-width:none;margin:0}
+  .hero-box{height:auto}
+  .hero-anim .hsvg{position:static;transform:none;width:230px;height:494px;margin:0 auto}
+  h1{font-size:clamp(56px,6.6vw,96px)}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -342,12 +362,21 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
      2) Обувь, в которой широкая сама стелька.
      3) Ширина — это не буква на коробке. -->
 <section class="hero">
-  <svg class="hero-bg" viewBox="0 0 200 430" aria-hidden="true"><use href="#footG" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
   <div class="wrap">
+    <div class="hero-anim">
+      <div class="hero-box">
+        <svg class="tsvg hsvg" viewBox="0 0 200 430" role="img" aria-labelledby="hsvgT">
+          <title id="hsvgT" data-i18n="tAlt"></title>
+          <use href="#insoleP" class="ins"/>
+          <g class="footA"><use href="#footG" class="ft"/></g>
+          <g mask="url(#outM)"><g class="footA"><use href="#footG" class="over"/></g></g>
+        </svg>
+      </div>
+      <p class="tkey"><span><i style="background:var(--sand2)"></i><span data-i18n="tKeyIns"></span></span><span><i style="background:var(--hot)"></i><span data-i18n="tKeyOver"></span></span></p>
+    </div>
     <p class="eyebrow" data-i18n="heroEyebrow">Обувь для широкой стопы · Казахстан</p>
     <h1><span data-i18n="h1a">Широкая обувь</span><span class="hot" data-i18n="h1b">начинается со стельки.</span></h1>
-    <div class="wline" aria-hidden="true"><i></i></div>
-    <p class="lead" data-i18n="heroSub"></p>
+    <p class="lead" data-i18n="heroSub" style="margin-top:14px"></p>
     <div class="btns">
       <a class="btn next" href="#measure" data-i18n="heroBtn">Измерить свою стопу</a>
     </div>
@@ -358,21 +387,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
 
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 
-<!-- ===== 2. МАНИФЕСТ ===== -->
-<section class="manifest sand" id="manifest">
-  <div class="wrap">
-    <p class="kicker rv" data-i18n="mK"></p>
-    <p class="dim rv" data-i18n="m1"></p>
-    <p class="dim rv" data-i18n-html="m2"></p>
-    <p class="dim rv" data-i18n="m3"></p>
-    <p class="big rv" data-i18n="m4"></p>
-    <p class="rv" data-i18n="m5"></p>
-    <p class="fin rv" data-i18n="m6"></p>
-    <div class="btns rv" style="margin-top:36px"><a class="btn next" href="#measure" data-i18n="mBtn"></a></div>
-  </div>
-</section>
-
-<!-- ===== 3. ШАГ 1 — КАК ИЗМЕРИТЬ СТОПУ + ВВОД МЕРОК ===== -->
+<!-- ===== 2. ШАГ 1 — КАК ИЗМЕРИТЬ СТОПУ + ВВОД МЕРОК ===== -->
 <section id="measure">
   <div class="wrap">
     <div class="stepno rv" data-step="1"><b></b><span class="bar" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></div>
@@ -402,7 +417,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   </div>
 </section>
 
-<!-- ===== 4. ШАГ 2 — ТЕСТ СТЕЛЬКИ ===== -->
+<!-- ===== 3. ШАГ 2 — ТЕСТ СТЕЛЬКИ ===== -->
 <section id="test" class="alt">
   <div class="wrap">
     <div class="stepno rv" data-step="2"><b></b><span class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
@@ -437,7 +452,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   </div>
 </section>
 
-<!-- ===== 5. ШАГ 3 — КВИЗ «ТИП СТОПЫ» + КАРТИНКА ДЛЯ СТОРИС ===== -->
+<!-- ===== 4. ШАГ 3 — КВИЗ «ТИП СТОПЫ» + КАРТИНКА ДЛЯ СТОРИС ===== -->
 <section id="quiz">
   <div class="wrap narrow">
     <div class="stepno rv" data-step="3"><b></b><span class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div>
@@ -461,7 +476,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   </div>
 </section>
 
-<!-- ===== 6. ШАГ 4 — АНКЕТА «ПЕРВАЯ ТЫСЯЧА» ===== -->
+<!-- ===== 5. ШАГ 4 — АНКЕТА «ПЕРВАЯ ТЫСЯЧА» ===== -->
 <section id="join" class="alt">
   <div class="wrap narrow">
     <div class="stepno rv" data-step="4"><b></b><span class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
@@ -529,6 +544,19 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
         <p class="demo" id="demoNote" hidden data-i18n="demo"></p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== 6. МАНИФЕСТ ===== -->
+<section class="manifest sand" id="manifest">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="mK"></p>
+    <p class="dim rv" data-i18n="m1"></p>
+    <p class="dim rv" data-i18n-html="m2"></p>
+    <p class="dim rv" data-i18n="m3"></p>
+    <p class="big rv" data-i18n="m4"></p>
+    <p class="rv" data-i18n="m5"></p>
+    <p class="fin rv" data-i18n="m6"></p>
   </div>
 </section>
 
@@ -655,7 +683,6 @@ T.ru = {
   langLabel: "Язык сайта", waLabel: "Написать в WhatsApp",
   stepOf: "Шаг {n} из 4",
   heroBtn: "Измерить свою стопу",
-  mBtn: "Начать — шаг 1",
   nextTest: "Дальше: тест стельки",
   nextQuiz: "Дальше: тип стопы",
   nextForm: "Дальше: анкета",
@@ -842,7 +869,6 @@ T.kz = {
   langLabel: "Сайт тілі", waLabel: "WhatsApp-қа жазу",
   stepOf: "{n}-қадам · барлығы 4",
   heroBtn: "Табанымды өлшеу",
-  mBtn: "Бастау — 1-қадам",
   nextTest: "Әрі қарай: ұлтарақ сынағы",
   nextQuiz: "Әрі қарай: табан типі",
   nextForm: "Әрі қарай: сауалнама",
@@ -1029,7 +1055,6 @@ T.en = {
   langLabel: "Site language", waLabel: "Message us on WhatsApp",
   stepOf: "Step {n} of 4",
   heroBtn: "Measure your feet",
-  mBtn: "Start — step 1",
   nextTest: "Next: the insole test",
   nextQuiz: "Next: your foot type",
   nextForm: "Next: the form",
