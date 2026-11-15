@@ -223,6 +223,8 @@ textarea.inp{min-height:112px;resize:vertical;line-height:1.4}
 .fgrid{display:grid;gap:28px;margin-top:8px}
 .photo{aspect-ratio:4/5;max-height:440px;width:100%;border-radius:22px;border:1.5px dashed var(--edge);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(232,220,198,.045) 14px 28px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--mute);font:800 12px/1 var(--fb);letter-spacing:.16em;text-transform:uppercase}
 .photo svg{width:46%;color:var(--edge)}
+.fgrid figure{margin:0;min-width:0}
+.fgrid figcaption{margin-top:12px;font:600 14.5px/1.4 var(--fb);color:var(--sand2)}
 #foText p{font:500 clamp(23px,6.2vw,34px)/1.2 var(--fh);margin-bottom:.75em}
 #foText p:last-child{color:var(--hot);font-weight:700;text-transform:uppercase}
 .sign{font:600 14px var(--fb);color:var(--mute)}
@@ -555,8 +557,11 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
     <h2 class="rv" data-i18n="foH"></h2>
     <div class="fgrid">
       <!-- ФОТО: когда будет снимок, замени весь блок <div class="photo">…</div> на
-           <img src="founder.jpg" alt="Елжан и папа, основатели WYDE" style="border-radius:22px;width:100%"> -->
-      <div class="photo rv"><svg viewBox="0 0 576 100" aria-hidden="true"><use href="#wyde"/></svg><span data-i18n="photo"></span></div>
+           <img src="founder.jpg" alt="Елжан и Елтинжал, основатели WYDE" style="border-radius:22px;width:100%"> -->
+      <figure class="rv">
+        <div class="photo"><svg viewBox="0 0 576 100" aria-hidden="true"><use href="#wyde"/></svg><span data-i18n="photo"></span></div>
+        <figcaption data-i18n="founders">Елжан и Елтинжал — сын и отец, основатели WYDE</figcaption>
+      </figure>
       <div class="story rv">
         <div id="foText"></div>
         <p class="sign" data-i18n="sign"></p>
@@ -770,6 +775,7 @@ T.ru = {
     "Мир не шьёт под таких, как я. Поэтому мы с папой решили шить сами."
   ],
   sign: "Елжан, сооснователь WYDE", photo: "Фото скоро",
+  founders: "Елжан и Елтинжал — сын и отец, основатели WYDE",
   nums: [["26 см", "длина стопы"], ["10,5 см", "ширина стопы"], ["9,5 см", "стелька в «широких» парах"]],
 
   faqH: "Вопросы",
@@ -947,6 +953,7 @@ T.kz = {
     "Әлем мен сияқтыларға тікпейді. Сондықтан әкем екеуміз өзіміз тігуді ұйғардық."
   ],
   sign: "Елжан, WYDE негізін қалаушылардың бірі", photo: "Фото жақында",
+  founders: "Елжан мен әкесі Елтинжал — WYDE негізін қалаушылар",
   nums: [["26 см", "табан ұзындығы"], ["10,5 см", "табан ені"], ["9,5 см", "«кең» жұптардағы ұлтарақ"]],
 
   faqH: "Сұрақтар",
@@ -1124,6 +1131,7 @@ T.en = {
     "The world doesn't make shoes for feet like mine. So my dad and I decided to make them ourselves."
   ],
   sign: "Yelzhan, co-founder of WYDE", photo: "Photo coming soon",
+  founders: "Yelzhan and his father Yeltinzhal — the founders of WYDE",
   nums: [["26 cm", "foot length"], ["10.5 cm", "foot width"], ["9.5 cm", "insole in “wide” pairs"]],
 
   faqH: "Questions",
