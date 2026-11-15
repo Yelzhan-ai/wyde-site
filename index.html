@@ -413,8 +413,8 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
             <div class="field"><label for="m-heel" data-i18n="heel"></label><input class="inp" id="m-heel" name="m-heel" data-m="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
           </div>
           <p class="mwhy" data-i18n="mGirthWhy"></p>
-          <div class="field"><label for="m-girth" data-i18n-html="girth"></label><input class="inp" id="m-girth" name="m-girth" data-m="girth" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
-          <div class="field"><label for="m-instep" data-i18n-html="instep"></label><input class="inp" id="m-instep" name="m-instep" data-m="instep" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
+          <div class="field"><label for="m-girth" data-i18n-html="girth"></label><input class="inp" id="m-girth" name="m-girth" data-m="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+          <div class="field"><label for="m-instep" data-i18n-html="instep"></label><input class="inp" id="m-instep" name="m-instep" data-m="instep" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
           <p class="mjis" id="mJis" aria-live="polite" hidden></p>
         </div>
         <p class="fmsg" id="mMsg" role="alert" hidden></p>
@@ -513,8 +513,8 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
               <div class="field"><label for="f-ball" data-i18n="ball"></label><input class="inp" id="f-ball" name="ball" inputmode="decimal" autocomplete="off" data-req data-num="6,16"></div>
               <div class="field"><label for="f-heel" data-i18n="heel"></label><input class="inp" id="f-heel" name="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
             </div>
-            <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
-            <div class="field"><label for="f-instep" data-i18n-html="instep"></label><input class="inp" id="f-instep" name="instep" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
+            <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+            <div class="field"><label for="f-instep" data-i18n-html="instep"></label><input class="inp" id="f-instep" name="instep" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
             <div class="field"><label for="f-insole" data-i18n-html="insole"></label><input class="inp" id="f-insole" name="insole" inputmode="decimal" autocomplete="off" data-num="5,14"></div>
             <div class="g2 g2w" style="grid-template-columns:1fr">
               <div class="field"><label for="f-jis" data-i18n-html="jis"></label><input class="inp" id="f-jis" name="jis" readonly placeholder="—"></div>
@@ -688,7 +688,7 @@ T.ru = {
   title: "WYDE — обувь для широкой стопы. Первая тысяча",
   desc: "WYDE — казахстанский бренд обуви, где широкая сама стелька и колодка, а не только верх. Узнай свой тип стопы и войди в первую тысячу.",
   langLabel: "Язык сайта", waLabel: "Написать в WhatsApp",
-  mGirthWhy: "Обхваты — это и есть полнота: те самые E, 2E, 4E на коробке. Без них колодку не подобрать.",
+  mGirthWhy: "Обхваты — это и есть полнота: те самые E, 2E, 4E на коробке. Нет ленты или нитки под рукой — пропусти, уточним позже в WhatsApp.",
   mJisNote: "Ориентир по японской шкале JIS. Полнота считается из длины и обхвата.",
   rHard: "Найти обувь",
   stepOf: "Шаг {n} из 4",
@@ -816,8 +816,8 @@ T.ru = {
   g1: "О тебе", g2: "Твои мерки", g3: "Твой опыт", g4: "Твой голос",
   name: "Имя", wa: "WhatsApp", ig: "Instagram <small>(необязательно)</small>", city: "Город", gender: "Пол",
   lenL: "Длина левой стопы, см", lenR: "Длина правой стопы, см", ball: "Ширина стопы, см", heel: "Ширина пятки, см",
-  girth: "Обхват в пучках, см",
-  instep: "Обхват в подъёме, см",
+  girth: "Обхват в пучках, см <small>(желательно)</small>",
+  instep: "Обхват в подъёме, см <small>(желательно)</small>",
   insole: "Ширина стельки твоей обуви, см <small>(если стелька вынимается)</small>",
   jis: "Полнота по JIS <small>(считается автоматически)</small>",
   type: "Тип стопы", typePh: "Пройди тест — подставим сами",
@@ -883,7 +883,7 @@ T.kz = {
   title: "WYDE — кең табанға арналған аяқ киім. Алғашқы мыңдық",
   desc: "WYDE — тек үсті емес, ұлтарағы мен қалыбының өзі кең қазақстандық аяқ киім бренді. Табан типіңді біл де, алғашқы мыңдыққа қосыл.",
   langLabel: "Сайт тілі", waLabel: "WhatsApp-қа жазу",
-  mGirthWhy: "Айналымдар — толықтықтың өзі: қораптағы E, 2E, 4E әріптері осы. Оларсыз қалып таңдай алмаймыз.",
+  mGirthWhy: "Айналымдар — толықтықтың өзі: қораптағы E, 2E, 4E әріптері осы. Қолыңда таспа не жіп болмаса — өткізіп жібер, кейін WhatsApp-та нақтылаймыз.",
   mJisNote: "Жапонияның JIS шкаласы бойынша бағдар. Толықтық ұзындық пен айналымнан есептеледі.",
   rHard: "Аяқ киім табу",
   stepOf: "{n}-қадам · барлығы 4",
@@ -1011,8 +1011,8 @@ T.kz = {
   g1: "Өзің туралы", g2: "Өлшемдерің", g3: "Тәжірибең", g4: "Дауысың",
   name: "Атың", wa: "WhatsApp", ig: "Instagram <small>(міндетті емес)</small>", city: "Қала", gender: "Жынысың",
   lenL: "Сол табан ұзындығы, см", lenR: "Оң табан ұзындығы, см", ball: "Табан ені, см", heel: "Өкше ені, см",
-  girth: "Табан айналымы, см",
-  instep: "Көтерілім айналымы, см",
+  girth: "Табан айналымы, см <small>(мүмкін болса)</small>",
+  instep: "Көтерілім айналымы, см <small>(мүмкін болса)</small>",
   insole: "Қазіргі аяқ киіміңнің ұлтарақ ені, см <small>(ұлтарақ суырылса)</small>",
   jis: "JIS бойынша толықтық <small>(автоматты түрде есептеледі)</small>",
   type: "Табан типі", typePh: "Тесттен өт — өзіміз енгіземіз",
@@ -1078,7 +1078,7 @@ T.en = {
   title: "WYDE — footwear for wide feet. The First Thousand",
   desc: "WYDE is a footwear brand from Kazakhstan that widens the insole and the last itself — not just the upper. Find your foot type and join the first thousand.",
   langLabel: "Site language", waLabel: "Message us on WhatsApp",
-  mGirthWhy: "Girths are your width fitting — the E, 2E, 4E on the box. We can't build a last without them.",
+  mGirthWhy: "Girths are your width fitting — the E, 2E, 4E on the box. No tape or string to hand? Skip them — we'll check with you on WhatsApp later.",
   mJisNote: "A reference point on Japan's JIS scale, calculated from your length and girth.",
   rHard: "Finding shoes",
   stepOf: "Step {n} of 4",
@@ -1206,8 +1206,8 @@ T.en = {
   g1: "About you", g2: "Your measurements", g3: "Your experience", g4: "Your vote",
   name: "Name", wa: "WhatsApp", ig: "Instagram <small>(optional)</small>", city: "City", gender: "Gender",
   lenL: "Left foot length, cm", lenR: "Right foot length, cm", ball: "Foot width, cm", heel: "Heel width, cm",
-  girth: "Ball girth, cm",
-  instep: "Instep girth, cm",
+  girth: "Ball girth, cm <small>(recommended)</small>",
+  instep: "Instep girth, cm <small>(recommended)</small>",
   insole: "Insole width of your current shoes, cm <small>(if it comes out)</small>",
   jis: "JIS width <small>(calculated automatically)</small>",
   type: "Foot type", typePh: "Take the test — we'll fill it in",
