@@ -75,6 +75,10 @@ h2{font:700 clamp(38px,10.6vw,84px)/1 var(--fh);text-transform:uppercase;margin-
 .stepno .bar i{flex:1;height:7px;border-radius:4px;background:var(--line)}
 .stepno .bar i.on{background:var(--hot)}
 .mcard{max-width:760px;margin-top:30px}
+.mwhy{margin-top:8px;padding:14px 16px;border-left:3px solid var(--hot);background:var(--ink3);border-radius:0 14px 14px 0}
+.mjis{font:700 24px/1.15 var(--fh);text-transform:uppercase}
+.mjis b{color:var(--hot);font-size:1.4em}
+.mjis small{display:block;margin-top:6px;font:400 15px/1.4 var(--fb);text-transform:none;color:var(--mute)}
 .mcard .btn.next{margin-top:24px}
 #quizNext{margin-top:28px}
 .sand{background:var(--sand);color:var(--ink)}
@@ -180,6 +184,7 @@ textarea.inp{min-height:112px;resize:vertical;line-height:1.4}
 .tcard h3 small{font:600 14px/1.2 var(--fb);text-transform:none;color:var(--mute)}
 .tcard dt{font:800 11.5px/1.2 var(--fb);letter-spacing:.15em;text-transform:uppercase;color:var(--hot);margin-top:16px}
 .tcard dd{margin-top:6px}
+.lvl{display:inline-block;margin:0 6px 4px 0;padding:3px 12px;border-radius:999px;background:var(--hot);color:var(--ink);font:700 15px/1.4 var(--fh);text-transform:uppercase;letter-spacing:.04em}
 .toenote{margin-top:6px;padding:14px 16px;border-radius:14px;background:var(--ink3);font-size:17px}
 .storybox{margin-top:28px;display:grid;gap:20px;align-items:center}
 .storybox img{width:min(62vw,250px);height:auto;border-radius:18px;border:1px solid var(--line);margin:0 auto;background:var(--ink)}
@@ -407,8 +412,10 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
             <div class="field"><label for="m-ball" data-i18n="ball"></label><input class="inp" id="m-ball" name="m-ball" data-m="ball" inputmode="decimal" autocomplete="off" data-req data-num="6,16"></div>
             <div class="field"><label for="m-heel" data-i18n="heel"></label><input class="inp" id="m-heel" name="m-heel" data-m="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
           </div>
-          <div class="field"><label for="m-girth" data-i18n-html="girth"></label><input class="inp" id="m-girth" name="m-girth" data-m="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
-          <div class="field"><label for="m-instep" data-i18n-html="instep"></label><input class="inp" id="m-instep" name="m-instep" data-m="instep" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+          <p class="mwhy" data-i18n="mGirthWhy"></p>
+          <div class="field"><label for="m-girth" data-i18n-html="girth"></label><input class="inp" id="m-girth" name="m-girth" data-m="girth" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
+          <div class="field"><label for="m-instep" data-i18n-html="instep"></label><input class="inp" id="m-instep" name="m-instep" data-m="instep" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
+          <p class="mjis" id="mJis" aria-live="polite" hidden></p>
         </div>
         <p class="fmsg" id="mMsg" role="alert" hidden></p>
         <button class="btn next" type="submit" data-i18n="nextTest"></button>
@@ -506,8 +513,8 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
               <div class="field"><label for="f-ball" data-i18n="ball"></label><input class="inp" id="f-ball" name="ball" inputmode="decimal" autocomplete="off" data-req data-num="6,16"></div>
               <div class="field"><label for="f-heel" data-i18n="heel"></label><input class="inp" id="f-heel" name="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
             </div>
-            <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
-            <div class="field"><label for="f-instep" data-i18n-html="instep"></label><input class="inp" id="f-instep" name="instep" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+            <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
+            <div class="field"><label for="f-instep" data-i18n-html="instep"></label><input class="inp" id="f-instep" name="instep" inputmode="decimal" autocomplete="off" data-req data-num="15,36"></div>
             <div class="field"><label for="f-insole" data-i18n-html="insole"></label><input class="inp" id="f-insole" name="insole" inputmode="decimal" autocomplete="off" data-num="5,14"></div>
             <div class="g2 g2w" style="grid-template-columns:1fr">
               <div class="field"><label for="f-jis" data-i18n-html="jis"></label><input class="inp" id="f-jis" name="jis" readonly placeholder="—"></div>
@@ -681,6 +688,9 @@ T.ru = {
   title: "WYDE — обувь для широкой стопы. Первая тысяча",
   desc: "WYDE — казахстанский бренд обуви, где широкая сама стелька и колодка, а не только верх. Узнай свой тип стопы и войди в первую тысячу.",
   langLabel: "Язык сайта", waLabel: "Написать в WhatsApp",
+  mGirthWhy: "Обхваты — это и есть полнота: те самые E, 2E, 4E на коробке. Без них колодку не подобрать.",
+  mJisNote: "Ориентир по японской шкале JIS. Полнота считается из длины и обхвата.",
+  rHard: "Найти обувь",
   stepOf: "Шаг {n} из 4",
   heroBtn: "Измерить свою стопу",
   nextTest: "Дальше: тест стельки",
@@ -721,7 +731,7 @@ T.ru = {
   m6: "WYDE шьёт под настоящие стопы.",
 
   qK: "Тест · 4 вопроса", qH: "Узнай свой тип стопы",
-  qLead: "Четыре вопроса — и ты знаешь, как устроена твоя опора и какая обувь её достойна. Смотри на свою обводку.",
+  qLead: "Четыре вопроса — и ты узнаешь свой тип стопы, насколько сложно найти под него обувь и что в ней обязательно должно быть. Смотри на свою обводку.",
   qProg: "Вопрос {n} из 4", back: "Назад",
   q: [
     { t: "Какая у тебя пятка?", h: "Посмотри на стопу сзади или на свой след на полу.", o: [["Узкая", "заметно у́же переда"], ["Обычная", ""], ["Широкая", "почти как перед"]] },
@@ -732,22 +742,28 @@ T.ru = {
   rK: "Твой тип стопы", rPower: "В чём сила", rNeed: "Что обязано быть в обуви",
   types: {
     fan: { n: "Веер", tag: "широкий перед, точная пятка",
-      p: "Перед раскрывается веером и берёт опору на себя, а пятка остаётся точной. Мощная площадка спереди — для толчка, рывка и резкой смены направления.",
-      s: "Широкая стелька в пучках и носок, где пальцам есть куда раскрыться. И при этом узкая пяточная часть — чтобы пятка сидела, а не болталась. Именно для этого у WYDE есть отдельная колодка под узкую пятку." },
+      h: "очень сложно", w: "Обычная пара давит спереди. «Широкая» расширяет колодку целиком — и пятка начинает болтаться. Тебе нужны широкий перед и узкая пятка одновременно, а так почти никто не шьёт.",
+      p: "Широкий перед — мощная опора для толчка и резких смен направления, а узкая пятка держит шаг точным.",
+      s: "Широкая стелька в передней части и носок, где пальцам есть куда раскрыться. И при этом узкая пяточная часть — чтобы пятка сидела, а не болталась. Именно для этого у WYDE есть отдельная колодка под узкую пятку." },
     mono: { n: "Монолит", tag: "широкая от пальцев до пятки",
-      p: "Опора по всей длине. Ты стоишь на земле всей площадью: тебя трудно сдвинуть и невозможно не заметить.",
+      h: "сложно", w: "«Широкие» модели добавляют объём сверху, а стелька остаётся узкой. Стопа давит на края по всей длине — от пальцев до пятки.",
+      p: "Опора по всей длине: ты стоишь на земле всей площадью, и тебя трудно сдвинуть.",
       s: "Стелька, широкая по всей длине, и широкая пяточная часть — без сужения посередине. Колодка WYDE под широкую пятку." },
     plat: { n: "Платформа", tag: "широкая и низкая",
-      p: "Широкая и низкая — как платформа: центр тяжести ближе к земле, контакт с опорой максимальный. Такую устойчивость не купишь.",
+      h: "очень сложно", w: "2E и 4E шьют под стопу широкую и высокую. Тебе достаётся лишняя высота: сверху свободно, а по бокам всё равно тесно. Ширина без лишней высоты на полках — редкость.",
+      p: "Центр тяжести ближе к земле и максимальный контакт с опорой — природная устойчивость.",
       s: "Ширина — в стельке, а не в высоте. Низкий объём верха, чтобы стопа не плавала: обычные 2E и 4E дают тебе лишнюю высоту и ни миллиметра нужной ширины." },
     titan: { n: "Титан", tag: "широкая и высокая",
-      p: "Широкая, высокая, объёмная — стопа, которой нужно много места, потому что в ней много силы. Крупная опора под большую нагрузку.",
+      h: "непросто", w: "Ближе всего к тебе — модели 2E и 4E: их шьют как раз под широкую и высокую стопу. Но стелька в них почти не шире обычной, поэтому по бокам всё равно тесно.",
+      p: "Крупная опора под большую нагрузку: в такой стопе много силы.",
       s: "И широкая стелька, и высокий объём верха. Глубокая посадка, шнуровка, которая раскрывается широко, и язычок, который не давит на подъём." },
     arch: { n: "Арка", tag: "высокий подъём",
-      p: "Высокий подъём — природная пружина: свод собирает энергию шага и возвращает её. Упругий, лёгкий ход.",
+      h: "непросто", w: "Шнуровка и язычок давят на подъём. Берёшь размер больше — пара начинает болтаться в длину. Тебе нужен запас по высоте, а не по размеру.",
+      p: "Высокий свод — природная пружина: он собирает энергию шага и возвращает её.",
       s: "Запас по высоте над подъёмом, широкая шнуровка и мягкий язычок. А перед — на широкой стельке." },
     square: { n: "Квадрат", tag: "пальцы в одну линию",
-      p: "Пальцы в одну линию — ты отталкиваешься сразу всем фронтом. Нагрузка делится поровну, опора — как стена.",
+      h: "сложно", w: "Мыс обычной обуви сужается к большому пальцу, и крайним пальцам не хватает места. Берёшь на размер больше — пара болтается в пятке.",
+      p: "Пальцы в одну линию: ты отталкиваешься всем фронтом сразу, нагрузка делится поровну.",
       s: "Квадратный широкий носок. Зауженный мыс забирает место у крайних пальцев — тебе нужен прямой фронт, где помещаются все." }
   },
   toe: {
@@ -764,7 +780,7 @@ T.ru = {
 
   dK: "Как устроен размер", dH: "Длина ≠ ширина ≠ объём",
   dLead: "Размер на коробке знает только длину. А у стопы пять мерок.",
-  leg: ["Длина — от пятки до самого длинного пальца", "Ширина в пучках — самое широкое место переда", "Ширина пятки", "Обхват в пучках — лента вокруг стопы по косточкам", "Обхват в подъёме — лента через самую высокую точку подъёма"],
+  leg: ["Длина — от пятки до самого длинного пальца", "Ширина стопы — самое широкое место переда", "Ширина пятки", "Обхват в пучках — лента вокруг стопы по косточкам", "Обхват в подъёме — лента через самую высокую точку подъёма"],
   whyH: "Почему 2E и 4E не спасают",
   whyP: "Буквы полноты — E, 2E, 4E — считают по обхвату, то есть по объёму. Такую обувь шьют под стопу сразу и широкую, и высокую: материал добавляют сверху, а стелька остаётся почти прежней. Но у многих стопа широкая и низкая. Им достаётся лишняя высота — и ни миллиметра нужной ширины.",
   factsH: "Что говорят данные",
@@ -783,12 +799,12 @@ T.ru = {
   filled: "Подставили в анкету.",
 
   meK: "Инструкция", meH: "Как измерить стопу за 5 минут",
-  meLead: "Нужны лист A4, ручка, линейка и сантиметровая лента.",
+  meLead: "Нужны лист A4, ручка, линейка и сантиметровая лента. Нет ленты — подойдут нитка или шнурок.",
   steps: [
-    ["Подготовка", "Вечером, босиком или в тонком носке, в котором будешь носить обувь. Нужны лист A4, ручка, линейка и сантиметровая лента. Проще мерить вдвоём."],
+    ["Подготовка", "Вечером, босиком или в тонком носке, в котором будешь носить обувь. Нужны лист A4, ручка, линейка и сантиметровая лента. Нет ленты — возьми нитку или шнурок: оберни стопу, отметь место, где конец сошёлся, и измерь линейкой. Проще мерить вдвоём."],
     ["Обведи стопу", "Положи лист на твёрдый пол вплотную к стене. Встань на него: пятка касается стены, вес на обе ноги. Обведи стопу. Ручку держи строго вертикально и веди вплотную к коже — не наклоняй ни внутрь, ни наружу, иначе обводка прибавит или убавит миллиметры."],
     ["Длина", "Линейкой от края листа у стены до самой дальней точки пальцев."],
-    ["Ширина в пучках", "На обводке — самое широкое место переда, по прямой поперёк стопы."],
+    ["Ширина стопы", "На обводке — самое широкое место переда, по прямой поперёк стопы."],
     ["Ширина пятки", "На обводке — самое широкое место пятки."],
     ["Обхват в пучках", "Лента вокруг стопы через косточки большого пальца и мизинца. Стоя, лента прилегает без натяга."],
     ["Обхват в подъёме", "Лента через самую высокую точку подъёма (примерно на середине длины стопы) и под сводом. Стоя, без натяга. Эта мерка показывает, низкая у тебя стопа или высокая."],
@@ -799,9 +815,9 @@ T.ru = {
   fLead: "Первые участники помогут создать колодку, выберут первую модель и цвет и первыми получат доступ к предзаказу. Это не рассылка. Это место в команде.",
   g1: "О тебе", g2: "Твои мерки", g3: "Твой опыт", g4: "Твой голос",
   name: "Имя", wa: "WhatsApp", ig: "Instagram <small>(необязательно)</small>", city: "Город", gender: "Пол",
-  lenL: "Длина левой стопы, см", lenR: "Длина правой стопы, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см",
-  girth: "Обхват в пучках, см <small>(необязательно)</small>",
-  instep: "Обхват в подъёме, см <small>(необязательно)</small>",
+  lenL: "Длина левой стопы, см", lenR: "Длина правой стопы, см", ball: "Ширина стопы, см", heel: "Ширина пятки, см",
+  girth: "Обхват в пучках, см",
+  instep: "Обхват в подъёме, см",
   insole: "Ширина стельки твоей обуви, см <small>(если стелька вынимается)</small>",
   jis: "Полнота по JIS <small>(считается автоматически)</small>",
   type: "Тип стопы", typePh: "Пройди тест — подставим сами",
@@ -867,6 +883,9 @@ T.kz = {
   title: "WYDE — кең табанға арналған аяқ киім. Алғашқы мыңдық",
   desc: "WYDE — тек үсті емес, ұлтарағы мен қалыбының өзі кең қазақстандық аяқ киім бренді. Табан типіңді біл де, алғашқы мыңдыққа қосыл.",
   langLabel: "Сайт тілі", waLabel: "WhatsApp-қа жазу",
+  mGirthWhy: "Айналымдар — толықтықтың өзі: қораптағы E, 2E, 4E әріптері осы. Оларсыз қалып таңдай алмаймыз.",
+  mJisNote: "Жапонияның JIS шкаласы бойынша бағдар. Толықтық ұзындық пен айналымнан есептеледі.",
+  rHard: "Аяқ киім табу",
   stepOf: "{n}-қадам · барлығы 4",
   heroBtn: "Табанымды өлшеу",
   nextTest: "Әрі қарай: ұлтарақ сынағы",
@@ -907,7 +926,7 @@ T.kz = {
   m6: "WYDE нағыз табанға тігеді.",
 
   qK: "Тест · 4 сұрақ", qH: "Табан типіңді біл",
-  qLead: "Төрт сұрақ — тірегің қалай құрылғанын және оған қандай аяқ киім лайық екенін білесің. Сызған контурыңа қара.",
+  qLead: "Төрт сұрақ — табан типіңді, оған аяқ киім табу қаншалықты қиын екенін және онда міндетті түрде не болуы керегін білесің. Сызған контурыңа қара.",
   qProg: "{n}-сұрақ · барлығы 4", back: "Артқа",
   q: [
     { t: "Өкшең қандай?", h: "Табаныңа артынан немесе едендегі ізіңе қара.", o: [["Тар", "алдыңғы жағынан анық жіңішке"], ["Қалыпты", ""], ["Кең", "алдыңғы жағымен шамалас"]] },
@@ -918,22 +937,28 @@ T.kz = {
   rK: "Сенің табан типің", rPower: "Күшің неде", rNeed: "Аяқ киіміңде міндетті түрде не болуы керек",
   types: {
     fan: { n: "Қанат", tag: "алды кең, өкшесі нақты",
-      p: "Табанның алды қанатша жайылып, тіректі өзіне алады, ал өкше нақты қалады. Алдыңда — қуатты алаң: серпілуге, жұлқынуға және бағытты күрт өзгертуге арналған.",
+      h: "өте қиын", w: "Әдеттегі жұп алдыңғы жағынан қысады. «Кең» модель бүкіл қалыпты кеңейтеді — сөйтіп өкше бос тұрады. Саған алды кең, өкшесі тар аяқ киім керек, ал мұндайды ешкім дерлік тікпейді.",
+      p: "Кең алдыңғы жақ — серпілуге және бағытты күрт өзгертуге арналған қуатты тірек, ал тар өкше қадамыңды нақты ұстайды.",
       s: "Табанның ең кең жерінде — кең ұлтарақ, ал тұмсығында башпайлар еркін жайылатын орын болуы керек. Сонымен бірге өкше тұсы тар болғаны жөн — өкше бос тұрмай, нық отыруы үшін. WYDE-тың тар өкшеге арналған бөлек қалыбы дәл осы үшін бар." },
     mono: { n: "Жартас", tag: "башпайдан өкшеге дейін кең",
-      p: "Тірек — табанның өн бойында. Жерге бүкіл аумағыңмен тұрасың: сені орныңнан қозғау қиын, байқамау мүмкін емес.",
+      h: "қиын", w: "«Кең» модельдер көлемді үстінен қосады, ал ұлтарақ тар күйінде қалады. Табаның башпайдан өкшеге дейін шетке тіреледі.",
+      p: "Тірек — табанның өн бойында: жерге бүкіл аумағыңмен тұрасың, сені орныңнан қозғау қиын.",
       s: "Өн бойы кең ұлтарақ және кең өкше тұсы — ортасында тарылмайтын. WYDE-тың кең өкшеге арналған қалыбы." },
     plat: { n: "Тұғыр", tag: "кең әрі аласа",
-      p: "Кең әрі аласа — тұғыр іспетті: ауырлық орталығың жерге жақын, тірек ауданың барынша үлкен. Мұндай орнықтылық сатып алынбайды.",
+      h: "өте қиын", w: "2E мен 4E кең әрі биік табанға тігіледі. Саған артық биіктік бұйырады: үсті бос, ал бүйірі бәрібір тар. Артық биіктігі жоқ, тек ені кең аяқ киім сөрелерде сирек кездеседі.",
+      p: "Ауырлық орталығың жерге жақын, тірек ауданың барынша үлкен — табиғи орнықтылық.",
       s: "Кеңдік биіктікте емес, ұлтарақта болуы керек. Табан ішінде бос жылжымауы үшін үсті аласа пішілген аяқ киім керек: әдеттегі 2E мен 4E саған артық биіктік береді, ал қажетті еннен бір миллиметр де қоспайды." },
     titan: { n: "Алып", tag: "кең әрі биік",
-      p: "Кең, биік, көлемді — күші мол болғандықтан орынды да көп қажет ететін табан. Үлкен жүкке арналған ірі тірек.",
+      h: "оңай емес", w: "Саған ең жақыны — 2E мен 4E модельдері: олар дәл кең әрі биік табанға тігіледі. Бірақ олардың ұлтарағы әдеттегіден кең емес дерлік, сондықтан бүйірі бәрібір тар.",
+      p: "Үлкен жүкке арналған ірі тірек: мұндай табанда күш мол.",
       s: "Кең ұлтарақ та, көлемді үсті де керек. Терең отырыс, кең ашылатын бау және табан үстін қыспайтын тілше." },
     arch: { n: "Күмбез", tag: "үсті биік",
-      p: "Табан үстінің биіктігі — табиғи серіппе: табан күмбезі қадам қуатын жинап, қайта береді. Жеңіл, серпінді жүріс.",
+      h: "оңай емес", w: "Бау мен тілше табан үстін қысады. Бір өлшем үлкенін алсаң — жұп ұзынынан бос тұрады. Саған өлшем емес, биіктік қоры керек.",
+      p: "Биік табан күмбезі — табиғи серіппе: қадам қуатын жинап, қайта береді.",
       s: "Табан үстіне биіктік қоры, кең ашылатын бау және жұмсақ тілше. Ал алдыңғы жағы кең ұлтарақта тұруы керек." },
     square: { n: "Шаршы", tag: "башпайлары бір сызықта",
-      p: "Башпайлар бір сызықта — бүкіл алдыңғы шебіңмен бірден серпілесің. Салмақ тең бөлінеді, тірегің қабырғадай берік.",
+      h: "қиын", w: "Әдеттегі аяқ киімнің тұмсығы бас бармаққа қарай сүйірленеді, шеткі башпайларға орын жетпейді. Бір өлшем үлкенін алсаң — өкше бос тұрады.",
+      p: "Башпайлар бір сызықта: бүкіл алдыңғы шебіңмен бірден серпілесің, салмақ тең бөлінеді.",
       s: "Шаршы пішінді кең тұмсық. Сүйір тұмсық шеткі башпайлардың орнын тартып алады — саған бәрі сыятын түзу алдыңғы жақ керек." }
   },
   toe: {
@@ -969,9 +994,9 @@ T.kz = {
   filled: "Сауалнамаға енгізілді.",
 
   meK: "Нұсқаулық", meH: "Табанды 5 минутта қалай өлшеуге болады",
-  meLead: "Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа.",
+  meLead: "Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Таспа болмаса — жіп не бау да жарайды.",
   steps: [
-    ["Дайындық", "Кешке өлше — жалаңаяқ немесе аяқ киіммен бірге киетін жұқа шұлықпен. Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Екеу болып өлшеу оңайырақ."],
+    ["Дайындық", "Кешке өлше — жалаңаяқ немесе аяқ киіммен бірге киетін жұқа шұлықпен. Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Таспа болмаса, жіп не бау ал: табаныңа орап, ұшы түйіскен жерді белгіле де, сызғышпен өлше. Екеу болып өлшеу оңайырақ."],
     ["Табаныңды сыз", "Парақты қатты еденге, қабырғаға тығыз тақап қой. Үстіне тұр: өкшең қабырғаға тиіп тұрсын, салмағың екі аяққа бірдей түссін. Табаныңды айналдыра сыз. Қаламды тіп-тік ұстап, теріге тақап жүргіз — ішке де, сыртқа да қисайтпа, әйтпесе контур миллиметр қосып не азайтып жібереді."],
     ["Ұзындық", "Сызғышпен парақтың қабырға жақ шетінен башпайлардың ең алыс нүктесіне дейін өлше."],
     ["Табан ені", "Контурдан алдыңғы жақтың ең кең жерін тауып, табанның көлденеңінен түзу сызықпен өлше."],
@@ -986,8 +1011,8 @@ T.kz = {
   g1: "Өзің туралы", g2: "Өлшемдерің", g3: "Тәжірибең", g4: "Дауысың",
   name: "Атың", wa: "WhatsApp", ig: "Instagram <small>(міндетті емес)</small>", city: "Қала", gender: "Жынысың",
   lenL: "Сол табан ұзындығы, см", lenR: "Оң табан ұзындығы, см", ball: "Табан ені, см", heel: "Өкше ені, см",
-  girth: "Табан айналымы, см <small>(міндетті емес)</small>",
-  instep: "Көтерілім айналымы, см <small>(міндетті емес)</small>",
+  girth: "Табан айналымы, см",
+  instep: "Көтерілім айналымы, см",
   insole: "Қазіргі аяқ киіміңнің ұлтарақ ені, см <small>(ұлтарақ суырылса)</small>",
   jis: "JIS бойынша толықтық <small>(автоматты түрде есептеледі)</small>",
   type: "Табан типі", typePh: "Тесттен өт — өзіміз енгіземіз",
@@ -1053,6 +1078,9 @@ T.en = {
   title: "WYDE — footwear for wide feet. The First Thousand",
   desc: "WYDE is a footwear brand from Kazakhstan that widens the insole and the last itself — not just the upper. Find your foot type and join the first thousand.",
   langLabel: "Site language", waLabel: "Message us on WhatsApp",
+  mGirthWhy: "Girths are your width fitting — the E, 2E, 4E on the box. We can't build a last without them.",
+  mJisNote: "A reference point on Japan's JIS scale, calculated from your length and girth.",
+  rHard: "Finding shoes",
   stepOf: "Step {n} of 4",
   heroBtn: "Measure your feet",
   nextTest: "Next: the insole test",
@@ -1093,7 +1121,7 @@ T.en = {
   m6: "WYDE builds for real feet.",
 
   qK: "The test · 4 questions", qH: "Find your foot type",
-  qLead: "Four questions — and you'll know how your foundation is built, and what kind of shoe it deserves. Use your foot tracing.",
+  qLead: "Four questions — and you'll know your foot type, how hard it is to find shoes for it, and what those shoes must have. Use your foot tracing.",
   qProg: "Question {n} of 4", back: "Back",
   q: [
     { t: "What's your heel like?", h: "Look at your foot from behind, or at your footprint on the floor.", o: [["Narrow", "clearly narrower than the front"], ["Regular", ""], ["Wide", "almost as wide as the front"]] },
@@ -1104,22 +1132,28 @@ T.en = {
   rK: "Your foot type", rPower: "Your power", rNeed: "What your shoe must have",
   types: {
     fan: { n: "Delta", tag: "wide front, precise heel",
-      p: "Your forefoot fans out and takes the load, while your heel stays precise. A powerful platform up front — made for push-off, bursts and sharp cuts.",
-      s: "A wide insole at the ball and a toe box where your toes can actually splay. Plus a narrow heel cup, so your heel locks in instead of slipping. That's exactly why WYDE has a dedicated narrow-heel last." },
+      h: "very hard", w: "Regular pairs squeeze the front. “Wide” versions widen the whole last — and your heel starts slipping. You need a wide front and a narrow heel at once, and almost nobody makes that.",
+      p: "A wide forefoot is a powerful base for push-off and sharp cuts, while a narrow heel keeps every step precise.",
+      s: "A wide insole up front and a toe box where your toes can actually splay. Plus a narrow heel cup, so your heel locks in instead of slipping. That's exactly why WYDE has a dedicated narrow-heel last." },
     mono: { n: "Monolith", tag: "wide from toes to heel",
-      p: "Support along the entire length. You meet the ground with your whole foot: hard to move, impossible to miss.",
+      h: "hard", w: "“Wide” models add volume on top while the insole stays narrow. Your foot presses against the edges from toes to heel.",
+      p: "Support along your whole length: you meet the ground with all of it, and you're hard to move.",
       s: "An insole that's wide end to end, and a wide heel — no pinch in the middle. The WYDE wide-heel last." },
     plat: { n: "Platform", tag: "wide and low",
-      p: "Wide and low, like a platform: your centre of gravity sits closer to the ground and your contact area is maxed out. Stability you can't buy.",
+      h: "very hard", w: "2E and 4E are built for feet that are wide and tall. You get height you don't need — loose on top, still tight at the sides. Width without the extra height is rare on the shelf.",
+      p: "A low centre of gravity and maximum contact with the ground — natural stability.",
       s: "Width in the insole, not in the height. A low-volume upper so your foot doesn't swim: standard 2E and 4E give you height you don't need — and not one millimetre of the width you do." },
     titan: { n: "Titan", tag: "wide and high",
-      p: "Wide, tall, full-volume — a foot that needs a lot of room because there's a lot of strength in it. A big base for big loads.",
+      h: "tricky", w: "2E and 4E are your closest match: they're built for wide, tall feet. But their insoles are barely wider than standard, so the sides still pinch.",
+      p: "A big base for big loads: there's a lot of strength in a foot like yours.",
       s: "A wide insole and a high-volume upper. A deep fit, lacing that opens wide, and a tongue that never presses on your instep." },
     arch: { n: "Arch", tag: "high instep",
-      p: "A high instep is a natural spring: your arch loads the energy of every step and gives it back. A light, elastic stride.",
+      h: "tricky", w: "Laces and tongue press on your instep. Go a size up and the shoe slips lengthwise. You need room in height, not in size.",
+      p: "A high arch is a natural spring: it stores the energy of each step and gives it back.",
       s: "Extra height over the instep, wide-opening lacing and a soft tongue. All of it on a wide insole up front." },
     square: { n: "Block", tag: "toes in one line",
-      p: "Toes in a straight line — you push off with your whole front at once. The load is shared evenly. You stand like a wall.",
+      h: "hard", w: "Regular toe boxes taper toward the big toe, leaving your outer toes short of room. Size up and your heel slips.",
+      p: "Toes in a line: you push off with your whole front at once, the load shared evenly.",
       s: "A square, wide toe box. A tapered toe steals room from your outer toes — you need a straight front where everyone fits." }
   },
   toe: {
@@ -1136,7 +1170,7 @@ T.en = {
 
   dK: "How sizing really works", dH: "Length ≠ width ≠ volume",
   dLead: "The size on the box only knows your length. Your foot has five measurements.",
-  leg: ["Length — from heel to the longest toe", "Ball width — the widest part of the forefoot", "Heel width", "Ball girth — a tape around the foot at the ball joints", "Instep girth — a tape over the highest point of the instep"],
+  leg: ["Length — from heel to the longest toe", "Foot width — the widest part of the forefoot", "Heel width", "Ball girth — a tape around the foot at the ball joints", "Instep girth — a tape over the highest point of the instep"],
   whyH: "Why 2E and 4E don't save you",
   whyP: "Width letters — E, 2E, 4E — are based on girth, which means volume. Those shoes are built for a foot that's both wide and tall: material is added on top while the insole stays almost the same. But many feet are wide and low. They get height they don't need — and not one millimetre of the width they do.",
   factsH: "What the data says",
@@ -1155,12 +1189,12 @@ T.en = {
   filled: "Added to your form.",
 
   meK: "How-to", meH: "Measure your feet in 5 minutes",
-  meLead: "You'll need a sheet of A4, a pen, a ruler and a soft tape measure.",
+  meLead: "You'll need a sheet of A4, a pen, a ruler and a soft tape measure. No tape? A piece of string works too.",
   steps: [
-    ["Get ready", "Measure in the evening, barefoot or in the thin socks you'll wear with your shoes. You'll need a sheet of A4, a pen, a ruler and a soft tape measure. It's easier with a friend."],
+    ["Get ready", "Measure in the evening, barefoot or in the thin socks you'll wear with your shoes. You'll need a sheet of A4, a pen, a ruler and a soft tape measure. No tape? Wrap a piece of string around your foot, mark where the end meets, and measure it with the ruler. It's easier with a friend."],
     ["Trace your foot", "Lay the sheet on a hard floor, flush against the wall. Stand on it: heel touching the wall, weight on both feet. Trace around your foot. Hold the pen perfectly upright and keep it tight to your skin — tilt it in or out and the outline gains or loses millimetres."],
     ["Length", "With a ruler, from the wall edge of the sheet to the furthest point of your toes."],
-    ["Ball width", "On the tracing: the widest part of the forefoot, measured straight across."],
+    ["Foot width", "On the tracing: the widest part of the forefoot, measured straight across."],
     ["Heel width", "On the tracing: the widest part of the heel."],
     ["Ball girth", "Wrap the tape around your foot over the big-toe and little-toe joints. Standing, snug but not pulled tight."],
     ["Instep girth", "Run the tape over the highest point of your instep (about halfway along your foot) and under the arch. Standing, no pulling. This one shows whether your foot is low or high."],
@@ -1171,9 +1205,9 @@ T.en = {
   fLead: "The first members will help shape the last, choose the first model and colour, and get first access to pre-order. This isn't a mailing list. It's a seat on the team.",
   g1: "About you", g2: "Your measurements", g3: "Your experience", g4: "Your vote",
   name: "Name", wa: "WhatsApp", ig: "Instagram <small>(optional)</small>", city: "City", gender: "Gender",
-  lenL: "Left foot length, cm", lenR: "Right foot length, cm", ball: "Ball width, cm", heel: "Heel width, cm",
-  girth: "Ball girth, cm <small>(optional)</small>",
-  instep: "Instep girth, cm <small>(optional)</small>",
+  lenL: "Left foot length, cm", lenR: "Right foot length, cm", ball: "Foot width, cm", heel: "Heel width, cm",
+  girth: "Ball girth, cm",
+  instep: "Instep girth, cm",
   insole: "Insole width of your current shoes, cm <small>(if it comes out)</small>",
   jis: "JIS width <small>(calculated automatically)</small>",
   type: "Foot type", typePh: "Take the test — we'll fill it in",
@@ -1405,7 +1439,7 @@ function renderResult() {
   const ks = state.typeKeys;
   $("#quizBox").innerHTML = `<div class="fadein"><p class="kicker">${esc(L.rK)}</p>
     <p class="tname" id="rT" tabindex="-1">${ks.map(k => `<span>${esc(L.types[k].n)}</span>`).join("")}</p>
-    ${ks.map(k => { const t = L.types[k]; return `<div class="tcard"><h3>${esc(t.n)} <small>${esc(t.tag)}</small></h3><dl><dt>${esc(L.rPower)}</dt><dd>${esc(t.p)}</dd><dt>${esc(L.rNeed)}</dt><dd>${esc(t.s)}</dd></dl></div>`; }).join("")}
+    ${ks.map(k => { const t = L.types[k]; return `<div class="tcard"><h3>${esc(t.n)} <small>${esc(t.tag)}</small></h3><dl><dt>${esc(L.rHard)}</dt><dd><b class="lvl">${esc(t.h)}</b> ${esc(t.w)}</dd><dt>${esc(L.rNeed)}</dt><dd>${esc(t.s)}</dd><dt>${esc(L.rPower)}</dt><dd>${esc(t.p)}</dd></dl></div>`; }).join("")}
     ${state.toe ? `<p class="toenote">${esc(L.toe[state.toe])}</p>` : ""}
     <p class="note-ok">✓ ${esc(L.rFilled)}</p>
     <p><button type="button" class="linkbtn" data-qagain>${esc(L.rAgain)}</button></p></div>`;
@@ -1510,6 +1544,7 @@ function calcJis() {
 function renderJis() {
   const j = calcJis(), box = $("#jRes"), i = j ? Math.max(0, Math.min(9, j.idx)) : -1, fj = $("#f-jis");
   if (fj) fj.value = j ? jisLabel(j.idx) : "";
+  const mj = $("#mJis"); if (mj) { mj.hidden = !j; if (j) mj.innerHTML = fill(L.jRes, { w: JIS[i] }) + `<small>${esc(L.mJisNote)}</small>`; }
   $("#jScale").innerHTML = JIS.map((w, k) => `<span class="${k === i ? "on" : ""}">${w}</span>`).join("");
   box.innerHTML = !j ? `<p style="margin-top:16px">${esc(L.jNeed)}</p>` : `<p class="jis-out">${fill(L.jRes, { w: JIS[i] })}</p>`
     + (j.idx > 9 ? `<p style="margin-top:8px"><b>${esc(L.jOver)}</b></p>` : j.idx < 0 ? `<p style="margin-top:8px">${esc(L.jUnder)}</p>` : "")
@@ -1592,7 +1627,7 @@ function payload() {
     utm: new URLSearchParams(location.search).get("utm_source") || document.referrer || ""
   };
 }
-const WA_LABELS = { name: "Имя", whatsapp: "WhatsApp", instagram: "Instagram", city: "Город", gender: "Пол", lenL: "Длина левой, см", lenR: "Длина правой, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см", girth: "Обхват в пучках, см", instep: "Обхват в подъёме, см", insole: "Ширина стельки, см", widerMm: "Стопа шире стельки, мм", jis: "Полнота JIS", type: "Тип стопы", pains: "Где проигрывает обувь", brands: "Бренды и ширины", model: "Модель", color: "Цвет", lang: "Язык", consent: "Согласие на обработку данных" };
+const WA_LABELS = { name: "Имя", whatsapp: "WhatsApp", instagram: "Instagram", city: "Город", gender: "Пол", lenL: "Длина левой, см", lenR: "Длина правой, см", ball: "Ширина стопы, см", heel: "Ширина пятки, см", girth: "Обхват в пучках, см", instep: "Обхват в подъёме, см", insole: "Ширина стельки, см", widerMm: "Стопа шире стельки, мм", jis: "Полнота JIS", type: "Тип стопы", pains: "Где проигрывает обувь", brands: "Бренды и ширины", model: "Модель", color: "Цвет", lang: "Язык", consent: "Согласие на обработку данных" };
 const waNum = () => CONFIG.whatsapp.replace(/\D/g, "");
 const waLink = d => "https://wa.me/" + waNum() + "?text=" + encodeURIComponent("Анкета WYDE — первая тысяча\n" + Object.keys(WA_LABELS).filter(k => d[k] !== "" && d[k] != null).map(k => WA_LABELS[k] + ": " + d[k]).join("\n"));
 function done(demo) {
@@ -1674,7 +1709,7 @@ function init() {
   $("#testForm").addEventListener("submit", runTest);
   const mf = $("#mForm");
   mf.addEventListener("submit", measureNext);
-  mf.addEventListener("input", e => { const el = e.target; if (!el.dataset.m) return; if (el.closest(".bad")) checkField(el); setMeasure(el.dataset.m, el.value, el); });
+  mf.addEventListener("input", e => { const el = e.target; if (!el.dataset.m) return; if (el.closest(".bad")) checkField(el); if (!$("#mForm .bad")) $("#mMsg").hidden = true; setMeasure(el.dataset.m, el.value, el); });
   ["#tFoot", "#tIns"].forEach(q => $(q).addEventListener("input", e => { $("#testForm .btn").hidden = false; setMeasure(q === "#tFoot" ? "ball" : "insole", e.target.value, e.target); }));
   $("#quizBox").addEventListener("click", quizClick);
   $("#sShare").addEventListener("click", storyShare);
