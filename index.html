@@ -128,6 +128,8 @@ h1 span{display:block} h1 .hot{color:var(--hot)}
 textarea.inp{min-height:112px;resize:vertical;line-height:1.4}
 .bad .inp,.bad .chip span{border-color:#ff7a6b}
 .err{font:600 13.5px/1.3 var(--fb);color:#ffa698}
+.howto{display:block;width:fit-content;padding:10px 0 2px;font:700 14.5px/1.3 var(--fb);color:var(--sand2);text-decoration:underline;text-underline-offset:4px}
+.howto:hover{color:var(--hot)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
 .stack{display:grid;gap:16px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -347,40 +349,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
 
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 
-<!-- ===== 2. ТЕСТ СТЕЛЬКИ ===== -->
-<section id="test" class="alt">
-  <div class="wrap">
-    <p class="kicker rv" data-i18n="tK"></p>
-    <h2 class="rv" data-i18n="tH"></h2>
-    <p class="lead rv" data-i18n="tLead"></p>
-    <div class="test-grid">
-      <div class="rv">
-        <svg class="tsvg" id="tsvg" viewBox="0 0 200 430" role="img" aria-labelledby="tsvgT">
-          <title id="tsvgT" data-i18n="tAlt"></title>
-          <use href="#insoleP" class="ins"/>
-          <g class="footA"><use href="#footG" class="ft"/></g>
-          <g mask="url(#outM)"><g class="footA"><use href="#footG" class="over"/></g></g>
-        </svg>
-        <p class="tkey"><span><i style="background:var(--sand2)"></i><span data-i18n="tKeyIns"></span></span><span><i style="background:var(--hot)"></i><span data-i18n="tKeyOver"></span></span></p>
-      </div>
-      <div class="card rv">
-        <ol class="nsteps" data-list="tSteps"></ol>
-        <form id="testForm" novalidate>
-          <div class="g2">
-            <div class="field"><label for="tFoot" data-i18n="tFoot"></label><input class="inp" id="tFoot" inputmode="decimal" autocomplete="off" placeholder="10,5"></div>
-            <div class="field"><label for="tIns" data-i18n="tInsole"></label><input class="inp" id="tIns" inputmode="decimal" autocomplete="off" placeholder="9,5"></div>
-          </div>
-          <p class="err" id="tErr" role="alert" style="margin-top:10px" hidden></p>
-          <button class="btn" type="submit" style="width:100%;margin-top:16px" data-i18n="tBtn"></button>
-        </form>
-        <div class="res" id="tRes" aria-live="polite" hidden></div>
-      </div>
-    </div>
-    <p class="hint rv" data-i18n="tHint"></p>
-  </div>
-</section>
-
-<!-- ===== 3. МАНИФЕСТ ===== -->
+<!-- ===== 2. МАНИФЕСТ ===== -->
 <section class="manifest sand" id="manifest">
   <div class="wrap">
     <p class="kicker rv" data-i18n="mK"></p>
@@ -393,7 +362,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   </div>
 </section>
 
-<!-- ===== 4. КВИЗ «ТИП СТОПЫ» + 5. КАРТИНКА ДЛЯ СТОРИС ===== -->
+<!-- ===== 3. КВИЗ «ТИП СТОПЫ» + 4. КАРТИНКА ДЛЯ СТОРИС ===== -->
 <section id="quiz">
   <div class="wrap narrow">
     <p class="kicker rv" data-i18n="qK"></p>
@@ -416,7 +385,52 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
   </div>
 </section>
 
-<!-- ===== 6. ДЛИНА ≠ ШИРИНА ≠ ОБЪЁМ + КАЛЬКУЛЯТОР JIS ===== -->
+<!-- ===== 5. КАК ИЗМЕРИТЬ СТОПУ ===== -->
+<section id="measure" class="sand">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="meK"></p>
+    <h2 class="rv" data-i18n="meH"></h2>
+    <p class="lead rv" data-i18n="meLead"></p>
+    <ol class="steps" id="steps"></ol>
+    <div class="btns"><a class="btn" href="#join" data-i18n="meCta"></a></div>
+  </div>
+</section>
+
+<!-- ===== 6. ТЕСТ СТЕЛЬКИ ===== -->
+<section id="test">
+  <div class="wrap">
+    <p class="kicker rv" data-i18n="tK"></p>
+    <h2 class="rv" data-i18n="tH"></h2>
+    <p class="lead rv" data-i18n="tLead"></p>
+    <div class="test-grid">
+      <div class="rv">
+        <svg class="tsvg" id="tsvg" viewBox="0 0 200 430" role="img" aria-labelledby="tsvgT">
+          <title id="tsvgT" data-i18n="tAlt"></title>
+          <use href="#insoleP" class="ins"/>
+          <g class="footA"><use href="#footG" class="ft"/></g>
+          <g mask="url(#outM)"><g class="footA"><use href="#footG" class="over"/></g></g>
+        </svg>
+        <p class="tkey"><span><i style="background:var(--sand2)"></i><span data-i18n="tKeyIns"></span></span><span><i style="background:var(--hot)"></i><span data-i18n="tKeyOver"></span></span></p>
+      </div>
+      <div class="card rv">
+        <ol class="nsteps" data-list="tSteps"></ol>
+        <form id="testForm" novalidate>
+          <div class="g2">
+            <div class="field"><label for="tFoot" data-i18n="tFoot"></label><input class="inp" id="tFoot" inputmode="decimal" autocomplete="off" placeholder="10,5"></div>
+            <div class="field"><label for="tIns" data-i18n="tInsole"></label><input class="inp" id="tIns" inputmode="decimal" autocomplete="off" placeholder="9,5"></div>
+          </div>
+          <a class="howto" href="#measure" data-i18n="howTo"></a>
+          <p class="err" id="tErr" role="alert" style="margin-top:10px" hidden></p>
+          <button class="btn" type="submit" style="width:100%;margin-top:16px" data-i18n="tBtn"></button>
+        </form>
+        <div class="res" id="tRes" aria-live="polite" hidden></div>
+      </div>
+    </div>
+    <p class="hint rv" data-i18n="tHint"></p>
+  </div>
+</section>
+
+<!-- ===== 7. ДЛИНА ≠ ШИРИНА ≠ ОБЪЁМ + КАЛЬКУЛЯТОР JIS ===== -->
 <section id="size" class="alt">
   <div class="wrap">
     <p class="kicker rv" data-i18n="dK"></p>
@@ -459,23 +473,13 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
           <div class="field"><label for="jLen" data-i18n="jLen"></label><input class="inp" id="jLen" inputmode="decimal" autocomplete="off" placeholder="26"></div>
           <div class="field"><label for="jGir" data-i18n="jGirth"></label><input class="inp" id="jGir" inputmode="decimal" autocomplete="off" placeholder="25,5"></div>
         </div>
+        <a class="howto" href="#measure" data-i18n="howTo"></a>
         <p class="err" id="jErr" role="alert" style="margin-top:10px" hidden></p>
         <button class="btn ghost" type="submit" style="width:100%;margin-top:16px" data-i18n="jBtn"></button>
       </form>
       <div class="scale" id="jScale" aria-hidden="true"></div>
       <div id="jRes" aria-live="polite" hidden></div>
     </div>
-  </div>
-</section>
-
-<!-- ===== 7. КАК ИЗМЕРИТЬ СТОПУ ===== -->
-<section id="measure" class="sand">
-  <div class="wrap">
-    <p class="kicker rv" data-i18n="meK"></p>
-    <h2 class="rv" data-i18n="meH"></h2>
-    <p class="lead rv" data-i18n="meLead"></p>
-    <ol class="steps" id="steps"></ol>
-    <div class="btns"><a class="btn" href="#join" data-i18n="meCta"></a></div>
   </div>
 </section>
 
@@ -499,6 +503,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
         </fieldset>
         <fieldset>
           <legend data-i18n="g2"></legend>
+          <a class="howto" href="#measure" data-i18n="howTo" style="margin:-8px 0 8px"></a>
           <div class="stack">
             <div class="g2">
               <div class="field"><label for="f-lenL" data-i18n="lenL"></label><input class="inp" id="f-lenL" name="lenL" inputmode="decimal" autocomplete="off" data-req data-num="15,35"></div>
@@ -625,7 +630,7 @@ const T = {};
 T.ru = {
   title: "WYDE — обувь для широкой стопы. Первая тысяча",
   desc: "WYDE — казахстанский бренд обуви, где широкая сама стелька и колодка, а не только верх. Узнай свой тип стопы и войди в первую тысячу.",
-  langLabel: "Язык сайта", waLabel: "Написать в WhatsApp",
+  langLabel: "Язык сайта", howTo: "Как измерить?", waLabel: "Написать в WhatsApp",
 
   heroEyebrow: "Обувь для широкой стопы · Казахстан",
   h1a: "Широкая стопа — это сила.", h1b: "Узкая обувь — слабость обуви.",
@@ -636,9 +641,9 @@ T.ru = {
   mq: ["Шире стандарта", "WYDE", "Стой широко"],
 
   tK: "Тест стельки · 1 минута", tH: "Момент правды",
-  tLead: "Вытащи стельку из своих кроссовок. Положи на пол. Встань на неё всем весом. А теперь посмотри вниз.",
-  tAlt: "Стопа встаёт на стельку и выходит за её края", tKeyIns: "стелька", tKeyOver: "стопа за краем",
-  tSteps: ["Вытащи стельку из любой своей пары.", "Положи на пол и встань на неё всем весом.", "Измерь линейкой самое широкое место стопы и стельки."],
+  tLead: "Вытащи стельку из своих кроссовок. Положи её на обводку своей стопы. А теперь посмотри на края.",
+  tAlt: "Обводка стопы выходит за края стельки", tKeyIns: "стелька", tKeyOver: "стопа за краем",
+  tSteps: ["Вытащи стельку из своих кроссовок.", "Положи её на свою обводку, совместив пятки.", "Посмотри, где стопа выходит за края стельки.", "Измерь линейкой самое широкое место стельки. Ширину стопы возьми из замера выше."],
   tFoot: "Ширина стопы, см", tInsole: "Ширина стельки, см", tBtn: "Показать правду",
   tRes: "Твоя стопа шире стельки на <b>{x} мм</b>",
   tPunch: "Это не ты не влез. <em>Это обувь не дотянула.</em>",
@@ -722,12 +727,13 @@ T.ru = {
   filled: "Подставили в анкету.",
 
   meK: "Инструкция", meH: "Как измерить стопу за 5 минут",
-  meLead: "Нужны лист A4, две книги, линейка и сантиметровая лента.",
+  meLead: "Нужны лист A4, ручка, линейка и сантиметровая лента.",
   steps: [
-    ["Подготовка", "Вечером, босиком или в тонком носке, в котором будешь носить обувь. Нужны лист A4, две толстые книги, линейка и сантиметровая лента. Проще мерить вдвоём."],
-    ["Длина", "Встань на лист, пятка вплотную к стене, вес на обе ноги. Приставь книгу ребром к самому длинному пальцу, отметь линию, измерь от стены до книги."],
-    ["Ширина в пучках", "Поставь две книги вертикально с боков стопы — вплотную к косточке большого пальца и к косточке мизинца. Измерь расстояние между книгами. Так точнее, чем по обводке: ручка добавляет лишние миллиметры."],
-    ["Ширина пятки", "Так же, двумя книгами, по самому широкому месту пятки."],
+    ["Подготовка", "Вечером, босиком или в тонком носке, в котором будешь носить обувь. Нужны лист A4, ручка, линейка и сантиметровая лента. Проще мерить вдвоём."],
+    ["Обведи стопу", "Положи лист на твёрдый пол вплотную к стене. Встань на него: пятка касается стены, вес на обе ноги. Обведи стопу. Ручку держи строго вертикально и веди вплотную к коже — не наклоняй ни внутрь, ни наружу, иначе обводка прибавит или убавит миллиметры."],
+    ["Длина", "Линейкой от края листа у стены до самой дальней точки пальцев."],
+    ["Ширина в пучках", "На обводке — самое широкое место переда, по прямой поперёк стопы."],
+    ["Ширина пятки", "На обводке — самое широкое место пятки."],
     ["Обхват в пучках", "Лента вокруг стопы через косточки большого пальца и мизинца. Стоя, лента прилегает без натяга."],
     ["Обхват в подъёме", "Лента через самую высокую точку подъёма (примерно на середине длины стопы) и под сводом. Стоя, без натяга. Эта мерка показывает, низкая у тебя стопа или высокая."],
     ["Обе ноги", "Повтори для второй стопы. В анкету — обе длины, остальное — по той стопе, что больше."]
@@ -805,7 +811,7 @@ T.ru = {
 T.kz = {
   title: "WYDE — кең табанға арналған аяқ киім. Алғашқы мыңдық",
   desc: "WYDE — тек үсті емес, ұлтарағы мен қалыбының өзі кең қазақстандық аяқ киім бренді. Табан типіңді біл де, алғашқы мыңдыққа қосыл.",
-  langLabel: "Сайт тілі", waLabel: "WhatsApp-қа жазу",
+  langLabel: "Сайт тілі", howTo: "Қалай өлшеу керек?", waLabel: "WhatsApp-қа жазу",
 
   heroEyebrow: "Кең табанға арналған аяқ киім · Қазақстан",
   h1a: "Кең табан — күш.", h1b: "Тар келсе — кінә аяқ киімде.",
@@ -816,9 +822,9 @@ T.kz = {
   mq: ["Стандарттан кең", "WYDE", "Нық бас"],
 
   tK: "Ұлтарақ сынағы · 1 минут", tH: "Шындық сәті",
-  tLead: "Кроссовкаңның ұлтарағын суырып ал. Еденге қой. Үстіне бар салмағыңмен тұр. Енді төмен қара.",
-  tAlt: "Табан ұлтараққа түсіп, оның шетінен асып тұр", tKeyIns: "ұлтарақ", tKeyOver: "шетінен асқан табан",
-  tSteps: ["Кез келген аяқ киіміңнің ұлтарағын суырып ал.", "Еденге қойып, үстіне бар салмағыңмен тұр.", "Сызғышпен табаныңның және ұлтарақтың ең кең жерін өлше."],
+  tLead: "Кроссовкаңның ұлтарағын суырып ал. Оны табаныңның контурына қой. Енді шеттеріне қара.",
+  tAlt: "Табан контуры ұлтарақтың шетінен шығып тұр", tKeyIns: "ұлтарақ", tKeyOver: "шетінен асқан табан",
+  tSteps: ["Кроссовкаңның ұлтарағын суырып ал.", "Оны өзің сызған контурға өкшелерін дәл келтіріп қой.", "Табаның ұлтарақтың шетінен қай жерде шығып тұрғанына қара.", "Ұлтарақтың ең кең жерін сызғышпен өлше. Табан енін жоғарыдағы өлшемнен ал."],
   tFoot: "Табан ені, см", tInsole: "Ұлтарақ ені, см", tBtn: "Шындықты көрсет",
   tRes: "Табаның ұлтарақтан <b>{x} мм</b> кең",
   tPunch: "Сен сыймай қалған жоқсың. <em>Аяқ киім жетпей қалды.</em>",
@@ -902,12 +908,13 @@ T.kz = {
   filled: "Сауалнамаға енгізілді.",
 
   meK: "Нұсқаулық", meH: "Табанды 5 минутта қалай өлшеуге болады",
-  meLead: "Керегі: A4 парақ, екі кітап, сызғыш және өлшеуіш таспа.",
+  meLead: "Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа.",
   steps: [
-    ["Дайындық", "Кешке өлше — жалаңаяқ немесе аяқ киіммен бірге киетін жұқа шұлықпен. Керегі: A4 парақ, екі қалың кітап, сызғыш және өлшеуіш таспа. Екеу болып өлшеу оңайырақ."],
-    ["Ұзындық", "Парақтың үстіне тұр: өкшең қабырғаға тығыз тиіп тұрсын, салмағың екі аяққа бірдей түссін. Кітапты қырымен ең ұзын башпайыңа тақап қой, сызықпен белгіле де, қабырғадан кітапқа дейінгі қашықтықты өлше."],
-    ["Табан ені", "Екі кітапты табаныңның екі жағына тік қой: біреуін бас бармақ түбіндегі буынға, екіншісін шынашақ түбіндегі буынға тығыз тақа. Кітаптардың арасын өлше. Бұл айналдыра сызғаннан дәлірек: қалам артық миллиметр қосады."],
-    ["Өкше ені", "Дәл солай, екі кітаппен — өкшенің ең кең жерінен өлше."],
+    ["Дайындық", "Кешке өлше — жалаңаяқ немесе аяқ киіммен бірге киетін жұқа шұлықпен. Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Екеу болып өлшеу оңайырақ."],
+    ["Табаныңды сыз", "Парақты қатты еденге, қабырғаға тығыз тақап қой. Үстіне тұр: өкшең қабырғаға тиіп тұрсын, салмағың екі аяққа бірдей түссін. Табаныңды айналдыра сыз. Қаламды тіп-тік ұстап, теріге тақап жүргіз — ішке де, сыртқа да қисайтпа, әйтпесе контур миллиметр қосып не азайтып жібереді."],
+    ["Ұзындық", "Сызғышпен парақтың қабырға жақ шетінен башпайлардың ең алыс нүктесіне дейін өлше."],
+    ["Табан ені", "Контурдан алдыңғы жақтың ең кең жерін тауып, табанның көлденеңінен түзу сызықпен өлше."],
+    ["Өкше ені", "Контурдан өкшенің ең кең жерін өлше."],
     ["Табан айналымы", "Таспаны бас бармақ пен шынашақ түбіндегі буындар арқылы табаныңа орап өлше. Тұрып өлше: таспа тартылмай, жай жанасып тұрсын."],
     ["Көтерілім айналымы", "Таспаны табан үстінің ең биік нүктесі (шамамен табан ұзындығының ортасы) мен табан күмбезінің астынан айналдыр. Тұрып, таспаны тартпай өлше. Бұл өлшем табаныңның аласа не биік екенін көрсетеді."],
     ["Екі аяқ та", "Екінші табаныңды да өлше. Сауалнамаға екі ұзындықты да жаз, қалған өлшемдерді үлкенірек табаның бойынша көрсет."]
@@ -985,7 +992,7 @@ T.kz = {
 T.en = {
   title: "WYDE — footwear for wide feet. The First Thousand",
   desc: "WYDE is a footwear brand from Kazakhstan that widens the insole and the last itself — not just the upper. Find your foot type and join the first thousand.",
-  langLabel: "Site language", waLabel: "Message us on WhatsApp",
+  langLabel: "Site language", howTo: "How to measure?", waLabel: "Message us on WhatsApp",
 
   heroEyebrow: "Footwear for wide feet · Born in Kazakhstan",
   h1a: "Wide feet are power.", h1b: "Narrow shoes are the weakness.",
@@ -996,9 +1003,9 @@ T.en = {
   mq: ["Wider than the standard", "WYDE", "Stand wide"],
 
   tK: "The insole test · 1 minute", tH: "The moment of truth",
-  tLead: "Pull the insole out of your sneakers. Lay it on the floor. Stand on it with your full weight. Now look down.",
-  tAlt: "A foot steps onto an insole and spills over its edges", tKeyIns: "insole", tKeyOver: "foot past the edge",
-  tSteps: ["Pull the insole out of any pair you own.", "Lay it on the floor and stand on it with your full weight.", "With a ruler, measure the widest part of your foot and of the insole."],
+  tLead: "Pull the insole out of your sneakers. Lay it on your foot tracing. Now look at the edges.",
+  tAlt: "A foot tracing spilling over the edges of an insole", tKeyIns: "insole", tKeyOver: "foot past the edge",
+  tSteps: ["Pull the insole out of your sneakers.", "Lay it on your foot tracing, heels lined up.", "See where your foot spills past the edges of the insole.", "Measure the widest part of the insole with a ruler. Take your foot width from the measurements above."],
   tFoot: "Foot width, cm", tInsole: "Insole width, cm", tBtn: "Show me the truth",
   tRes: "Your foot is wider than the insole by <b>{x} mm</b>",
   tPunch: "You didn't fail to fit. <em>The shoe failed to show up.</em>",
@@ -1082,12 +1089,13 @@ T.en = {
   filled: "Added to your form.",
 
   meK: "How-to", meH: "Measure your feet in 5 minutes",
-  meLead: "You'll need a sheet of A4, two books, a ruler and a soft tape measure.",
+  meLead: "You'll need a sheet of A4, a pen, a ruler and a soft tape measure.",
   steps: [
-    ["Get ready", "Measure in the evening, barefoot or in the thin socks you'll wear with your shoes. You'll need a sheet of A4, two thick books, a ruler and a soft tape measure. It's easier with a friend."],
-    ["Length", "Stand on the sheet, heel flush against the wall, weight on both feet. Set a book on its edge against your longest toe, mark the line, then measure from the wall to the book."],
-    ["Ball width", "Stand two books upright on either side of your foot — tight against the joint behind your big toe and the joint behind your little toe. Measure the gap between the books. It beats tracing: a pen adds extra millimetres."],
-    ["Heel width", "Same again with the two books, at the widest part of your heel."],
+    ["Get ready", "Measure in the evening, barefoot or in the thin socks you'll wear with your shoes. You'll need a sheet of A4, a pen, a ruler and a soft tape measure. It's easier with a friend."],
+    ["Trace your foot", "Lay the sheet on a hard floor, flush against the wall. Stand on it: heel touching the wall, weight on both feet. Trace around your foot. Hold the pen perfectly upright and keep it tight to your skin — tilt it in or out and the outline gains or loses millimetres."],
+    ["Length", "With a ruler, from the wall edge of the sheet to the furthest point of your toes."],
+    ["Ball width", "On the tracing: the widest part of the forefoot, measured straight across."],
+    ["Heel width", "On the tracing: the widest part of the heel."],
     ["Ball girth", "Wrap the tape around your foot over the big-toe and little-toe joints. Standing, snug but not pulled tight."],
     ["Instep girth", "Run the tape over the highest point of your instep (about halfway along your foot) and under the arch. Standing, no pulling. This one shows whether your foot is low or high."],
     ["Both feet", "Repeat for the other foot. Enter both lengths, and everything else from the larger foot."]
@@ -1203,13 +1211,15 @@ function setLang(lang, save) {
 
 /* ---------- Иконки шагов «как измерить» ---------- */
 const FOOT = t => `<use href="#footG" transform="${t}"/>`;
-const BOOK = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="1.5"/><path d="M${x + 2.5} ${y + 3}v${h - 6}"/>`;
 const SIDE = `<g transform="translate(2 18) scale(.23)"><path vector-effect="non-scaling-stroke" d="M40 8V96C30 108 28 132 44 138H206C226 138 232 120 216 112C190 100 150 84 118 60C104 48 100 30 100 8"/><ellipse class="o" vector-effect="non-scaling-stroke" cx="130" cy="104" rx="10" ry="36" stroke-dasharray="14 12" transform="rotate(-14 130 104)"/></g>`;
+const PEN = (x, y) => `<path class="o" d="M${x} ${y}h6v30l-3 7-3-7z"/>`;
+const WALL = y => `<path d="M5 ${y}H43M9 ${y}l-4 5M17 ${y}l-4 5M25 ${y}l-4 5M33 ${y}l-4 5M41 ${y}l-4 5"/>`;
 const ICONS = [
-  `<rect x="4" y="14" width="26" height="36" rx="2"/><text x="10" y="36">A4</text>` + BOOK(36, 12, 10, 40) + BOOK(49, 16, 10, 36),
-  FOOT("translate(12 9) scale(.12)") + `<path d="M5 57H43M9 57l-4 5M17 57l-4 5M25 57l-4 5M33 57l-4 5M41 57l-4 5"/><rect class="o" x="9" y="3" width="30" height="5" rx="1.5"/><path class="o" d="M53 6v51M49 6h8M49 57h8"/>`,
-  FOOT("translate(19 4) scale(.13)") + BOOK(11, 10, 8, 28) + BOOK(43, 10, 8, 28) + `<path class="o" d="M20 23h22"/>`,
-  FOOT("translate(19 4) scale(.13)") + BOOK(17, 36, 8, 24) + BOOK(37, 36, 8, 24) + `<path class="o" d="M26 48h10"/>`,
+  `<rect x="4" y="12" width="28" height="40" rx="2"/><text x="11" y="36">A4</text>` + PEN(38, 8) + `<rect x="50" y="8" width="9" height="46" rx="1.5"/><path d="M50 16h4M50 24h4M50 32h4M50 40h4M50 48h4"/>`,
+  FOOT("translate(12 9) scale(.12)") + WALL(57) + PEN(46, 14),
+  FOOT("translate(12 9) scale(.12)") + WALL(57) + `<path class="o" d="M52 9v48M48 9h8M48 57h8"/>`,
+  FOOT("translate(18 3) scale(.13)") + `<path class="o" d="M18 23h28M18 18v10M46 18v10"/>`,
+  FOOT("translate(18 3) scale(.13)") + `<path class="o" d="M22 47h20M22 42v10M42 42v10"/>`,
   FOOT("translate(18 3) scale(.13)") + `<ellipse class="o" cx="31" cy="23" rx="15" ry="5"/><path class="o" d="M46 23c7 2 9 9 4 15"/>`,
   SIDE,
   FOOT("translate(2 3) scale(.13)") + FOOT("translate(62 3) scale(-.13 .13)")
@@ -1257,7 +1267,7 @@ function renderTest(scroll) {
   box.innerHTML = (t.diff > 0
     ? `<p class="res-h">${fill(L.tRes, { x: t.diff })}</p><p class="punch">${L.tPunch}</p><p>${esc(L.tMore)}</p>`
     : `<p class="punch">${esc(L.tEqH)}</p><p>${esc(L.tEqP)}</p>`)
-    + `<p class="note-ok">✓ ${esc(L.tFilled)}</p><div class="btns"><a class="btn" href="#quiz">${esc(L.btnType)}</a></div>`;
+    + `<p class="note-ok">✓ ${esc(L.tFilled)}</p><div class="btns">${state.quiz.done ? `<a class="btn" href="#join">${esc(L.btnJoin)}</a>` : `<a class="btn" href="#quiz">${esc(L.btnType)}</a>`}</div>`;
   box.hidden = false;
   if (scroll) box.scrollIntoView({ behavior: "smooth", block: "center" });
 }
