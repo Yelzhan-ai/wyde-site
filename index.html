@@ -78,7 +78,6 @@ h2{font:700 clamp(38px,10.6vw,84px)/1 var(--fh);text-transform:uppercase;margin-
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:76px 0 40px;overflow:hidden}
 .hero-bg{position:absolute;right:-30%;top:40px;width:min(118vw,760px);color:var(--sand);opacity:.13;transform:rotate(14deg);pointer-events:none}
 .hero .wrap{position:relative}
-.hero-logo{width:min(46vw,300px);color:var(--sand);margin-bottom:16px}
 .eyebrow{font:800 11.5px/1.3 var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
 h1{font:700 clamp(42px,12.4vw,124px)/.96 var(--fh);text-transform:uppercase;letter-spacing:-.005em}
 h1 span{display:block} h1 .hot{color:var(--hot)}
@@ -333,7 +332,6 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
 <section class="hero">
   <svg class="hero-bg" viewBox="0 0 200 430" aria-hidden="true"><use href="#footG" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
   <div class="wrap">
-    <svg class="hero-logo" viewBox="0 0 576 100" aria-hidden="true"><use href="#wyde"/></svg>
     <p class="eyebrow" data-i18n="heroEyebrow">Обувь для широкой стопы · Казахстан</p>
     <h1><span data-i18n="h1a">Широкая стопа — это сила.</span><span class="hot" data-i18n="h1b">Узкая обувь — слабость обуви.</span></h1>
     <div class="wline" aria-hidden="true"><i></i></div>
@@ -438,9 +436,9 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
             <path class="gr" d="M8 142H252"/>
             <path class="f" d="M40 8V96C30 108 28 132 44 138H206C226 138 232 120 216 112C190 100 150 84 118 60C104 48 100 30 100 8"/>
             <ellipse class="d" cx="181" cy="116" rx="8" ry="26" stroke-dasharray="5 5"/>
-            <path class="d" d="M132 71V138M126 71H138"/>
+            <ellipse class="d" cx="130" cy="104" rx="9" ry="34" stroke-dasharray="5 5" transform="rotate(-14 130 104)"/>
             <g class="mk"><circle cx="181" cy="72" r="11"/><text x="181" y="76.5">4</text></g>
-            <g class="mk"><circle cx="132" cy="106" r="11"/><text x="132" y="110.5">5</text></g>
+            <g class="mk"><circle cx="126" cy="50" r="11"/><text x="126" y="54.5">5</text></g>
           </svg>
         </div>
         <ol class="legend" data-list="leg"></ol>
@@ -511,6 +509,7 @@ dialog::backdrop{background:rgba(0,0,0,.72)}
               <div class="field"><label for="f-heel" data-i18n="heel"></label><input class="inp" id="f-heel" name="heel" inputmode="decimal" autocomplete="off" data-req data-num="3,11"></div>
             </div>
             <div class="field"><label for="f-girth" data-i18n-html="girth"></label><input class="inp" id="f-girth" name="girth" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
+            <div class="field"><label for="f-instep" data-i18n-html="instep"></label><input class="inp" id="f-instep" name="instep" inputmode="decimal" autocomplete="off" data-num="15,36"></div>
             <div class="field"><label for="f-insole" data-i18n-html="insole"></label><input class="inp" id="f-insole" name="insole" inputmode="decimal" autocomplete="off" data-num="5,14"></div>
             <div class="g2 g2w" style="grid-template-columns:1fr">
               <div class="field"><label for="f-jis" data-i18n-html="jis"></label><input class="inp" id="f-jis" name="jis" readonly placeholder="—"></div>
@@ -702,7 +701,7 @@ T.ru = {
 
   dK: "Как устроен размер", dH: "Длина ≠ ширина ≠ объём",
   dLead: "Размер на коробке знает только длину. А у стопы пять мерок.",
-  leg: ["Длина — от пятки до самого длинного пальца", "Ширина в пучках — самое широкое место переда", "Ширина пятки", "Обхват в пучках — лента вокруг стопы по косточкам", "Подъём — высота стопы сверху"],
+  leg: ["Длина — от пятки до самого длинного пальца", "Ширина в пучках — самое широкое место переда", "Ширина пятки", "Обхват в пучках — лента вокруг стопы по косточкам", "Обхват в подъёме — лента через самую высокую точку подъёма"],
   whyH: "Почему 2E и 4E не спасают",
   whyP: "Буквы полноты — E, 2E, 4E — считают по обхвату, то есть по объёму. Такую обувь шьют под стопу сразу и широкую, и высокую: материал добавляют сверху, а стелька остаётся почти прежней. Но у многих стопа широкая и низкая. Им достаётся лишняя высота — и ни миллиметра нужной ширины.",
   factsH: "Что говорят данные",
@@ -723,14 +722,15 @@ T.ru = {
   filled: "Подставили в анкету.",
 
   meK: "Инструкция", meH: "Как измерить стопу за 5 минут",
-  meLead: "Нужны лист A4, ручка, линейка и сантиметровая лента. Меряй вечером: к вечеру стопа становится шире.",
+  meLead: "Нужны лист A4, две книги, линейка и сантиметровая лента.",
   steps: [
-    ["Лист к стене", "Положи лист A4 на твёрдый пол вплотную к стене."],
-    ["Встань и обведи", "Вечером, стоя: пятка касается стены, вес на обеих ногах. Обведи стопу, держа ручку вертикально."],
-    ["Длина", "Линейкой: от края листа у стены до кончика самого длинного пальца."],
-    ["Ширина в пучках и пятка", "Самое широкое место переда — ширина в пучках. Самое широкое место пятки — ширина пятки."],
-    ["Обхват", "Сантиметровой лентой вокруг стопы по косточкам у большого пальца и мизинца. Стоя, без натяга."],
-    ["Обе ноги", "Повтори для второй стопы: они почти всегда разные. В анкету запиши обе длины, а ширину — по той стопе, что шире."]
+    ["Подготовка", "Вечером, босиком или в тонком носке, в котором будешь носить обувь. Нужны лист A4, две толстые книги, линейка и сантиметровая лента. Проще мерить вдвоём."],
+    ["Длина", "Встань на лист, пятка вплотную к стене, вес на обе ноги. Приставь книгу ребром к самому длинному пальцу, отметь линию, измерь от стены до книги."],
+    ["Ширина в пучках", "Поставь две книги вертикально с боков стопы — вплотную к косточке большого пальца и к косточке мизинца. Измерь расстояние между книгами. Так точнее, чем по обводке: ручка добавляет лишние миллиметры."],
+    ["Ширина пятки", "Так же, двумя книгами, по самому широкому месту пятки."],
+    ["Обхват в пучках", "Лента вокруг стопы через косточки большого пальца и мизинца. Стоя, лента прилегает без натяга."],
+    ["Обхват в подъёме", "Лента через самую высокую точку подъёма (примерно на середине длины стопы) и под сводом. Стоя, без натяга. Эта мерка показывает, низкая у тебя стопа или высокая."],
+    ["Обе ноги", "Повтори для второй стопы. В анкету — обе длины, остальное — по той стопе, что больше."]
   ],
   meCta: "Мерки готовы — в анкету",
 
@@ -740,6 +740,7 @@ T.ru = {
   name: "Имя", wa: "WhatsApp", ig: "Instagram <small>(необязательно)</small>", city: "Город", gender: "Пол",
   lenL: "Длина левой стопы, см", lenR: "Длина правой стопы, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см",
   girth: "Обхват в пучках, см <small>(необязательно)</small>",
+  instep: "Обхват в подъёме, см <small>(необязательно)</small>",
   insole: "Ширина стельки твоей обуви, см <small>(если стелька вынимается)</small>",
   jis: "Полнота по JIS <small>(из калькулятора, необязательно)</small>",
   type: "Тип стопы", typePh: "Пройди тест — подставим сами",
@@ -880,7 +881,7 @@ T.kz = {
 
   dK: "Өлшем қалай құрылған", dH: "Ұзындық ≠ ен ≠ көлем",
   dLead: "Қораптағы өлшем тек ұзындықты біледі. Ал табанда бес өлшем бар.",
-  leg: ["Ұзындық — өкшеден ең ұзын башпайға дейін", "Табан ені — алдыңғы жақтың ең кең жері", "Өкше ені", "Табан айналымы — буын тұсынан таспамен айналдыра өлшенеді", "Көтерілім — табан үстінің биіктігі"],
+  leg: ["Ұзындық — өкшеден ең ұзын башпайға дейін", "Табан ені — алдыңғы жақтың ең кең жері", "Өкше ені", "Табан айналымы — буын тұсынан таспамен айналдыра өлшенеді", "Көтерілім айналымы — таспа табан үстінің ең биік нүктесі арқылы өтеді"],
   whyH: "2E мен 4E неге көмектеспейді",
   whyP: "Толықтық әріптері — E, 2E, 4E — айналыммен, яғни көлеммен есептеледі. Мұндай аяқ киім бірден әрі кең, әрі биік табанға тігіледі: материал үстіне қосылады, ал ұлтарақ сол күйі дерлік қалады. Бірақ көп адамның табаны кең әрі аласа. Оларға артық биіктік бұйырады — ал қажетті еннен бір миллиметр де тимейді.",
   factsH: "Деректер не дейді",
@@ -901,14 +902,15 @@ T.kz = {
   filled: "Сауалнамаға енгізілді.",
 
   meK: "Нұсқаулық", meH: "Табанды 5 минутта қалай өлшеуге болады",
-  meLead: "Керегі: A4 парақ, қалам, сызғыш және өлшеуіш таспа. Кешке өлше: кешке қарай табан кеңейеді.",
+  meLead: "Керегі: A4 парақ, екі кітап, сызғыш және өлшеуіш таспа.",
   steps: [
-    ["Парақты қабырғаға тақа", "A4 парақты қатты еденге, қабырғаға тақап қой."],
-    ["Тұрып, айналдыра сыз", "Кешке, түрегеп тұрып өлше: өкшең қабырғаға тиіп тұрсын, салмағың екі аяққа тең түссін. Қаламды тік ұстап, табаныңды айналдыра сыз."],
-    ["Ұзындық", "Сызғышпен: парақтың қабырға жақ шетінен ең ұзын башпайдың ұшына дейін."],
-    ["Табан ені мен өкше ені", "Алдыңғы жақтың ең кең жері — табан ені. Өкшенің ең кең жері — өкше ені."],
-    ["Айналым", "Өлшеуіш таспаны бас бармақ пен шынашақ түбіндегі буындар тұсынан айналдыр. Тұрып, таспаны қатты тартпай өлше."],
-    ["Екі аяқ та", "Екінші табаныңды да өлше: олар бірдей бола бермейді. Сауалнамаға екі ұзындықты да жаз, ал енді кеңірек табаның бойынша көрсет."]
+    ["Дайындық", "Кешке өлше — жалаңаяқ немесе аяқ киіммен бірге киетін жұқа шұлықпен. Керегі: A4 парақ, екі қалың кітап, сызғыш және өлшеуіш таспа. Екеу болып өлшеу оңайырақ."],
+    ["Ұзындық", "Парақтың үстіне тұр: өкшең қабырғаға тығыз тиіп тұрсын, салмағың екі аяққа бірдей түссін. Кітапты қырымен ең ұзын башпайыңа тақап қой, сызықпен белгіле де, қабырғадан кітапқа дейінгі қашықтықты өлше."],
+    ["Табан ені", "Екі кітапты табаныңның екі жағына тік қой: біреуін бас бармақ түбіндегі буынға, екіншісін шынашақ түбіндегі буынға тығыз тақа. Кітаптардың арасын өлше. Бұл айналдыра сызғаннан дәлірек: қалам артық миллиметр қосады."],
+    ["Өкше ені", "Дәл солай, екі кітаппен — өкшенің ең кең жерінен өлше."],
+    ["Табан айналымы", "Таспаны бас бармақ пен шынашақ түбіндегі буындар арқылы табаныңа орап өлше. Тұрып өлше: таспа тартылмай, жай жанасып тұрсын."],
+    ["Көтерілім айналымы", "Таспаны табан үстінің ең биік нүктесі (шамамен табан ұзындығының ортасы) мен табан күмбезінің астынан айналдыр. Тұрып, таспаны тартпай өлше. Бұл өлшем табаныңның аласа не биік екенін көрсетеді."],
+    ["Екі аяқ та", "Екінші табаныңды да өлше. Сауалнамаға екі ұзындықты да жаз, қалған өлшемдерді үлкенірек табаның бойынша көрсет."]
   ],
   meCta: "Өлшемдерім дайын — сауалнамаға",
 
@@ -918,6 +920,7 @@ T.kz = {
   name: "Атың", wa: "WhatsApp", ig: "Instagram <small>(міндетті емес)</small>", city: "Қала", gender: "Жынысың",
   lenL: "Сол табан ұзындығы, см", lenR: "Оң табан ұзындығы, см", ball: "Табан ені, см", heel: "Өкше ені, см",
   girth: "Табан айналымы, см <small>(міндетті емес)</small>",
+  instep: "Көтерілім айналымы, см <small>(міндетті емес)</small>",
   insole: "Қазіргі аяқ киіміңнің ұлтарақ ені, см <small>(ұлтарақ суырылса)</small>",
   jis: "JIS бойынша толықтық <small>(калькулятордан, міндетті емес)</small>",
   type: "Табан типі", typePh: "Тесттен өт — өзіміз енгіземіз",
@@ -1058,7 +1061,7 @@ T.en = {
 
   dK: "How sizing really works", dH: "Length ≠ width ≠ volume",
   dLead: "The size on the box only knows your length. Your foot has five measurements.",
-  leg: ["Length — from heel to the longest toe", "Ball width — the widest part of the forefoot", "Heel width", "Ball girth — a tape around the foot at the ball joints", "Instep — how tall your foot is on top"],
+  leg: ["Length — from heel to the longest toe", "Ball width — the widest part of the forefoot", "Heel width", "Ball girth — a tape around the foot at the ball joints", "Instep girth — a tape over the highest point of the instep"],
   whyH: "Why 2E and 4E don't save you",
   whyP: "Width letters — E, 2E, 4E — are based on girth, which means volume. Those shoes are built for a foot that's both wide and tall: material is added on top while the insole stays almost the same. But many feet are wide and low. They get height they don't need — and not one millimetre of the width they do.",
   factsH: "What the data says",
@@ -1079,14 +1082,15 @@ T.en = {
   filled: "Added to your form.",
 
   meK: "How-to", meH: "Measure your feet in 5 minutes",
-  meLead: "You'll need a sheet of A4, a pen, a ruler and a soft tape measure. Measure in the evening: feet get wider through the day.",
+  meLead: "You'll need a sheet of A4, two books, a ruler and a soft tape measure.",
   steps: [
-    ["Paper to the wall", "Lay a sheet of A4 on a hard floor, flush against the wall."],
-    ["Stand and trace", "In the evening, standing: heel touching the wall, weight on both feet. Trace your foot with the pen held upright."],
-    ["Length", "With a ruler: from the wall edge of the sheet to the tip of your longest toe."],
-    ["Ball width and heel", "The widest part of the forefoot is your ball width. The widest part of the heel is your heel width."],
-    ["Girth", "Wrap the tape around your foot at the joints behind the big toe and the little toe. Standing, no pulling."],
-    ["Both feet", "Repeat for the other foot: they're almost never identical. Enter both lengths, and the width of the wider foot."]
+    ["Get ready", "Measure in the evening, barefoot or in the thin socks you'll wear with your shoes. You'll need a sheet of A4, two thick books, a ruler and a soft tape measure. It's easier with a friend."],
+    ["Length", "Stand on the sheet, heel flush against the wall, weight on both feet. Set a book on its edge against your longest toe, mark the line, then measure from the wall to the book."],
+    ["Ball width", "Stand two books upright on either side of your foot — tight against the joint behind your big toe and the joint behind your little toe. Measure the gap between the books. It beats tracing: a pen adds extra millimetres."],
+    ["Heel width", "Same again with the two books, at the widest part of your heel."],
+    ["Ball girth", "Wrap the tape around your foot over the big-toe and little-toe joints. Standing, snug but not pulled tight."],
+    ["Instep girth", "Run the tape over the highest point of your instep (about halfway along your foot) and under the arch. Standing, no pulling. This one shows whether your foot is low or high."],
+    ["Both feet", "Repeat for the other foot. Enter both lengths, and everything else from the larger foot."]
   ],
   meCta: "Got my numbers — to the form",
 
@@ -1096,6 +1100,7 @@ T.en = {
   name: "Name", wa: "WhatsApp", ig: "Instagram <small>(optional)</small>", city: "City", gender: "Gender",
   lenL: "Left foot length, cm", lenR: "Right foot length, cm", ball: "Ball width, cm", heel: "Heel width, cm",
   girth: "Ball girth, cm <small>(optional)</small>",
+  instep: "Instep girth, cm <small>(optional)</small>",
   insole: "Insole width of your current shoes, cm <small>(if it comes out)</small>",
   jis: "JIS width <small>(from the calculator, optional)</small>",
   type: "Foot type", typePh: "Take the test — we'll fill it in",
@@ -1198,12 +1203,15 @@ function setLang(lang, save) {
 
 /* ---------- Иконки шагов «как измерить» ---------- */
 const FOOT = t => `<use href="#footG" transform="${t}"/>`;
+const BOOK = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="1.5"/><path d="M${x + 2.5} ${y + 3}v${h - 6}"/>`;
+const SIDE = `<g transform="translate(2 18) scale(.23)"><path vector-effect="non-scaling-stroke" d="M40 8V96C30 108 28 132 44 138H206C226 138 232 120 216 112C190 100 150 84 118 60C104 48 100 30 100 8"/><ellipse class="o" vector-effect="non-scaling-stroke" cx="130" cy="104" rx="10" ry="36" stroke-dasharray="14 12" transform="rotate(-14 130 104)"/></g>`;
 const ICONS = [
-  `<path d="M8 6v52M8 16l-5 5M8 30l-5 5M8 44l-5 5"/><rect x="12" y="10" width="36" height="46" rx="2"/><text x="22" y="38">A4</text>`,
-  FOOT("translate(8 3) scale(.13)") + `<path class="o" d="M40 34l14-14 5 5-14 14-7 2z"/>`,
-  FOOT("translate(6 3) scale(.13)") + `<path class="o" d="M46 8v46M41 8h10M41 54h10"/>`,
-  FOOT("translate(18 3) scale(.13)") + `<path class="o" d="M17 23h28M17 18v10M45 18v10M23 49h16M23 44v10M39 44v10"/>`,
+  `<rect x="4" y="14" width="26" height="36" rx="2"/><text x="10" y="36">A4</text>` + BOOK(36, 12, 10, 40) + BOOK(49, 16, 10, 36),
+  FOOT("translate(12 9) scale(.12)") + `<path d="M5 57H43M9 57l-4 5M17 57l-4 5M25 57l-4 5M33 57l-4 5M41 57l-4 5"/><rect class="o" x="9" y="3" width="30" height="5" rx="1.5"/><path class="o" d="M53 6v51M49 6h8M49 57h8"/>`,
+  FOOT("translate(19 4) scale(.13)") + BOOK(11, 10, 8, 28) + BOOK(43, 10, 8, 28) + `<path class="o" d="M20 23h22"/>`,
+  FOOT("translate(19 4) scale(.13)") + BOOK(17, 36, 8, 24) + BOOK(37, 36, 8, 24) + `<path class="o" d="M26 48h10"/>`,
   FOOT("translate(18 3) scale(.13)") + `<ellipse class="o" cx="31" cy="23" rx="15" ry="5"/><path class="o" d="M46 23c7 2 9 9 4 15"/>`,
+  SIDE,
   FOOT("translate(2 3) scale(.13)") + FOOT("translate(62 3) scale(-.13 .13)")
 ];
 
@@ -1483,7 +1491,7 @@ function payload() {
   const ball = n("ball"), ins = n("insole");
   return {
     name: d.name, whatsapp: "+7" + phoneDigits(d.whatsapp), instagram: d.instagram === "@" ? "" : d.instagram, city: d.city, gender: lab("gender", d.gender),
-    lenL: n("lenL"), lenR: n("lenR"), ball, heel: n("heel"), girth: n("girth"), insole: ins,
+    lenL: n("lenL"), lenR: n("lenR"), ball, heel: n("heel"), girth: n("girth"), instep: n("instep"), insole: ins,
     widerMm: ball !== "" && ins !== "" ? Math.round((ball - ins) * 10) : "",
     jis: d.jis, type: state.typeKeys.length ? typeName("ru") : "",
     pains: d.pains.map(v => lab("pains", v)).join(", "), brands: d.brands, model: lab("model", d.model), color: lab("color", d.color),
@@ -1491,7 +1499,7 @@ function payload() {
     utm: new URLSearchParams(location.search).get("utm_source") || document.referrer || ""
   };
 }
-const WA_LABELS = { name: "Имя", whatsapp: "WhatsApp", instagram: "Instagram", city: "Город", gender: "Пол", lenL: "Длина левой, см", lenR: "Длина правой, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см", girth: "Обхват в пучках, см", insole: "Ширина стельки, см", widerMm: "Стопа шире стельки, мм", jis: "Полнота JIS", type: "Тип стопы", pains: "Где проигрывает обувь", brands: "Бренды и ширины", model: "Модель", color: "Цвет", lang: "Язык", consent: "Согласие на обработку данных" };
+const WA_LABELS = { name: "Имя", whatsapp: "WhatsApp", instagram: "Instagram", city: "Город", gender: "Пол", lenL: "Длина левой, см", lenR: "Длина правой, см", ball: "Ширина в пучках, см", heel: "Ширина пятки, см", girth: "Обхват в пучках, см", instep: "Обхват в подъёме, см", insole: "Ширина стельки, см", widerMm: "Стопа шире стельки, мм", jis: "Полнота JIS", type: "Тип стопы", pains: "Где проигрывает обувь", brands: "Бренды и ширины", model: "Модель", color: "Цвет", lang: "Язык", consent: "Согласие на обработку данных" };
 const waNum = () => CONFIG.whatsapp.replace(/\D/g, "");
 const waLink = d => "https://wa.me/" + waNum() + "?text=" + encodeURIComponent("Анкета WYDE — первая тысяча\n" + Object.keys(WA_LABELS).filter(k => d[k] !== "" && d[k] != null).map(k => WA_LABELS[k] + ": " + d[k]).join("\n"));
 function done(demo) {
