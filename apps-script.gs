@@ -10,6 +10,7 @@ const SHEET_NAME = 'WYDE';
 
 // Ключ из анкеты → заголовок столбца.
 // Порядок строк здесь = порядок столбцов в таблице. Первая строка — дата отправки.
+// Новые столбцы всегда добавляются В КОНЕЦ списка, чтобы старые строки таблицы не съехали.
 const COLUMNS = [
   ['date',      'Дата'],
   ['name',      'Имя'],
@@ -33,7 +34,16 @@ const COLUMNS = [
   ['color',     'Голос: цвет'],
   ['lang',      'Язык сайта'],
   ['consent',   'Согласие на обработку данных'],
-  ['utm',       'Откуда пришёл']
+  ['utm',       'Откуда пришёл'],
+  // способ замера: "snapfeet" (приложение) или "paper" (бумага A4)
+  ['method',                'Способ замера'],
+  // цифры из приложения Snapfeet, в миллиметрах
+  ['snapfeet_left_length',  'Snapfeet: длина левой, мм'],
+  ['snapfeet_right_length', 'Snapfeet: длина правой, мм'],
+  ['snapfeet_left_width',   'Snapfeet: ширина левой, мм'],
+  ['snapfeet_right_width',  'Snapfeet: ширина правой, мм'],
+  ['snapfeet_left_instep',  'Snapfeet: подъём левой, мм'],
+  ['snapfeet_right_instep', 'Snapfeet: подъём правой, мм']
 ];
 
 // Сайт присылает анкету сюда.
@@ -45,11 +55,15 @@ function doPost(e) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
 
-    if (sheet.getLastRow() === 0) { // первая анкета — рисуем шапку
-      sheet.appendRow(COLUMNS.map(function (c) { return c[1]; }));
+    // Шапка: на пустом листе рисуем её, на старом — дописываем новые столбцы справа.
+    const headers = COLUMNS.map(function (c) { return c[1]; });
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(headers);
       sheet.setFrozenRows(1);
-      sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight('bold');
     }
+    const head = sheet.getRange(1, 1, 1, headers.length);
+    if (head.getValues()[0].join('|') !== headers.join('|')) head.setValues([headers]);
+    head.setFontWeight('bold');
 
     sheet.appendRow(COLUMNS.map(function (c) {
       return c[0] === 'date' ? new Date() : clean(data[c[0]]);
